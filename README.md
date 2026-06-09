@@ -1,18 +1,40 @@
-# Leon Cheung Chak-ting (Zeding Zhang / 张泽鼎)
+# Zeding Zhang
 
-Full-stack developer and AI engineer. Building tools at the intersection of LLMs, computer vision, and developer productivity.
+Full-stack AI engineer focused on agentic software, repository intelligence, and applied computer vision.
 
-## Projects
+I build practical tools around LLMs, RAG, developer workflows, and perception systems, with an emphasis on clear product surfaces, testable pipelines, and deployment-ready engineering.
 
-| Project | Description |
-|---------|-------------|
-| [geo-lens](https://github.com/ZedingZhang/geo-lens) | GEO platform — AI search visibility scoring, citation diagnosis, LLM content optimization |
-| [codepipe](https://github.com/ZedingZhang/codepipe) | Multi-language local-first deterministic pipeline coding agent |
-| [reporag](https://github.com/ZedingZhang/reporag) | RAG assistant for understanding GitHub repos with code-aware retrieval |
-| [dms-multitask](https://github.com/ZedingZhang/dms-multitask) | Lightweight driver monitoring — face/phone/cigarette detection, TensorRT-ready |
-| [vlm-data-closedloop](https://github.com/ZedingZhang/vlm-data-closedloop) | VLM-driven data closedloop for cabin monitoring |
-| [huazhou-dictionary-miniprogram](https://github.com/ZedingZhang/huazhou-dictionary-miniprogram) | 化州话字典 WeChat Mini Program |
+[Website](https://zedingzhang.com) · [GEO Lens Demo](https://geo-lens-peach.vercel.app)
 
-## Tech
+## Focus
 
-TypeScript · Python · Next.js · React · Prisma · PostgreSQL · PyTorch · TensorRT · Docker · LangChain · RAG
+- Agentic software development: tool use, human approval, code-aware retrieval, evaluation loops
+- Full-stack AI products: Next.js, TypeScript, FastAPI, Prisma, PostgreSQL, Docker, Vercel/Neon
+- Applied CV and VLM workflows: driver monitoring, cabin perception, hard-example mining, auto-annotation
+- Developer productivity systems: local-first coding agents, deterministic pipelines, AST/BM25 code search
+
+## Featured Projects
+
+| Project | What it demonstrates | Stack |
+|---|---|---|
+| [GEO Lens](https://github.com/ZedingZhang/geo-lens) | Full-stack SaaS prototype for AI search visibility, citation diagnosis, content recommendations, and demo-safe LLM workflows. [Live demo](https://geo-lens-peach.vercel.app) | Next.js, TypeScript, Prisma, PostgreSQL, OpenAI-compatible LLMs, Vercel, Neon |
+| [RepoRAG](https://github.com/ZedingZhang/reporag) | GitHub repository RAG assistant with code-aware chunking, hybrid retrieval, citations, LangGraph agent workflows, approvals, MCP tools, and evaluation scripts | Python, FastAPI, LangGraph, pgvector, PostgreSQL, Streamlit, Docker |
+| [CodePipe](https://github.com/ZedingZhang/codepipe) | Local-first deterministic coding agent that combines BM25/AST retrieval, patch generation, verification, Docker sandboxing, and data flywheel ideas | Python, Typer, tree-sitter, pytest, Docker, OpenAI-compatible APIs |
+| [DMS-MultiTask](https://github.com/ZedingZhang/dms-multitask) | Lightweight driver monitoring model for face, phone, cigarette detection, facial landmarks, fatigue signals, and TensorRT-oriented deployment | Python, PyTorch, OpenCV, ONNX, TensorRT |
+| [VLM Data Closedloop](https://github.com/ZedingZhang/vlm-data-closedloop) | Cabin-monitoring data loop for hard-example mining, VLM-assisted annotation, and augmentation | Python, YOLOv8, OpenCV, PyTorch, VLM APIs |
+| [Huazhou Dictionary Mini Program](https://github.com/ZedingZhang/huazhou-dictionary-miniprogram) | Offline WeChat mini program for Huazhou dialect pronunciation lookup with simplified/traditional Chinese support | JavaScript, WeChat Mini Program |
+
+## Engineering Signals
+
+- Built RAG systems with source-grounded answers, line-level citations, hybrid retrieval, and evaluation datasets
+- Designed agent workflows with explicit planning, approval gates, command/path guards, trace logs, and test execution
+- Shipped full-stack demos with database-backed workflows, production env configuration, CI, Docker, and hosted deployment
+- Comfortable moving across frontend, backend, data/model pipelines, and infrastructure glue
+
+## Tech Stack
+
+TypeScript · React · Next.js · Python · FastAPI · PostgreSQL · Prisma · pgvector · Docker · LangGraph · RAG · PyTorch · OpenCV · TensorRT
+
+## Current Direction
+
+I am working toward becoming a full-stack agent software engineer: someone who can design the AI workflow, build the product interface, operate the backend, evaluate model behavior, and ship the system as a reliable demo or production service.
