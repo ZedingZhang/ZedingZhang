@@ -23,6 +23,16 @@ and deterministic verification.
 | [RepoRAG](https://github.com/ZedingZhang/reporag) | Source-grounded repository RAG plus an approval-gated code maintenance workbench with LangGraph, MCP, and security guards | v0.1.0-alpha |
 | [GEO Lens](https://github.com/ZedingZhang/geo-lens) | Production-style full-stack AI SaaS for GEO / AI-search visibility workflows | [Live Demo](https://geo-lens-peach.vercel.app) |
 
+## Project Map
+
+| Layer | Project | Purpose |
+|---|---|---|
+| Repository understanding | [RepoRAG](https://github.com/ZedingZhang/reporag) | Retrieve code context, answer with citations, expose MCP tools |
+| Deterministic code editing | [CodePipe](https://github.com/ZedingZhang/codepipe) | Local-first repair pipeline with BM25/AST localization and pytest verification |
+| Safe execution | [RepoAirlock](https://github.com/ZedingZhang/repoairlock) | Run coding agents in Docker with policy checks, audit logs, and replayable reports |
+| Productization | [GEO Lens](https://github.com/ZedingZhang/geo-lens) | Full-stack AI SaaS demo for AI-search visibility workflows |
+| Vision / edge AI | [DMS-MultiTask](https://github.com/ZedingZhang/dms-multitask) | Lightweight driver-monitoring model, TensorRT-ready |
+
 ## Additional Work
 
 - [DMS-MultiTask](https://github.com/ZedingZhang/dms-multitask) — lightweight driver monitoring model with 1.14M parameters and TensorRT-ready deployment
