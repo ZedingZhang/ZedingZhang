@@ -20,7 +20,7 @@ and deterministic verification.
 |---|---|---|
 | [RepoAirlock](https://github.com/ZedingZhang/repoairlock) | Safety-oriented execution harness for coding agents: Docker isolation, policy enforcement, audit trails, patch replay, HTML reports | v0.1.1-alpha |
 | [CodePipe](https://github.com/ZedingZhang/codepipe) | Deterministic local-first coding agent with a fixed expert pipeline, BM25 + AST retrieval, fuzzy patching, and pytest verification | v0.1.0-alpha |
-| [RepoRAG](https://github.com/ZedingZhang/reporag) | Source-grounded repository RAG plus an approval-gated code maintenance workbench with LangGraph, MCP, and security guards | 159-test implementation |
+| [RepoRAG](https://github.com/ZedingZhang/reporag) | Source-grounded repository RAG plus an approval-gated code maintenance workbench with LangGraph, MCP, and security guards | v0.1.0-alpha |
 | [GEO Lens](https://github.com/ZedingZhang/geo-lens) | Production-style full-stack AI SaaS for GEO / AI-search visibility workflows | [Live Demo](https://geo-lens-peach.vercel.app) |
 
 ## Additional Work
