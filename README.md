@@ -8,16 +8,6 @@ and deterministic verification.
 
 [Website](https://zedingzhang.com) · [Email](mailto:zeding@zedingzhang.com)
 
-## 30-second verification
-
-| Check | Link |
-|---|---|
-| Portfolio site | [zedingzhang.com](https://zedingzhang.com) |
-| Coding-agent safety | [RepoAirlock](https://github.com/ZedingZhang/repoairlock) |
-| Repository intelligence | [RepoRAG](https://github.com/ZedingZhang/reporag) |
-| Deterministic code editing | [CodePipe](https://github.com/ZedingZhang/codepipe) |
-| Product demo | [GEO Lens live demo](https://geo-lens-peach.vercel.app) |
-
 ## Current Focus
 
 - Coding-agent safety: sandboxed execution, policy checks, audit trails, replayable artifacts
