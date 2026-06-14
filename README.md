@@ -8,6 +8,10 @@ and deterministic verification.
 
 [Website](https://zedingzhang.com) · [Email](mailto:zeding@zedingzhang.com)
 
+## Repository Note
+
+Most repositories here were recently polished and open-sourced from local/private development work. I optimize for runnable demos, tests, explicit limitations, and reproducible engineering evidence rather than commit-count signaling.
+
 ## Current Focus
 
 - Coding-agent safety: sandboxed execution, policy checks, audit trails, replayable artifacts
