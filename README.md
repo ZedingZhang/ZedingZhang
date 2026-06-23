@@ -34,7 +34,3 @@ and deterministic verification.
 - [DMS-MultiTask](https://github.com/ZedingZhang/dms-multitask) — lightweight driver monitoring model with 1.14M parameters and TensorRT-ready deployment
 - [VLM Data Closedloop](https://github.com/ZedingZhang/vlm-data-closedloop) — VLM-assisted hard-example mining, annotation, and augmentation pipeline for cabin monitoring
 - [Huazhou Dictionary](https://github.com/ZedingZhang/huazhou-dictionary-miniprogram) — offline WeChat mini program for Huazhou dialect lookup with 4,310 entries
-
-## Stack
-
-Python · TypeScript · C++ · FastAPI · LangGraph · PostgreSQL · Docker · PyTorch · TensorRT · MCP
