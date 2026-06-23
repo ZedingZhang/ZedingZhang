@@ -4,8 +4,6 @@ I build coding-agent infrastructure, repository intelligence systems,
 and deployable AI workflows with a bias toward reliability, auditability,
 and deterministic verification.
 
-[Website](https://zedingzhang.com)
-
 ## Current Focus
 
 - Coding-agent safety: sandboxed execution, policy checks, audit trails, replayable artifacts
