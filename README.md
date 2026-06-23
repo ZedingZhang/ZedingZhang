@@ -1,7 +1,5 @@
 # Zeding Zhang
 
-AI agent engineer with production C++ experience.
-
 I build coding-agent infrastructure, repository intelligence systems,
 and deployable AI workflows with a bias toward reliability, auditability,
 and deterministic verification.
