@@ -17,6 +17,7 @@ and deterministic verification.
 | [RepoAirlock](https://github.com/ZedingZhang/repoairlock) | Safety-oriented execution harness for coding agents: Docker isolation, policy enforcement, audit trails, patch replay, HTML reports | v0.1.1-alpha |
 | [CodePipe](https://github.com/ZedingZhang/codepipe) | Deterministic local-first coding agent with a fixed expert pipeline, BM25 + AST retrieval, fuzzy patching, and pytest verification | v0.1.0-alpha |
 | [RepoRAG](https://github.com/ZedingZhang/reporag) | Source-grounded repository RAG plus an approval-gated code maintenance workbench with LangGraph, MCP, and security guards | v0.1.0-alpha |
+| [Ya](https://github.com/ZedingZhang/ya-agent) | Consent-first personal research and decision CLI agent with local approved memory, task-relevant retrieval, and bounded Tree of Agents research | [v0.1.6](https://github.com/ZedingZhang/ya-agent/releases/tag/v0.1.6) |
 | [GEO Lens](https://github.com/ZedingZhang/geo-lens) | Production-style full-stack AI SaaS for GEO / AI-search visibility workflows | [Live Demo](https://geo-lens-peach.vercel.app) |
 
 ## Project Map
@@ -26,6 +27,7 @@ and deterministic verification.
 | Repository understanding | [RepoRAG](https://github.com/ZedingZhang/reporag) | Retrieve code context, answer with citations, expose MCP tools |
 | Deterministic code editing | [CodePipe](https://github.com/ZedingZhang/codepipe) | Local-first repair pipeline with BM25/AST localization and pytest verification |
 | Safe execution | [RepoAirlock](https://github.com/ZedingZhang/repoairlock) | Run coding agents in Docker with policy checks, audit logs, and replayable reports |
+| Personal research and decisions | [Ya](https://github.com/ZedingZhang/ya-agent) | Consent-first CLI research agent with approved local memory and bounded multi-agent mode |
 | Productization | [GEO Lens](https://github.com/ZedingZhang/geo-lens) | Full-stack AI SaaS demo for AI-search visibility workflows |
 | Vision / edge AI | [DMS-MultiTask](https://github.com/ZedingZhang/dms-multitask) | Lightweight driver-monitoring model, TensorRT-ready |
 
