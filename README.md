@@ -1,8 +1,6 @@
 # Zeding Zhang
 
-I build coding-agent infrastructure, repository intelligence systems,
-and deployable AI workflows with a bias toward reliability, auditability,
-and deterministic verification.
+I build reliable AI agents, tools, and workflows.
 
 ## Current Focus
 
