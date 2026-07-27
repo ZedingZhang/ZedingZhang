@@ -27,7 +27,6 @@ and deterministic verification.
 | Repository understanding | [RepoRAG](https://github.com/ZedingZhang/reporag) | Retrieve code context, answer with citations, expose MCP tools |
 | Safe execution | [RepoAirlock](https://github.com/ZedingZhang/repoairlock) | Run coding agents in Docker with policy checks, audit logs, and replayable reports |
 | Productization | [GEO Lens](https://github.com/ZedingZhang/geo-lens) | Full-stack AI SaaS demo for AI-search visibility workflows |
-| Vision / edge AI | [DMS-MultiTask](https://github.com/ZedingZhang/dms-multitask) | Lightweight driver-monitoring model, TensorRT-ready |
 
 ## Additional Work
 
