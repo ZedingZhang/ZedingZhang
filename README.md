@@ -6,9 +6,9 @@ and deterministic verification.
 
 ## Current Focus
 
-- Coding-agent safety: sandboxed execution, policy checks, audit trails, replayable artifacts
-- Repository intelligence: code-aware retrieval, citations, MCP tools, approval-gated maintenance
-- Local-first agent design: deterministic pipelines, BM25/AST retrieval, test-driven verification
+- Human-directed agent systems: consent-first research, bounded iterative improvement, and transparent decision workflows
+- Repository intelligence and safe code operations: code-aware retrieval, citations, approvals, sandboxed execution, and replayable artifacts
+- Deployable AI products and perception data loops: GEO workflows, production-ready applications, and VLM-assisted hard-example mining
 
 ## Featured Work
 
