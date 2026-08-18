@@ -4,9 +4,7 @@ I build reliable AI agents, tools, and workflows.
 
 ## Current Focus
 
-- Human-directed agent systems: consent-first research, bounded iterative improvement, and transparent decision workflows
-- Repository intelligence and safe code operations: code-aware retrieval, citations, approvals, sandboxed execution, and replayable artifacts
-- Deployable AI products and perception data loops: GEO workflows, production-ready applications, and VLM-assisted hard-example mining
+I focus on agent development, agent safety, and edge inference.
 
 ## Featured Work
 
