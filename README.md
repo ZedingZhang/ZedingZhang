@@ -1,9 +1,5 @@
 # Zeding Zhang
 
-I build reliable AI agents, tools, and workflows.
-
-## Current Focus
-
 I focus on agent development, agent safety, and edge inference.
 
 ## Featured Work
