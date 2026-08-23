@@ -16,3 +16,8 @@ I focus on agent development, agent safety, and edge inference.
 - [DMS-MultiTask](https://github.com/ZedingZhang/dms-multitask) — lightweight driver monitoring model with 1.14M parameters and TensorRT-ready deployment
 - [VLM Data Closedloop](https://github.com/ZedingZhang/vlm-data-closedloop) — VLM-assisted hard-example mining, annotation, and augmentation pipeline for cabin monitoring
 - [Huazhou Dictionary](https://github.com/ZedingZhang/huazhou-dictionary-miniprogram) — offline WeChat mini program for Huazhou dialect lookup with 4,310 entries
+
+## Recent Activity
+
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
