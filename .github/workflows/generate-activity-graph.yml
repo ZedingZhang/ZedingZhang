@@ -1,0 +1,62 @@
+name: Generate contribution activity graph
+
+on:
+  schedule:
+    # Offset from the Recent Activity workflow to avoid simultaneous pushes.
+    - cron: "47 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-contribution-activity-graph
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    name: Generate light and dark SVGs
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+
+      - name: Generate activity graph SVGs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_USERNAME: ZedingZhang
+        run: node .github/scripts/generate-activity-graph.mjs
+
+      - name: Commit generated SVGs when they change
+        shell: bash
+        run: |
+          if [[ -z "$(git status --porcelain -- assets/github-activity-light.svg assets/github-activity-dark.svg)" ]]; then
+            echo "Activity graph data has not changed."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-activity-light.svg assets/github-activity-dark.svg
+          git commit -m "chore: update contribution activity graph [skip ci]"
+
+          for attempt in 1 2 3; do
+            if git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME"; then
+              exit 0
+            fi
+
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 5))
+          done
+
+          echo "Unable to push generated activity graphs after three attempts." >&2
+          exit 1

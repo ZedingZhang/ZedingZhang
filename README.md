@@ -5,19 +5,19 @@ I focus on agent development, agent safety, and edge inference.
 ## Contribution Activity
 
 <p align="center">
-  <a href="https://github.com/Ashutosh00710/github-readme-activity-graph">
+  <a href="https://github.com/ZedingZhang/ZedingZhang/actions/workflows/generate-activity-graph.yml">
     <picture>
       <source
         media="(prefers-color-scheme: dark)"
-        srcset="https://zeding-github-activity-graph.vercel.app/graph?theme=dark"
+        srcset="https://raw.githubusercontent.com/ZedingZhang/ZedingZhang/main/assets/github-activity-dark.svg"
       />
       <source
         media="(prefers-color-scheme: light)"
-        srcset="https://zeding-github-activity-graph.vercel.app/graph?theme=light"
+        srcset="https://raw.githubusercontent.com/ZedingZhang/ZedingZhang/main/assets/github-activity-light.svg"
       />
       <img
         alt="Zeding Zhang's GitHub contribution activity graph"
-        src="https://zeding-github-activity-graph.vercel.app/graph?theme=light"
+        src="https://raw.githubusercontent.com/ZedingZhang/ZedingZhang/main/assets/github-activity-light.svg"
       />
     </picture>
   </a>
