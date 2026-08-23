@@ -1,4 +1,4 @@
-# Zeding Zhang
+# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Hi!+I'm+Zeding+Zhang.)](https://git.io/typing-svg)
 
 I focus on agent development, agent safety, and edge inference.
 
