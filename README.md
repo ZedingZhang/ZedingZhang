@@ -20,4 +20,9 @@ I focus on agent development, agent safety, and edge inference.
 ## Recent Activity
 
 <!--START_SECTION:activity-->
+1. 🎉 Merged PR [#569](https://github.com/Tencent/AI-Infra-Guard/pull/569) in [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard)
+2. 🎉 Merged PR [#1386](https://github.com/TencentCloud/CubeSandbox/pull/1386) in [TencentCloud/CubeSandbox](https://github.com/TencentCloud/CubeSandbox)
+3. 🗣 Commented on [#569](https://github.com/Tencent/AI-Infra-Guard/pull/569#issuecomment-5350479137) in [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard)
+4. 💪 Opened PR [#569](https://github.com/Tencent/AI-Infra-Guard/pull/569) in [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard)
+5. 💪 Opened PR [#1386](https://github.com/TencentCloud/CubeSandbox/pull/1386) in [TencentCloud/CubeSandbox](https://github.com/TencentCloud/CubeSandbox)
 <!--END_SECTION:activity-->
