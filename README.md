@@ -26,9 +26,9 @@ I focus on agent development, agent safety, and edge inference.
 ## Recent Activity
 
 <!--START_SECTION:activity-->
-1. ❗ Opened issue [#1338](https://github.com/alibaba/rtp-llm/issues/1338) in [alibaba/rtp-llm](https://github.com/alibaba/rtp-llm)
-2. 🗣 Commented on [#2475](https://github.com/microsoft/onnxruntime-genai/pull/2475#issuecomment-5433675386) in [microsoft/onnxruntime-genai](https://github.com/microsoft/onnxruntime-genai)
-3. 💪 Opened PR [#2475](https://github.com/microsoft/onnxruntime-genai/pull/2475) in [microsoft/onnxruntime-genai](https://github.com/microsoft/onnxruntime-genai)
-4. 🗣 Commented on [#1553](https://github.com/microsoft/onnxruntime-genai/issues/1553#issuecomment-5433352155) in [microsoft/onnxruntime-genai](https://github.com/microsoft/onnxruntime-genai)
-5. 💪 Opened PR [#4806](https://github.com/alibaba/MNN/pull/4806) in [alibaba/MNN](https://github.com/alibaba/MNN)
+1. 💪 Opened PR [#2840](https://github.com/apple/coremltools/pull/2840) in [apple/coremltools](https://github.com/apple/coremltools)
+2. 🗣 Commented on [#2837](https://github.com/apple/coremltools/issues/2837#issuecomment-5439137633) in [apple/coremltools](https://github.com/apple/coremltools)
+3. ❗ Opened issue [#1338](https://github.com/alibaba/rtp-llm/issues/1338) in [alibaba/rtp-llm](https://github.com/alibaba/rtp-llm)
+4. 🗣 Commented on [#2475](https://github.com/microsoft/onnxruntime-genai/pull/2475#issuecomment-5433675386) in [microsoft/onnxruntime-genai](https://github.com/microsoft/onnxruntime-genai)
+5. 💪 Opened PR [#2475](https://github.com/microsoft/onnxruntime-genai/pull/2475) in [microsoft/onnxruntime-genai](https://github.com/microsoft/onnxruntime-genai)
 <!--END_SECTION:activity-->
