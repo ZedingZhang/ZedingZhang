@@ -17,6 +17,16 @@ jobs:
       - name: Check out profile repository
         uses: actions/checkout@v4
 
+      - name: Clear previously generated activity
+        shell: bash
+        run: |
+          awk '
+            /<!--START_SECTION:activity-->/ { print; in_activity = 1; next }
+            /<!--END_SECTION:activity-->/ { in_activity = 0; print; next }
+            !in_activity { print }
+          ' README.md > README.tmp
+          mv README.tmp README.md
+
       - name: Update recent activity
         uses: jamesgeorge007/github-activity-readme@4aefbfa1c222d70537dc6a02f0519266aab2b1ea
         env:
