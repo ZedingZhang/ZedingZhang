@@ -36,4 +36,9 @@ I focus on agent development, agent safety, and edge inference.
 8. 🗣 Commented on [#1553](https://github.com/microsoft/onnxruntime-genai/issues/1553#issuecomment-5433352155) in [microsoft/onnxruntime-genai](https://github.com/microsoft/onnxruntime-genai)
 9. 💪 Opened PR [#4806](https://github.com/alibaba/MNN/pull/4806) in [alibaba/MNN](https://github.com/alibaba/MNN)
 10. 🗣 Commented on [#4804](https://github.com/alibaba/MNN/issues/4804#issuecomment-5404114642) in [alibaba/MNN](https://github.com/alibaba/MNN)
+11. 🎉 Merged PR [#569](https://github.com/Tencent/AI-Infra-Guard/pull/569) in [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard)
+12. 🎉 Merged PR [#1386](https://github.com/TencentCloud/CubeSandbox/pull/1386) in [TencentCloud/CubeSandbox](https://github.com/TencentCloud/CubeSandbox)
+13. 🗣 Commented on [#569](https://github.com/Tencent/AI-Infra-Guard/pull/569#issuecomment-5350479137) in [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard)
+14. 💪 Opened PR [#569](https://github.com/Tencent/AI-Infra-Guard/pull/569) in [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard)
+15. 💪 Opened PR [#1386](https://github.com/TencentCloud/CubeSandbox/pull/1386) in [TencentCloud/CubeSandbox](https://github.com/TencentCloud/CubeSandbox)
 <!--END_SECTION:activity-->
