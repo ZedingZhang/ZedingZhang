@@ -26,4 +26,12 @@ I focus on agent development, agent safety, and edge inference.
 ## Recent Activity
 
 <!--RECENT_ACTIVITY:start-->
+1. 💪 Opened PR [#5933](undefined) in [google/osv.dev](https://github.com/google/osv.dev)<br>
+2. 💪 Opened PR [#2840](undefined) in [apple/coremltools](https://github.com/apple/coremltools)<br>
+3. ❗️ Opened issue [#1338](https://github.com/alibaba/rtp-llm/issues/1338) in [alibaba/rtp-llm](https://github.com/alibaba/rtp-llm)<br>
+4. 💪 Opened PR [#2475](undefined) in [microsoft/onnxruntime-genai](https://github.com/microsoft/onnxruntime-genai)<br>
+5. 💪 Opened PR [#4806](undefined) in [alibaba/MNN](https://github.com/alibaba/MNN)<br>
+6. 💪 Opened PR [#569](undefined) in [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard)<br>
+7. 💪 Opened PR [#1386](undefined) in [TencentCloud/CubeSandbox](https://github.com/TencentCloud/CubeSandbox)<br>
+8. ❗️ Opened issue [#18](https://github.com/anywhere-labs/dsh-desktop/issues/18) in [anywhere-labs/dsh-desktop](https://github.com/anywhere-labs/dsh-desktop)<br>
 <!--RECENT_ACTIVITY:end-->
