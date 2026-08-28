@@ -24,4 +24,5 @@ jobs:
         with:
           GH_USERNAME: ZedingZhang
           MAX_LINES: 15
+          FILTER_EVENTS: IssuesEvent,PullRequestEvent,ReleaseEvent
           COMMIT_MSG: "chore: update recent GitHub activity"
