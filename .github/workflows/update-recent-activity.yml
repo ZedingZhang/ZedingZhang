@@ -17,22 +17,7 @@ jobs:
       - name: Check out profile repository
         uses: actions/checkout@v4
 
-      - name: Clear previously generated activity
-        shell: bash
-        run: |
-          awk '
-            /<!--START_SECTION:activity-->/ { print; in_activity = 1; next }
-            /<!--END_SECTION:activity-->/ { in_activity = 0; print; next }
-            !in_activity { print }
-          ' README.md > README.tmp
-          mv README.tmp README.md
-
       - name: Update recent activity
-        uses: jamesgeorge007/github-activity-readme@4aefbfa1c222d70537dc6a02f0519266aab2b1ea
+        uses: Readme-Workflows/recent-activity@aa0d01a1f4efdb8595986788eccbfdd430c73b8b
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          GH_USERNAME: ZedingZhang
-          MAX_LINES: 15
-          FILTER_EVENTS: IssuesEvent,PullRequestEvent,ReleaseEvent
-          COMMIT_MSG: "chore: update recent GitHub activity"

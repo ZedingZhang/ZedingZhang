@@ -1,0 +1,11 @@
+settings:
+  username: ZedingZhang
+  commit_msg: "chore: update recent GitHub activity"
+  max_lines: 15
+  readme_file: ./README.md
+  whitelisted_events:
+    - issues
+    - pr
+    - release
+  ignored_repos:
+    - ZedingZhang/github-workflow-lab
