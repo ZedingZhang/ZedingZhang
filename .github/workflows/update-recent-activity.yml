@@ -23,5 +23,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           GH_USERNAME: ZedingZhang
-          MAX_LINES: 10
+          MAX_LINES: 15
           COMMIT_MSG: "chore: update recent GitHub activity"
