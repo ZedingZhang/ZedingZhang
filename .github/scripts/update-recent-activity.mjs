@@ -2,7 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const username = process.env.GH_USERNAME;
 const token = process.env.GITHUB_TOKEN;
-const maxLines = Number.parseInt(process.env.MAX_LINES ?? "15", 10);
+const maxLines = Number.parseInt(process.env.MAX_LINES ?? "20", 10);
 const allowedEvents = new Set(splitList(process.env.FILTER_EVENTS));
 const excludedRepos = new Set(
   splitList(process.env.EXCLUDED_REPOS).map((repo) => repo.toLowerCase()),
