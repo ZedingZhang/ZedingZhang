@@ -21,7 +21,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: ZedingZhang
-          MAX_LINES: "15"
+          MAX_LINES: "20"
           FILTER_EVENTS: IssuesEvent,PullRequestEvent,ReleaseEvent
           EXCLUDED_REPOS: ZedingZhang/github-workflow-lab
         run: node .github/scripts/update-recent-activity.mjs
