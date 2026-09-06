@@ -45,5 +45,4 @@ I focus on agent development, agent safety, and edge inference.
 17. 💪 Opened PR [#569](https://github.com/Tencent/AI-Infra-Guard/pull/569) in [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard)
 18. 💪 Opened PR [#1386](https://github.com/TencentCloud/CubeSandbox/pull/1386) in [TencentCloud/CubeSandbox](https://github.com/TencentCloud/CubeSandbox)
 19. ❗ Opened issue [#18](https://github.com/anywhere-labs/dsh-desktop/issues/18) in [anywhere-labs/dsh-desktop](https://github.com/anywhere-labs/dsh-desktop)
-20. 🎉 Merged PR [#4555](https://github.com/alibaba/MNN/pull/4555) in [alibaba/MNN](https://github.com/alibaba/MNN)
 <!--RECENT_ACTIVITY:end-->
