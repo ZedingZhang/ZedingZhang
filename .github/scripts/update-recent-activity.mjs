@@ -14,11 +14,7 @@ if (!Number.isInteger(maxLines) || maxLines < 1 || maxLines > 100) {
 }
 
 const pullRequestQuery = `
-  query PullRequestHistory(
-    $login: String!
-    $after: String
-    $timelineLimit: Int!
-  ) {
+  query PullRequestHistory($login: String!, $after: String) {
     user(login: $login) {
       pullRequests(
         first: 100
@@ -29,26 +25,11 @@ const pullRequestQuery = `
           number
           url
           createdAt
-          closedAt
           mergedAt
           repository {
             nameWithOwner
             url
             isPrivate
-          }
-          timelineItems(
-            last: $timelineLimit
-            itemTypes: [CLOSED_EVENT, REOPENED_EVENT]
-          ) {
-            nodes {
-              __typename
-              ... on ClosedEvent {
-                createdAt
-              }
-              ... on ReopenedEvent {
-                createdAt
-              }
-            }
           }
         }
         pageInfo {
@@ -129,7 +110,6 @@ async function fetchPullRequestPage(after) {
       variables: {
         login: username,
         after,
-        timelineLimit: maxLines,
       },
     }),
   });
@@ -167,24 +147,6 @@ function toActivity(pullRequest) {
     { ...common, action: "opened", occurredAt: pullRequest.createdAt },
   ];
 
-  for (const event of pullRequest.timelineItems.nodes.filter(Boolean)) {
-    if (event.__typename === "ReopenedEvent") {
-      activity.push({ ...common, action: "reopened", occurredAt: event.createdAt });
-      continue;
-    }
-
-    if (event.__typename === "ClosedEvent") {
-      const isMergeClosure =
-        pullRequest.mergedAt &&
-        pullRequest.closedAt &&
-        Date.parse(event.createdAt) === Date.parse(pullRequest.closedAt);
-
-      if (!isMergeClosure) {
-        activity.push({ ...common, action: "closed", occurredAt: event.createdAt });
-      }
-    }
-  }
-
   if (pullRequest.mergedAt) {
     activity.push({
       ...common,
@@ -201,7 +163,7 @@ function compareActivity(left, right) {
     Date.parse(right.occurredAt) - Date.parse(left.occurredAt);
   if (timeDifference !== 0) return timeDifference;
 
-  const actionPriority = { merged: 4, reopened: 3, closed: 2, opened: 1 };
+  const actionPriority = { merged: 2, opened: 1 };
   const actionDifference =
     actionPriority[right.action] - actionPriority[left.action];
   if (actionDifference !== 0) return actionDifference;
@@ -214,9 +176,7 @@ function compareActivity(left, right) {
 function formatActivity(activity) {
   const labels = {
     opened: "💪 Opened PR",
-    closed: "❌ Closed PR",
     merged: "🎉 Merged PR",
-    reopened: "♻️ Reopened PR",
   };
   const pullLink = `[#${activity.number}](${activity.pullUrl})`;
   const repoLink = `[${escapeMarkdown(activity.repo)}](${activity.repoUrl})`;
