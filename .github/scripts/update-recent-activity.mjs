@@ -13,6 +13,8 @@ if (!Number.isInteger(maxLines) || maxLines < 1 || maxLines > 100) {
   throw new Error("MAX_LINES must be an integer from 1 to 100");
 }
 
+const normalizedUsername = username.toLowerCase();
+
 const pullRequestQuery = `
   query PullRequestHistory($login: String!, $after: String) {
     user(login: $login) {
@@ -30,6 +32,9 @@ const pullRequestQuery = `
             nameWithOwner
             url
             isPrivate
+            owner {
+              login
+            }
           }
         }
         pageInfo {
@@ -46,6 +51,7 @@ const activity = pullRequests
   .filter(
     (pullRequest) =>
       !pullRequest.repository.isPrivate &&
+      pullRequest.repository.owner.login.toLowerCase() !== normalizedUsername &&
       !excludedRepos.has(pullRequest.repository.nameWithOwner.toLowerCase()),
   )
   .flatMap(toActivity)
