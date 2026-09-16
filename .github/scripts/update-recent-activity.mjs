@@ -3,7 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 const username = process.env.GH_USERNAME;
 const token = process.env.GITHUB_TOKEN;
 const maxItemsPerColumn = Number.parseInt(
-  process.env.MAX_ITEMS_PER_COLUMN ?? "10",
+  process.env.MAX_ITEMS_PER_COLUMN ?? "20",
   10,
 );
 const excludedRepos = new Set(
