@@ -21,7 +21,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: ZedingZhang
-          MAX_LINES: "20"
+          MAX_ITEMS_PER_COLUMN: "10"
         run: node .github/scripts/update-recent-activity.mjs
 
       - name: Commit updated activity

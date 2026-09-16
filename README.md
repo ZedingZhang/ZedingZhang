@@ -26,24 +26,40 @@ I focus on agent development, agent safety, and edge inference.
 ## Recent Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. 🎉 Merged PR [#2643](https://github.com/microsoft/PyRIT/pull/2643) in [microsoft/PyRIT](https://github.com/microsoft/PyRIT)
-2. 🎉 Merged PR [#1848](https://github.com/uber/NullAway/pull/1848) in [uber/NullAway](https://github.com/uber/NullAway)
-3. 💪 Opened PR [#10424](https://github.com/google/filament/pull/10424) in [google/filament](https://github.com/google/filament)
-4. 💪 Opened PR [#1848](https://github.com/uber/NullAway/pull/1848) in [uber/NullAway](https://github.com/uber/NullAway)
-5. 💪 Opened PR [#10604](https://github.com/adobe/react-spectrum/pull/10604) in [adobe/react-spectrum](https://github.com/adobe/react-spectrum)
-6. 💪 Opened PR [#2643](https://github.com/microsoft/PyRIT/pull/2643) in [microsoft/PyRIT](https://github.com/microsoft/PyRIT)
-7. 🎉 Merged PR [#10536](https://github.com/adobe/react-spectrum/pull/10536) in [adobe/react-spectrum](https://github.com/adobe/react-spectrum)
-8. 🎉 Merged PR [#2840](https://github.com/apple/coremltools/pull/2840) in [apple/coremltools](https://github.com/apple/coremltools)
-9. 🎉 Merged PR [#1816](https://github.com/uber/NullAway/pull/1816) in [uber/NullAway](https://github.com/uber/NullAway)
-10. 💪 Opened PR [#1816](https://github.com/uber/NullAway/pull/1816) in [uber/NullAway](https://github.com/uber/NullAway)
-11. 🎉 Merged PR [#5933](https://github.com/google/osv.dev/pull/5933) in [google/osv.dev](https://github.com/google/osv.dev)
-12. 🎉 Merged PR [#4806](https://github.com/alibaba/MNN/pull/4806) in [alibaba/MNN](https://github.com/alibaba/MNN)
-13. 💪 Opened PR [#90](https://github.com/bytedance/volclava/pull/90) in [bytedance/volclava](https://github.com/bytedance/volclava)
-14. 💪 Opened PR [#9106](https://github.com/facebook/lexical/pull/9106) in [facebook/lexical](https://github.com/facebook/lexical)
-15. 💪 Opened PR [#10536](https://github.com/adobe/react-spectrum/pull/10536) in [adobe/react-spectrum](https://github.com/adobe/react-spectrum)
-16. 💪 Opened PR [#38698](https://github.com/aws/aws-cdk/pull/38698) in [aws/aws-cdk](https://github.com/aws/aws-cdk)
-17. 💪 Opened PR [#5933](https://github.com/google/osv.dev/pull/5933) in [google/osv.dev](https://github.com/google/osv.dev)
-18. 💪 Opened PR [#2840](https://github.com/apple/coremltools/pull/2840) in [apple/coremltools](https://github.com/apple/coremltools)
-19. 💪 Opened PR [#2475](https://github.com/microsoft/onnxruntime-genai/pull/2475) in [microsoft/onnxruntime-genai](https://github.com/microsoft/onnxruntime-genai)
-20. 💪 Opened PR [#4806](https://github.com/alibaba/MNN/pull/4806) in [alibaba/MNN](https://github.com/alibaba/MNN)
+<table width="100%">
+  <thead>
+    <tr>
+      <th width="50%">🎉 Merged PRs</th>
+      <th width="50%">💪 Open PRs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%" valign="top">
+        <ol>
+          <li><a href="https://github.com/microsoft/PyRIT/pull/2643">#2643</a> in <a href="https://github.com/microsoft/PyRIT">microsoft/PyRIT</a></li>
+          <li><a href="https://github.com/uber/NullAway/pull/1848">#1848</a> in <a href="https://github.com/uber/NullAway">uber/NullAway</a></li>
+          <li><a href="https://github.com/adobe/react-spectrum/pull/10536">#10536</a> in <a href="https://github.com/adobe/react-spectrum">adobe/react-spectrum</a></li>
+          <li><a href="https://github.com/apple/coremltools/pull/2840">#2840</a> in <a href="https://github.com/apple/coremltools">apple/coremltools</a></li>
+          <li><a href="https://github.com/uber/NullAway/pull/1816">#1816</a> in <a href="https://github.com/uber/NullAway">uber/NullAway</a></li>
+          <li><a href="https://github.com/google/osv.dev/pull/5933">#5933</a> in <a href="https://github.com/google/osv.dev">google/osv.dev</a></li>
+          <li><a href="https://github.com/alibaba/MNN/pull/4806">#4806</a> in <a href="https://github.com/alibaba/MNN">alibaba/MNN</a></li>
+          <li><a href="https://github.com/Tencent/AI-Infra-Guard/pull/569">#569</a> in <a href="https://github.com/Tencent/AI-Infra-Guard">Tencent/AI-Infra-Guard</a></li>
+          <li><a href="https://github.com/TencentCloud/CubeSandbox/pull/1386">#1386</a> in <a href="https://github.com/TencentCloud/CubeSandbox">TencentCloud/CubeSandbox</a></li>
+          <li><a href="https://github.com/alibaba/MNN/pull/4555">#4555</a> in <a href="https://github.com/alibaba/MNN">alibaba/MNN</a></li>
+        </ol>
+      </td>
+      <td width="50%" valign="top">
+        <ol>
+          <li><a href="https://github.com/google/filament/pull/10424">#10424</a> in <a href="https://github.com/google/filament">google/filament</a></li>
+          <li><a href="https://github.com/adobe/react-spectrum/pull/10604">#10604</a> in <a href="https://github.com/adobe/react-spectrum">adobe/react-spectrum</a></li>
+          <li><a href="https://github.com/bytedance/volclava/pull/90">#90</a> in <a href="https://github.com/bytedance/volclava">bytedance/volclava</a></li>
+          <li><a href="https://github.com/facebook/lexical/pull/9106">#9106</a> in <a href="https://github.com/facebook/lexical">facebook/lexical</a></li>
+          <li><a href="https://github.com/aws/aws-cdk/pull/38698">#38698</a> in <a href="https://github.com/aws/aws-cdk">aws/aws-cdk</a></li>
+          <li><a href="https://github.com/microsoft/onnxruntime-genai/pull/2475">#2475</a> in <a href="https://github.com/microsoft/onnxruntime-genai">microsoft/onnxruntime-genai</a></li>
+        </ol>
+      </td>
+    </tr>
+  </tbody>
+</table>
 <!--RECENT_ACTIVITY:end-->
