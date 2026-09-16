@@ -2,15 +2,22 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const username = process.env.GH_USERNAME;
 const token = process.env.GITHUB_TOKEN;
-const maxLines = Number.parseInt(process.env.MAX_LINES ?? "20", 10);
+const maxItemsPerColumn = Number.parseInt(
+  process.env.MAX_ITEMS_PER_COLUMN ?? "10",
+  10,
+);
 const excludedRepos = new Set(
   splitList(process.env.EXCLUDED_REPOS).map((repo) => repo.toLowerCase()),
 );
 
 if (!username) throw new Error("GH_USERNAME is required");
 if (!token) throw new Error("GITHUB_TOKEN is required");
-if (!Number.isInteger(maxLines) || maxLines < 1 || maxLines > 100) {
-  throw new Error("MAX_LINES must be an integer from 1 to 100");
+if (
+  !Number.isInteger(maxItemsPerColumn) ||
+  maxItemsPerColumn < 1 ||
+  maxItemsPerColumn > 50
+) {
+  throw new Error("MAX_ITEMS_PER_COLUMN must be an integer from 1 to 50");
 }
 
 const normalizedUsername = username.toLowerCase();
@@ -28,6 +35,7 @@ const pullRequestQuery = `
           url
           createdAt
           mergedAt
+          state
           repository {
             nameWithOwner
             url
@@ -47,17 +55,20 @@ const pullRequestQuery = `
 `;
 
 const pullRequests = await fetchPullRequests();
-const activity = pullRequests
-  .filter(
-    (pullRequest) =>
-      !pullRequest.repository.isPrivate &&
-      pullRequest.repository.owner.login.toLowerCase() !== normalizedUsername &&
-      !excludedRepos.has(pullRequest.repository.nameWithOwner.toLowerCase()),
-  )
-  .flatMap(toActivity)
-  .sort(compareActivity)
-  .slice(0, maxLines)
-  .map(formatActivity);
+const eligiblePullRequests = pullRequests.filter(
+  (pullRequest) =>
+    !pullRequest.repository.isPrivate &&
+    pullRequest.repository.owner.login.toLowerCase() !== normalizedUsername &&
+    !excludedRepos.has(pullRequest.repository.nameWithOwner.toLowerCase()),
+);
+const mergedPullRequests = eligiblePullRequests
+  .filter((pullRequest) => Boolean(pullRequest.mergedAt))
+  .sort((left, right) => comparePullRequests(left, right, "mergedAt"))
+  .slice(0, maxItemsPerColumn);
+const openPullRequests = eligiblePullRequests
+  .filter((pullRequest) => pullRequest.state === "OPEN")
+  .sort((left, right) => comparePullRequests(left, right, "createdAt"))
+  .slice(0, maxItemsPerColumn);
 
 const readmePath = "README.md";
 const readme = await readFile(readmePath, "utf8");
@@ -70,8 +81,7 @@ if (start === -1 || end === -1 || end < start) {
   throw new Error("Recent Activity markers are missing or out of order in README.md");
 }
 
-const lines = activity.map((entry, index) => `${index + 1}. ${entry}`);
-const generated = [startMarker, ...lines, endMarker].join("\n");
+const generated = renderActivityTable(mergedPullRequests, openPullRequests);
 const updated =
   readme.slice(0, start) + generated + readme.slice(end + endMarker.length);
 
@@ -142,54 +152,67 @@ async function fetchPullRequestPage(after) {
   return user.pullRequests;
 }
 
-function toActivity(pullRequest) {
-  const common = {
-    number: pullRequest.number,
-    pullUrl: pullRequest.url,
-    repo: pullRequest.repository.nameWithOwner,
-    repoUrl: pullRequest.repository.url,
-  };
-  const activity = [
-    { ...common, action: "opened", occurredAt: pullRequest.createdAt },
-  ];
-
-  if (pullRequest.mergedAt) {
-    activity.push({
-      ...common,
-      action: "merged",
-      occurredAt: pullRequest.mergedAt,
-    });
-  }
-
-  return activity;
-}
-
-function compareActivity(left, right) {
-  const timeDifference =
-    Date.parse(right.occurredAt) - Date.parse(left.occurredAt);
+function comparePullRequests(left, right, dateField) {
+  const timeDifference = Date.parse(right[dateField]) - Date.parse(left[dateField]);
   if (timeDifference !== 0) return timeDifference;
 
-  const actionPriority = { merged: 2, opened: 1 };
-  const actionDifference =
-    actionPriority[right.action] - actionPriority[left.action];
-  if (actionDifference !== 0) return actionDifference;
-
-  return `${left.repo}#${left.number}`.localeCompare(
-    `${right.repo}#${right.number}`,
+  return `${left.repository.nameWithOwner}#${left.number}`.localeCompare(
+    `${right.repository.nameWithOwner}#${right.number}`,
   );
 }
 
-function formatActivity(activity) {
-  const labels = {
-    opened: "💪 Opened PR",
-    merged: "🎉 Merged PR",
-  };
-  const pullLink = `[#${activity.number}](${activity.pullUrl})`;
-  const repoLink = `[${escapeMarkdown(activity.repo)}](${activity.repoUrl})`;
-
-  return `${labels[activity.action]} ${pullLink} in ${repoLink}`;
+function renderActivityTable(merged, open) {
+  return [
+    startMarker,
+    '<table width="100%">',
+    "  <thead>",
+    "    <tr>",
+    '      <th width="50%">🎉 Merged PRs</th>',
+    '      <th width="50%">💪 Open PRs</th>',
+    "    </tr>",
+    "  </thead>",
+    "  <tbody>",
+    "    <tr>",
+    '      <td width="50%" valign="top">',
+    ...renderPullRequestList(merged, "No merged PRs found."),
+    "      </td>",
+    '      <td width="50%" valign="top">',
+    ...renderPullRequestList(open, "No open PRs found."),
+    "      </td>",
+    "    </tr>",
+    "  </tbody>",
+    "</table>",
+    endMarker,
+  ].join("\n");
 }
 
-function escapeMarkdown(value) {
-  return String(value).replace(/[\\[\]]/g, "\\$&");
+function renderPullRequestList(pullRequests, emptyMessage) {
+  if (pullRequests.length === 0) {
+    return [`        <p><em>${escapeHtml(emptyMessage)}</em></p>`];
+  }
+
+  return [
+    "        <ol>",
+    ...pullRequests.map(
+      (pullRequest) => `          <li>${formatPullRequest(pullRequest)}</li>`,
+    ),
+    "        </ol>",
+  ];
+}
+
+function formatPullRequest(pullRequest) {
+  const pullLink = `<a href="${escapeHtml(pullRequest.url)}">#${pullRequest.number}</a>`;
+  const repoLink = `<a href="${escapeHtml(pullRequest.repository.url)}">${escapeHtml(
+    pullRequest.repository.nameWithOwner,
+  )}</a>`;
+
+  return `${pullLink} in ${repoLink}`;
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
 }
