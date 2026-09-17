@@ -52,6 +52,7 @@ I focus on agent development, agent safety, and edge inference.
       </td>
       <td width="50%" valign="top">
         <ol>
+          <li><a href="https://github.com/apple/coremltools/pull/2862">#2862</a> in <a href="https://github.com/apple/coremltools">apple/coremltools</a></li>
           <li><a href="https://github.com/adobe/react-spectrum/pull/10604">#10604</a> in <a href="https://github.com/adobe/react-spectrum">adobe/react-spectrum</a></li>
           <li><a href="https://github.com/bytedance/volclava/pull/90">#90</a> in <a href="https://github.com/bytedance/volclava">bytedance/volclava</a></li>
           <li><a href="https://github.com/facebook/lexical/pull/9106">#9106</a> in <a href="https://github.com/facebook/lexical">facebook/lexical</a></li>
