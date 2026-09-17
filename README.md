@@ -37,6 +37,7 @@ I focus on agent development, agent safety, and edge inference.
     <tr>
       <td width="50%" valign="top">
         <ol>
+          <li><a href="https://github.com/google/filament/pull/10424">#10424</a> in <a href="https://github.com/google/filament">google/filament</a></li>
           <li><a href="https://github.com/microsoft/PyRIT/pull/2643">#2643</a> in <a href="https://github.com/microsoft/PyRIT">microsoft/PyRIT</a></li>
           <li><a href="https://github.com/uber/NullAway/pull/1848">#1848</a> in <a href="https://github.com/uber/NullAway">uber/NullAway</a></li>
           <li><a href="https://github.com/adobe/react-spectrum/pull/10536">#10536</a> in <a href="https://github.com/adobe/react-spectrum">adobe/react-spectrum</a></li>
@@ -51,7 +52,6 @@ I focus on agent development, agent safety, and edge inference.
       </td>
       <td width="50%" valign="top">
         <ol>
-          <li><a href="https://github.com/google/filament/pull/10424">#10424</a> in <a href="https://github.com/google/filament">google/filament</a></li>
           <li><a href="https://github.com/adobe/react-spectrum/pull/10604">#10604</a> in <a href="https://github.com/adobe/react-spectrum">adobe/react-spectrum</a></li>
           <li><a href="https://github.com/bytedance/volclava/pull/90">#90</a> in <a href="https://github.com/bytedance/volclava">bytedance/volclava</a></li>
           <li><a href="https://github.com/facebook/lexical/pull/9106">#9106</a> in <a href="https://github.com/facebook/lexical">facebook/lexical</a></li>
