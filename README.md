@@ -55,6 +55,7 @@ I focus on agent development, agent safety, and edge inference.
       </td>
       <td width="50%" valign="top">
         <ol>
+          <li><a href="https://github.com/microsoft/agent-framework/pull/8551">#8551</a> in <a href="https://github.com/microsoft/agent-framework">microsoft/agent-framework</a></li>
           <li><a href="https://github.com/alibaba/MNN/pull/4894">#4894</a> in <a href="https://github.com/alibaba/MNN">alibaba/MNN</a></li>
           <li><a href="https://github.com/alibaba/MNN/pull/4888">#4888</a> in <a href="https://github.com/alibaba/MNN">alibaba/MNN</a></li>
           <li><a href="https://github.com/apple/coremltools/pull/2862">#2862</a> in <a href="https://github.com/apple/coremltools">apple/coremltools</a></li>
