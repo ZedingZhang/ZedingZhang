@@ -59,6 +59,8 @@ I focus on agent development, agent safety, and edge inference.
       </td>
       <td width="50%" valign="top">
         <ol>
+          <li><a href="https://github.com/google/benchmark/pull/2310">#2310</a> in <a href="https://github.com/google/benchmark">google/benchmark</a></li>
+          <li><a href="https://github.com/facebook/lexical/pull/9268">#9268</a> in <a href="https://github.com/facebook/lexical">facebook/lexical</a></li>
           <li><a href="https://github.com/alibaba/fastjson2/pull/7873">#7873</a> in <a href="https://github.com/alibaba/fastjson2">alibaba/fastjson2</a></li>
           <li><a href="https://github.com/microsoft/agent-framework/pull/8569">#8569</a> in <a href="https://github.com/microsoft/agent-framework">microsoft/agent-framework</a></li>
           <li><a href="https://github.com/HKUDS/nanobot/pull/5826">#5826</a> in <a href="https://github.com/HKUDS/nanobot">HKUDS/nanobot</a></li>
