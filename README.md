@@ -59,6 +59,8 @@ I focus on agent development, agent safety, and edge inference.
       </td>
       <td width="50%" valign="top">
         <ol>
+          <li><a href="https://github.com/microsoft/PowerToys/pull/50961">#50961</a> in <a href="https://github.com/microsoft/PowerToys">microsoft/PowerToys</a></li>
+          <li><a href="https://github.com/bytedance/volclava/pull/119">#119</a> in <a href="https://github.com/bytedance/volclava">bytedance/volclava</a></li>
           <li><a href="https://github.com/google/osv.dev/pull/6102">#6102</a> in <a href="https://github.com/google/osv.dev">google/osv.dev</a></li>
           <li><a href="https://github.com/google/benchmark/pull/2310">#2310</a> in <a href="https://github.com/google/benchmark">google/benchmark</a></li>
           <li><a href="https://github.com/facebook/lexical/pull/9268">#9268</a> in <a href="https://github.com/facebook/lexical">facebook/lexical</a></li>
