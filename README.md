@@ -29,14 +29,15 @@ I focus on agent development, agent safety, and edge inference.
 <table width="100%">
   <thead>
     <tr>
-      <th width="50%">🎉 Merged PRs</th>
-      <th width="50%">💪 Open PRs</th>
+      <th width="500">🎉 Merged PRs</th>
+      <th width="500">💪 Open PRs</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td width="50%" valign="top">
+      <td width="500" valign="top">
         <ol>
+          <li><a href="https://github.com/alibaba/fastjson2/pull/7873">#7873</a> in <a href="https://github.com/alibaba/fastjson2">alibaba/fastjson2</a></li>
           <li><a href="https://github.com/uber/NullAway/pull/1929">#1929</a> in <a href="https://github.com/uber/NullAway">uber/NullAway</a></li>
           <li><a href="https://github.com/microsoft/onnxruntime-genai/pull/2475">#2475</a> in <a href="https://github.com/microsoft/onnxruntime-genai">microsoft/onnxruntime-genai</a></li>
           <li><a href="https://github.com/apple/coremltools/pull/2862">#2862</a> in <a href="https://github.com/apple/coremltools">apple/coremltools</a></li>
@@ -59,13 +60,13 @@ I focus on agent development, agent safety, and edge inference.
           <li><a href="https://github.com/alibaba/MNN/pull/4555">#4555</a> in <a href="https://github.com/alibaba/MNN">alibaba/MNN</a></li>
         </ol>
       </td>
-      <td width="50%" valign="top">
+      <td width="500" valign="top">
         <ol>
+          <li><a href="https://github.com/mastra-ai/mastra/pull/26245">#26245</a> in <a href="https://github.com/mastra-ai/mastra">mastra-ai/mastra</a></li>
           <li><a href="https://github.com/cloudflare/workers-sdk/pull/16090">#16090</a> in <a href="https://github.com/cloudflare/workers-sdk">cloudflare/workers-sdk</a></li>
           <li><a href="https://github.com/bytedance/volclava/pull/119">#119</a> in <a href="https://github.com/bytedance/volclava">bytedance/volclava</a></li>
           <li><a href="https://github.com/google/osv.dev/pull/6102">#6102</a> in <a href="https://github.com/google/osv.dev">google/osv.dev</a></li>
           <li><a href="https://github.com/facebook/lexical/pull/9268">#9268</a> in <a href="https://github.com/facebook/lexical">facebook/lexical</a></li>
-          <li><a href="https://github.com/alibaba/fastjson2/pull/7873">#7873</a> in <a href="https://github.com/alibaba/fastjson2">alibaba/fastjson2</a></li>
           <li><a href="https://github.com/HKUDS/nanobot/pull/5826">#5826</a> in <a href="https://github.com/HKUDS/nanobot">HKUDS/nanobot</a></li>
           <li><a href="https://github.com/adobe/react-spectrum/pull/10604">#10604</a> in <a href="https://github.com/adobe/react-spectrum">adobe/react-spectrum</a></li>
           <li><a href="https://github.com/bytedance/volclava/pull/90">#90</a> in <a href="https://github.com/bytedance/volclava">bytedance/volclava</a></li>

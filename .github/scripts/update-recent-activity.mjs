@@ -3,7 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 const username = process.env.GH_USERNAME;
 const token = process.env.GITHUB_TOKEN;
 const maxItemsPerColumn = Number.parseInt(
-  process.env.MAX_ITEMS_PER_COLUMN ?? "20",
+  process.env.MAX_ITEMS_PER_COLUMN ?? "30",
   10,
 );
 const excludedRepos = new Set(
@@ -162,21 +162,22 @@ function comparePullRequests(left, right, dateField) {
 }
 
 function renderActivityTable(merged, open) {
+  // Numeric widths keep both columns wide under GitHub's max-content table styling.
   return [
     startMarker,
     '<table width="100%">',
     "  <thead>",
     "    <tr>",
-    '      <th width="50%">🎉 Merged PRs</th>',
-    '      <th width="50%">💪 Open PRs</th>',
+    '      <th width="500">🎉 Merged PRs</th>',
+    '      <th width="500">💪 Open PRs</th>',
     "    </tr>",
     "  </thead>",
     "  <tbody>",
     "    <tr>",
-    '      <td width="50%" valign="top">',
+    '      <td width="500" valign="top">',
     ...renderPullRequestList(merged, "No merged PRs found."),
     "      </td>",
-    '      <td width="50%" valign="top">',
+    '      <td width="500" valign="top">',
     ...renderPullRequestList(open, "No open PRs found."),
     "      </td>",
     "    </tr>",
