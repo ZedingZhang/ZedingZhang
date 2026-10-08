@@ -37,6 +37,7 @@ I focus on agent development, agent safety, and edge inference.
     <tr>
       <td width="500" valign="top">
         <ol>
+          <li><a href="https://github.com/desplega-ai/agent-swarm/pull/1981">#1981</a> in <a href="https://github.com/desplega-ai/agent-swarm">desplega-ai/agent-swarm</a></li>
           <li><a href="https://github.com/reticlehq/reticle/pull/1466">#1466</a> in <a href="https://github.com/reticlehq/reticle">reticlehq/reticle</a></li>
           <li><a href="https://github.com/desplega-ai/agent-swarm/pull/1960">#1960</a> in <a href="https://github.com/desplega-ai/agent-swarm">desplega-ai/agent-swarm</a></li>
           <li><a href="https://github.com/alibaba/fastjson2/pull/7873">#7873</a> in <a href="https://github.com/alibaba/fastjson2">alibaba/fastjson2</a></li>
