@@ -37,6 +37,7 @@ I focus on agent development, agent safety, and edge inference.
     <tr>
       <td width="500" valign="top">
         <ol>
+          <li><a href="https://github.com/desplega-ai/agent-swarm/pull/2004">#2004</a> in <a href="https://github.com/desplega-ai/agent-swarm">desplega-ai/agent-swarm</a></li>
           <li><a href="https://github.com/reticlehq/reticle/pull/1488">#1488</a> in <a href="https://github.com/reticlehq/reticle">reticlehq/reticle</a></li>
           <li><a href="https://github.com/desplega-ai/agent-swarm/pull/1981">#1981</a> in <a href="https://github.com/desplega-ai/agent-swarm">desplega-ai/agent-swarm</a></li>
           <li><a href="https://github.com/reticlehq/reticle/pull/1466">#1466</a> in <a href="https://github.com/reticlehq/reticle">reticlehq/reticle</a></li>
@@ -66,7 +67,6 @@ I focus on agent development, agent safety, and edge inference.
       </td>
       <td width="500" valign="top">
         <ol>
-          <li><a href="https://github.com/desplega-ai/agent-swarm/pull/2004">#2004</a> in <a href="https://github.com/desplega-ai/agent-swarm">desplega-ai/agent-swarm</a></li>
           <li><a href="https://github.com/QwenLM/qwen-code/pull/13602">#13602</a> in <a href="https://github.com/QwenLM/qwen-code">QwenLM/qwen-code</a></li>
           <li><a href="https://github.com/mastra-ai/mastra/pull/26245">#26245</a> in <a href="https://github.com/mastra-ai/mastra">mastra-ai/mastra</a></li>
           <li><a href="https://github.com/cloudflare/workers-sdk/pull/16090">#16090</a> in <a href="https://github.com/cloudflare/workers-sdk">cloudflare/workers-sdk</a></li>
