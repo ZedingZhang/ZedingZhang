@@ -37,6 +37,7 @@ I focus on agent development, agent safety, and edge inference.
     <tr>
       <td width="500" valign="top">
         <ol>
+          <li><a href="https://github.com/HKUDS/nanobot/pull/6132">#6132</a> in <a href="https://github.com/HKUDS/nanobot">HKUDS/nanobot</a></li>
           <li><a href="https://github.com/desplega-ai/agent-swarm/pull/2004">#2004</a> in <a href="https://github.com/desplega-ai/agent-swarm">desplega-ai/agent-swarm</a></li>
           <li><a href="https://github.com/reticlehq/reticle/pull/1488">#1488</a> in <a href="https://github.com/reticlehq/reticle">reticlehq/reticle</a></li>
           <li><a href="https://github.com/desplega-ai/agent-swarm/pull/1981">#1981</a> in <a href="https://github.com/desplega-ai/agent-swarm">desplega-ai/agent-swarm</a></li>
