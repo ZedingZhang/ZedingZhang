@@ -70,6 +70,8 @@ I focus on agent development, agent safety, and edge inference.
       </td>
       <td width="500" valign="top">
         <ol>
+          <li><a href="https://github.com/desplega-ai/agent-swarm/pull/2090">#2090</a> in <a href="https://github.com/desplega-ai/agent-swarm">desplega-ai/agent-swarm</a></li>
+          <li><a href="https://github.com/microsoft/agent-framework/pull/9269">#9269</a> in <a href="https://github.com/microsoft/agent-framework">microsoft/agent-framework</a></li>
           <li><a href="https://github.com/kyegomez/swarms/pull/2522">#2522</a> in <a href="https://github.com/kyegomez/swarms">kyegomez/swarms</a></li>
           <li><a href="https://github.com/mastra-ai/mastra/pull/26245">#26245</a> in <a href="https://github.com/mastra-ai/mastra">mastra-ai/mastra</a></li>
           <li><a href="https://github.com/cloudflare/workers-sdk/pull/16090">#16090</a> in <a href="https://github.com/cloudflare/workers-sdk">cloudflare/workers-sdk</a></li>
