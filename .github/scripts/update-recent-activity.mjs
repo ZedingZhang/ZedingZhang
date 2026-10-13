@@ -174,7 +174,7 @@ function renderContributions() {
   return [
     startMarker,
     "",
-    `${mergedPullRequests.length} merged PRs across ${sortedProjects.length} upstream projects, ordered by merged PR count. The project name links to the repository, the PR number to the change.`,
+    `${mergedPullRequests.length} merged PRs across ${sortedProjects.length} upstream projects.`,
     "",
     "| Project | Merged | What the PRs cover | Highlight fixes |",
     "|---------|:------:|--------------------|-----------------|",

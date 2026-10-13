@@ -27,7 +27,7 @@ I focus on agent development, agent safety, and edge inference.
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-30 merged PRs across 17 upstream projects, ordered by merged PR count. The project name links to the repository, the PR number to the change.
+30 merged PRs across 17 upstream projects.
 
 | Project | Merged | What the PRs cover | Highlight fixes |
 |---------|:------:|--------------------|-----------------|
