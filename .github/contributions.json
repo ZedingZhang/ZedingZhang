@@ -1,0 +1,130 @@
+{
+  "desplega-ai/agent-swarm": {
+    "name": "Agent Swarm",
+    "summary": "Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution",
+    "highlights": [
+      { "number": 2090, "description": "Retry transient MCP setup failures before a Pi session loses its swarm tools." },
+      { "number": 1981, "description": "Validate ACP targets and commands before workers claim tasks they cannot start." },
+      { "number": 2037, "description": "Make the QuickJS worker pool configurable, with validated concurrency limits." }
+    ]
+  },
+  "alibaba/MNN": {
+    "name": "MNN",
+    "summary": "Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings",
+    "highlights": [
+      { "number": 4894, "description": "Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs." },
+      { "number": 4888, "description": "Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes." },
+      { "number": 4555, "description": "Correct embedding model filenames and tensor IO in QNN export." }
+    ]
+  },
+  "uber/NullAway": {
+    "name": "NullAway",
+    "summary": "Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing",
+    "highlights": [
+      { "number": 1929, "description": "Prevent initialization-check crashes in `@NullMarked` constructors inside unmarked classes." },
+      { "number": 1848, "description": "Treat Maven `@Parameter` fields as externally initialized, avoiding false diagnostics." }
+    ]
+  },
+  "HKUDS/nanobot": {
+    "name": "nanobot",
+    "summary": "Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support",
+    "highlights": [
+      { "number": 6132, "description": "Normalize DeepSeek minimal reasoning effort to low so thinking and tool-call history stay consistent." },
+      { "number": 5800, "description": "Add opt-in Discord replies for regular, attachment, and streaming responses." }
+    ]
+  },
+  "microsoft/agent-framework": {
+    "name": "Microsoft Agent Framework",
+    "summary": "Agent orchestration correctness: multimodal handoff preservation and explicit mode validation",
+    "highlights": [
+      { "number": 8551, "description": "Preserve user images, files, and vector-store references during agent handoffs." },
+      { "number": 8536, "description": "Reject explicitly empty mode lists instead of silently falling back to built-in modes." }
+    ]
+  },
+  "apple/coremltools": {
+    "name": "Core ML Tools",
+    "summary": "Model conversion correctness: scalar squeeze values and symbolic upsample output shapes",
+    "highlights": [
+      { "number": 2840, "description": "Preserve known upsample dimensions so symbolic 1D interpolation followed by Conv1d converts correctly." },
+      { "number": 2862, "description": "Normalize scalar squeeze results to the MIL input dtype." }
+    ]
+  },
+  "reticlehq/reticle": {
+    "name": "Reticle",
+    "summary": "Browser verification and setup: expected-failure signals and automatic plain HTML integration",
+    "highlights": [
+      { "number": 1488, "description": "Recognize explicit refusal signals when an expected failure is the correct application outcome." },
+      { "number": 1466, "description": "Automatically connect plain HTML projects with package.json while preserving CSP edits." }
+    ]
+  },
+  "QwenLM/qwen-code": {
+    "name": "Qwen Code",
+    "summary": "Managed-agent API error handling for missing tool publications",
+    "highlights": [
+      { "number": 13602, "description": "Return a consistent 404 for unknown tool publications instead of an internal server error." }
+    ]
+  },
+  "google/filament": {
+    "name": "Filament",
+    "summary": "Vulkan depth/stencil render-target capability detection",
+    "highlights": [
+      { "number": 10424, "description": "Query the depth/stencil attachment feature bit when checking Vulkan format support." }
+    ]
+  },
+  "adobe/react-spectrum": {
+    "name": "React Spectrum",
+    "summary": "Calendar year-picker correctness at constrained date-range boundaries",
+    "highlights": [
+      { "number": 10536, "description": "Include the final selectable year and clamp its focused date to the allowed range." }
+    ]
+  },
+  "TencentCloud/CubeSandbox": {
+    "name": "CubeSandbox",
+    "summary": "OpenAI Agents SDK integration documentation in English and Chinese",
+    "highlights": [
+      { "number": 1386, "description": "Document OpenAI Agents SDK integration and migration from E2B Cloud to CubeSandbox." }
+    ]
+  },
+  "Tencent/AI-Infra-Guard": {
+    "name": "AI-Infra-Guard",
+    "summary": "Vulnerability-rule consistency across case-sensitive and case-insensitive filesystems",
+    "highlights": [
+      { "number": 569, "description": "Remove duplicate rules with case-colliding paths and reject future collisions in validation." }
+    ]
+  },
+  "microsoft/PyRIT": {
+    "name": "PyRIT",
+    "summary": "Accessibility of selected configuration paths in the AI red-teaming interface",
+    "highlights": [
+      { "number": 2643, "description": "Improve selected configuration-path contrast in both light and dark themes." }
+    ]
+  },
+  "alibaba/fastjson2": {
+    "name": "fastjson2",
+    "summary": "Dynamic ClassLoader isolation when multiple fastjson2 copies coexist",
+    "highlights": [
+      { "number": 7873, "description": "Keep generated writers in the current fastjson2 type universe when the context ClassLoader loads another copy." }
+    ]
+  },
+  "google/osv.dev": {
+    "name": "OSV.dev",
+    "summary": "Vulnerability severity-source attribution on detail pages",
+    "highlights": [
+      { "number": 5933, "description": "Display severity sources so users can distinguish NVD, CNA, and self-attributed assessments." }
+    ]
+  },
+  "microsoft/onnxruntime-genai": {
+    "name": "ONNX Runtime GenAI",
+    "summary": "C# chat-client access to the cached generation state",
+    "highlights": [
+      { "number": 2475, "description": "Expose the cached Generator through IChatClient.GetService for between-request operations such as RewindTo." }
+    ]
+  },
+  "NVIDIA/cuopt": {
+    "name": "cuOpt",
+    "summary": "Quickstart documentation link maintenance",
+    "highlights": [
+      { "number": 1925, "description": "Replace broken NVIDIA Brev documentation links in the Python and server quickstarts." }
+    ]
+  }
+}

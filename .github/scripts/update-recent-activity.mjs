@@ -2,25 +2,16 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const username = process.env.GH_USERNAME;
 const token = process.env.GITHUB_TOKEN;
-const maxItemsPerColumn = Number.parseInt(
-  process.env.MAX_ITEMS_PER_COLUMN ?? "30",
-  10,
-);
 const excludedRepos = new Set(
   splitList(process.env.EXCLUDED_REPOS).map((repo) => repo.toLowerCase()),
 );
 
 if (!username) throw new Error("GH_USERNAME is required");
 if (!token) throw new Error("GITHUB_TOKEN is required");
-if (
-  !Number.isInteger(maxItemsPerColumn) ||
-  maxItemsPerColumn < 1 ||
-  maxItemsPerColumn > 50
-) {
-  throw new Error("MAX_ITEMS_PER_COLUMN must be an integer from 1 to 50");
-}
-
 const normalizedUsername = username.toLowerCase();
+const projectNotes = JSON.parse(
+  await readFile(new URL("../contributions.json", import.meta.url), "utf8"),
+);
 
 const pullRequestQuery = `
   query PullRequestHistory($login: String!, $after: String) {
@@ -32,13 +23,16 @@ const pullRequestQuery = `
       ) {
         nodes {
           number
+          title
           url
           createdAt
           mergedAt
           state
           repository {
+            name
             nameWithOwner
             url
+            stargazerCount
             isPrivate
             owner {
               login
@@ -63,25 +57,40 @@ const eligiblePullRequests = pullRequests.filter(
 );
 const mergedPullRequests = eligiblePullRequests
   .filter((pullRequest) => Boolean(pullRequest.mergedAt))
-  .sort((left, right) => comparePullRequests(left, right, "mergedAt"))
-  .slice(0, maxItemsPerColumn);
+  .sort((left, right) => comparePullRequests(left, right, "mergedAt"));
 const openPullRequests = eligiblePullRequests
   .filter((pullRequest) => pullRequest.state === "OPEN")
-  .sort((left, right) => comparePullRequests(left, right, "createdAt"))
-  .slice(0, maxItemsPerColumn);
+  .sort((left, right) => comparePullRequests(left, right, "createdAt"));
+
+const projects = new Map();
+for (const pullRequest of mergedPullRequests) {
+  const key = pullRequest.repository.nameWithOwner;
+  if (!projects.has(key)) {
+    projects.set(key, { repository: pullRequest.repository, pullRequests: [] });
+  }
+  projects.get(key).pullRequests.push(pullRequest);
+}
+const sortedProjects = [...projects.values()].sort(
+  (left, right) =>
+    right.pullRequests.length - left.pullRequests.length ||
+    right.repository.stargazerCount - left.repository.stargazerCount ||
+    left.repository.nameWithOwner.localeCompare(right.repository.nameWithOwner),
+);
 
 const readmePath = "README.md";
 const readme = await readFile(readmePath, "utf8");
-const startMarker = "<!--RECENT_ACTIVITY:start-->";
-const endMarker = "<!--RECENT_ACTIVITY:end-->";
+const startMarker = "<!--OPEN_SOURCE_CONTRIBUTIONS:start-->";
+const endMarker = "<!--OPEN_SOURCE_CONTRIBUTIONS:end-->";
 const start = readme.indexOf(startMarker);
 const end = readme.indexOf(endMarker);
 
 if (start === -1 || end === -1 || end < start) {
-  throw new Error("Recent Activity markers are missing or out of order in README.md");
+  throw new Error(
+    "Open Source Contributions markers are missing or out of order in README.md",
+  );
 }
 
-const generated = renderActivityTable(mergedPullRequests, openPullRequests);
+const generated = renderContributions();
 const updated =
   readme.slice(0, start) + generated + readme.slice(end + endMarker.length);
 
@@ -118,7 +127,7 @@ async function fetchPullRequestPage(after) {
       Accept: "application/vnd.github+json",
       Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
-      "User-Agent": "profile-recent-activity-workflow",
+      "User-Agent": "profile-contributions-workflow",
       "X-GitHub-Api-Version": "2022-11-28",
     },
     body: JSON.stringify({
@@ -161,53 +170,77 @@ function comparePullRequests(left, right, dateField) {
   );
 }
 
-function renderActivityTable(merged, open) {
-  // Numeric widths keep both columns wide under GitHub's max-content table styling.
+function renderContributions() {
   return [
     startMarker,
-    '<table width="100%">',
-    "  <thead>",
-    "    <tr>",
-    '      <th width="500">🎉 Merged PRs</th>',
-    '      <th width="500">💪 Open PRs</th>',
-    "    </tr>",
-    "  </thead>",
-    "  <tbody>",
-    "    <tr>",
-    '      <td width="500" valign="top">',
-    ...renderPullRequestList(merged, "No merged PRs found."),
-    "      </td>",
-    '      <td width="500" valign="top">',
-    ...renderPullRequestList(open, "No open PRs found."),
-    "      </td>",
-    "    </tr>",
-    "  </tbody>",
-    "</table>",
+    "",
+    `${mergedPullRequests.length} merged PRs across ${sortedProjects.length} upstream projects, ordered by merged PR count. The project name links to the repository, the PR number to the change.`,
+    "",
+    "| Project | Merged | What the PRs cover | Highlight fixes |",
+    "|---------|:------:|--------------------|-----------------|",
+    ...sortedProjects.map(({ repository, pullRequests }) => {
+      const notes = projectNotes[repository.nameWithOwner];
+      const summary = notes?.summary ?? pullRequests
+        .slice(0, 3)
+        .map((pr) => pr.title)
+        .join("; ");
+      const highlights = notes?.highlights ?? pullRequests
+        .slice(0, 2)
+        .map((pr) => ({ number: pr.number }));
+      const fixes = highlights.flatMap((highlight) => {
+        const pr = pullRequests.find((item) => item.number === highlight.number);
+        return pr ? [formatPullRequest(pr, highlight.description)] : [];
+      }).join("<br>");
+      return `| ${formatProject(repository)} | **${pullRequests.length}** | ${escapeMarkdown(summary)} | ${fixes} |`;
+    }),
+    "",
+    ...sortedProjects.flatMap(({ repository, pullRequests }) => [
+      "<details>",
+      `<summary>All ${pullRequests.length} merged ${escapeHtml(projectName(repository))} ${pullRequests.length === 1 ? "PR" : "PRs"}</summary>`,
+      "",
+      "| PR | What changed |",
+      "|:--:|--------------|",
+      ...pullRequests.map((pr) => `| [#${pr.number}](${pr.url}) | ${escapeMarkdown(pr.title)} |`),
+      "",
+      "</details>",
+      "",
+    ]),
+    "<details>",
+    `<summary>Open PRs (${openPullRequests.length})</summary>`,
+    "",
+    "| Project | PR | What I'm working on |",
+    "|---------|:--:|---------------------|",
+    ...openPullRequests.map((pr) =>
+      `| [${escapeMarkdown(projectName(pr.repository))}](${pr.repository.url}) | [#${pr.number}](${pr.url}) | ${escapeMarkdown(pr.title)} |`,
+    ),
+    "",
+    "</details>",
+    "",
     endMarker,
   ].join("\n");
 }
 
-function renderPullRequestList(pullRequests, emptyMessage) {
-  if (pullRequests.length === 0) {
-    return [`        <p><em>${escapeHtml(emptyMessage)}</em></p>`];
-  }
-
-  return [
-    "        <ol>",
-    ...pullRequests.map(
-      (pullRequest) => `          <li>${formatPullRequest(pullRequest)}</li>`,
-    ),
-    "        </ol>",
-  ];
+function projectName(repository) {
+  return projectNotes[repository.nameWithOwner]?.name ?? repository.name;
 }
 
-function formatPullRequest(pullRequest) {
-  const pullLink = `<a href="${escapeHtml(pullRequest.url)}">#${pullRequest.number}</a>`;
-  const repoLink = `<a href="${escapeHtml(pullRequest.repository.url)}">${escapeHtml(
-    pullRequest.repository.nameWithOwner,
-  )}</a>`;
+function formatProject(repository) {
+  const stars = repository.stargazerCount >= 1000
+    ? `${(repository.stargazerCount / 1000).toFixed(1)}k`
+    : String(repository.stargazerCount);
+  return `[${escapeMarkdown(projectName(repository))}](${repository.url}) (${stars}★)`;
+}
 
-  return `${pullLink} in ${repoLink}`;
+function formatPullRequest(pullRequest, description = pullRequest.title) {
+  return `[#${pullRequest.number}](${pullRequest.url}) ${escapeMarkdown(description)}`;
+}
+
+function escapeMarkdown(value) {
+  return escapeHtml(value)
+    .replaceAll("\\", "\\\\")
+    .replace(/([\[\]*_])/g, "\\$1")
+    .replaceAll("|", "&#124;")
+    .replace(/[\r\n]+/g, " ");
 }
 
 function escapeHtml(value) {
