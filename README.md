@@ -219,7 +219,7 @@ I focus on agent development, agent safety, and edge inference.
 </details>
 
 <details>
-<summary>Open PRs (15)</summary>
+<summary>Open PRs (14)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
@@ -228,7 +228,6 @@ I focus on agent development, agent safety, and edge inference.
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#13954](https://github.com/QwenLM/qwen-code/pull/13954) | fix(ci): enforce Flyway migration ordering |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9269](https://github.com/microsoft/agent-framework/pull/9269) | .NET: Preserve caller cancellation in memory providers |
 | [swarms](https://github.com/kyegomez/swarms) | [#2522](https://github.com/kyegomez/swarms/pull/2522) | \[FIX\]\[MajorityVoting\]\[Respect verbose for panels\] |
-| [mastra](https://github.com/mastra-ai/mastra) | [#26245](https://github.com/mastra-ai/mastra/pull/26245) | fix(inngest): preserve model fallback across iterations |
 | [workers-sdk](https://github.com/cloudflare/workers-sdk) | [#16090](https://github.com/cloudflare/workers-sdk/pull/16090) | \[deploy-helpers\] Add result-only output for Preview deployments |
 | [volclava](https://github.com/bytedance/volclava) | [#119](https://github.com/bytedance/volclava/pull/119) | fix: preserve askedHosts for submit request cleanup |
 | [OSV.dev](https://github.com/google/osv.dev) | [#6102](https://github.com/google/osv.dev/pull/6102) | fix(website): collapse long affected range event lists |
