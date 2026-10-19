@@ -27,11 +27,11 @@ I focus on agent development, agent safety, and edge inference.
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-34 merged PRs across 17 upstream projects.
+35 merged PRs across 17 upstream projects.
 
 | Project | Merged | What the PRs cover | Highlight fixes |
 |---------|:------:|--------------------|-----------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (904★) | **8** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (904★) | **9** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
 | [MNN](https://github.com/alibaba/MNN) (16.2k★) | **4** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings | [#4894](https://github.com/alibaba/MNN/pull/4894) Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs.<br>[#4888](https://github.com/alibaba/MNN/pull/4888) Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes.<br>[#4555](https://github.com/alibaba/MNN/pull/4555) Correct embedding model filenames and tensor IO in QNN export. |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing | [#1929](https://github.com/uber/NullAway/pull/1929) Prevent initialization-check crashes in `@NullMarked` constructors inside unmarked classes.<br>[#1848](https://github.com/uber/NullAway/pull/1848) Treat Maven `@Parameter` fields as externally initialized, avoiding false diagnostics. |
 | [nanobot](https://github.com/HKUDS/nanobot) (49.2k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support | [#6132](https://github.com/HKUDS/nanobot/pull/6132) Normalize DeepSeek minimal reasoning effort to low so thinking and tool-call history stay consistent.<br>[#5800](https://github.com/HKUDS/nanobot/pull/5800) Add opt-in Discord replies for regular, attachment, and streaming responses. |
@@ -43,17 +43,18 @@ I focus on agent development, agent safety, and edge inference.
 | [React Spectrum](https://github.com/adobe/react-spectrum) (16.0k★) | **1** | Calendar year-picker correctness at constrained date-range boundaries | [#10536](https://github.com/adobe/react-spectrum/pull/10536) Include the final selectable year and clamp its focused date to the allowed range. |
 | [CubeSandbox](https://github.com/TencentCloud/CubeSandbox) (13.0k★) | **1** | OpenAI Agents SDK integration documentation in English and Chinese | [#1386](https://github.com/TencentCloud/CubeSandbox/pull/1386) Document OpenAI Agents SDK integration and migration from E2B Cloud to CubeSandbox. |
 | [AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) (6.9k★) | **1** | Vulnerability-rule consistency across case-sensitive and case-insensitive filesystems | [#569](https://github.com/Tencent/AI-Infra-Guard/pull/569) Remove duplicate rules with case-colliding paths and reject future collisions in validation. |
-| [PyRIT](https://github.com/microsoft/PyRIT) (4.6k★) | **1** | Accessibility of selected configuration paths in the AI red-teaming interface | [#2643](https://github.com/microsoft/PyRIT/pull/2643) Improve selected configuration-path contrast in both light and dark themes. |
+| [PyRIT](https://github.com/microsoft/PyRIT) (4.7k★) | **1** | Accessibility of selected configuration paths in the AI red-teaming interface | [#2643](https://github.com/microsoft/PyRIT/pull/2643) Improve selected configuration-path contrast in both light and dark themes. |
 | [fastjson2](https://github.com/alibaba/fastjson2) (4.4k★) | **1** | Dynamic ClassLoader isolation when multiple fastjson2 copies coexist | [#7873](https://github.com/alibaba/fastjson2/pull/7873) Keep generated writers in the current fastjson2 type universe when the context ClassLoader loads another copy. |
 | [OSV.dev](https://github.com/google/osv.dev) (3.0k★) | **1** | Vulnerability severity-source attribution on detail pages | [#5933](https://github.com/google/osv.dev/pull/5933) Display severity sources so users can distinguish NVD, CNA, and self-attributed assessments. |
 | [ONNX Runtime GenAI](https://github.com/microsoft/onnxruntime-genai) (1.1k★) | **1** | C# chat-client access to the cached generation state | [#2475](https://github.com/microsoft/onnxruntime-genai/pull/2475) Expose the cached Generator through IChatClient.GetService for between-request operations such as RewindTo. |
 | [cuOpt](https://github.com/NVIDIA/cuopt) (1.1k★) | **1** | Quickstart documentation link maintenance | [#1925](https://github.com/NVIDIA/cuopt/pull/1925) Replace broken NVIDIA Brev documentation links in the Python and server quickstarts. |
 
 <details>
-<summary>All 8 merged Agent Swarm PRs</summary>
+<summary>All 9 merged Agent Swarm PRs</summary>
 
 | PR | What changed |
 |:--:|--------------|
+| [#2257](https://github.com/desplega-ai/agent-swarm/pull/2257) | fix(workflows): recover waits resolved before a crash |
 | [#2220](https://github.com/desplega-ai/agent-swarm/pull/2220) | fix(fs): preserve file metadata on agent-fs uploads |
 | [#2166](https://github.com/desplega-ai/agent-swarm/pull/2166) | fix(scripts): respect API PORT in script SDK defaults |
 | [#2111](https://github.com/desplega-ai/agent-swarm/pull/2111) | feat(scripts): support zod/mini imports |
@@ -220,11 +221,10 @@ I focus on agent development, agent safety, and edge inference.
 </details>
 
 <details>
-<summary>Open PRs (15)</summary>
+<summary>Open PRs (14)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2257](https://github.com/desplega-ai/agent-swarm/pull/2257) | fix(workflows): recover waits resolved before a crash |
 | [nanobot](https://github.com/HKUDS/nanobot) | [#6194](https://github.com/HKUDS/nanobot/pull/6194) | fix(api): release idle session locks |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14026](https://github.com/QwenLM/qwen-code/pull/14026) | refactor(cli): share compression token count formatting |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#13954](https://github.com/QwenLM/qwen-code/pull/13954) | fix(ci): enforce Flyway migration ordering |
