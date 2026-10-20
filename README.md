@@ -222,10 +222,11 @@ I focus on agent development, agent safety, and edge inference.
 </details>
 
 <details>
-<summary>Open PRs (16)</summary>
+<summary>Open PRs (17)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
+| [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14844](https://github.com/QwenLM/qwen-code/pull/14844) | fix(cli): prefer the user's global npm on Windows |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14824](https://github.com/QwenLM/qwen-code/pull/14824) | fix(review): accept the Step 6 findings artifact as --new-findings |
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2281](https://github.com/desplega-ai/agent-swarm/pull/2281) | fix(github): parse boolean configuration flags consistently |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9543](https://github.com/microsoft/agent-framework/pull/9543) | Python: Handle missing reasoning text in DevUI |
