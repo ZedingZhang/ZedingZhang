@@ -31,7 +31,7 @@ I focus on agent development, agent safety, and edge inference.
 
 | Project | Merged | What the PRs cover | Highlight fixes |
 |---------|:------:|--------------------|-----------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (910★) | **10** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (911★) | **10** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
 | [MNN](https://github.com/alibaba/MNN) (16.3k★) | **4** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings | [#4894](https://github.com/alibaba/MNN/pull/4894) Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs.<br>[#4888](https://github.com/alibaba/MNN/pull/4888) Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes.<br>[#4555](https://github.com/alibaba/MNN/pull/4555) Correct embedding model filenames and tensor IO in QNN export. |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.2k★) | **3** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing | [#1929](https://github.com/uber/NullAway/pull/1929) Prevent initialization-check crashes in `@NullMarked` constructors inside unmarked classes.<br>[#1848](https://github.com/uber/NullAway/pull/1848) Treat Maven `@Parameter` fields as externally initialized, avoiding false diagnostics. |
@@ -223,10 +223,13 @@ I focus on agent development, agent safety, and edge inference.
 </details>
 
 <details>
-<summary>Open PRs (17)</summary>
+<summary>Open PRs (20)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2306](https://github.com/desplega-ai/agent-swarm/pull/2306) | perf(worker): cut boot API calls with a skills bundle and a boot render cache |
+| [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14985](https://github.com/QwenLM/qwen-code/pull/14985) | fix(daemon): give the ACP initialize handshake its own startup budget |
+| [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14982](https://github.com/QwenLM/qwen-code/pull/14982) | fix(core): make the always-on context warning accurate for CJK and actionable |
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2298](https://github.com/desplega-ai/agent-swarm/pull/2298) | fix(codex): keep session instructions out of AGENTS.md |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14844](https://github.com/QwenLM/qwen-code/pull/14844) | fix(cli): prefer the user's global npm on Windows |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14824](https://github.com/QwenLM/qwen-code/pull/14824) | fix(review): refuse the findings artifact by name and print the expected schema |
