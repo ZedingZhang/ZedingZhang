@@ -27,11 +27,11 @@ I focus on agent development, agent safety, and edge inference.
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-37 merged PRs across 17 upstream projects.
+38 merged PRs across 17 upstream projects.
 
 | Project | Merged | What the PRs cover | Highlight fixes |
 |---------|:------:|--------------------|-----------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (911★) | **10** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (912★) | **11** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
 | [MNN](https://github.com/alibaba/MNN) (16.3k★) | **4** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings | [#4894](https://github.com/alibaba/MNN/pull/4894) Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs.<br>[#4888](https://github.com/alibaba/MNN/pull/4888) Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes.<br>[#4555](https://github.com/alibaba/MNN/pull/4555) Correct embedding model filenames and tensor IO in QNN export. |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.2k★) | **3** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing | [#1929](https://github.com/uber/NullAway/pull/1929) Prevent initialization-check crashes in `@NullMarked` constructors inside unmarked classes.<br>[#1848](https://github.com/uber/NullAway/pull/1848) Treat Maven `@Parameter` fields as externally initialized, avoiding false diagnostics. |
@@ -50,10 +50,11 @@ I focus on agent development, agent safety, and edge inference.
 | [cuOpt](https://github.com/NVIDIA/cuopt) (1.1k★) | **1** | Quickstart documentation link maintenance | [#1925](https://github.com/NVIDIA/cuopt/pull/1925) Replace broken NVIDIA Brev documentation links in the Python and server quickstarts. |
 
 <details>
-<summary>All 10 merged Agent Swarm PRs</summary>
+<summary>All 11 merged Agent Swarm PRs</summary>
 
 | PR | What changed |
 |:--:|--------------|
+| [#2298](https://github.com/desplega-ai/agent-swarm/pull/2298) | fix(codex): keep session instructions out of AGENTS.md |
 | [#2281](https://github.com/desplega-ai/agent-swarm/pull/2281) | fix(github): parse boolean configuration flags consistently |
 | [#2257](https://github.com/desplega-ai/agent-swarm/pull/2257) | fix(workflows): recover waits resolved before a crash |
 | [#2220](https://github.com/desplega-ai/agent-swarm/pull/2220) | fix(fs): preserve file metadata on agent-fs uploads |
@@ -223,14 +224,14 @@ I focus on agent development, agent safety, and edge inference.
 </details>
 
 <details>
-<summary>Open PRs (20)</summary>
+<summary>Open PRs (19)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
+| [lexical](https://github.com/facebook/lexical) | [#9414](https://github.com/facebook/lexical/pull/9414) | \[lexical-markdown\] Bug Fix: Treat the backslash as ASCII punctuation in emphasis flanking |
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2306](https://github.com/desplega-ai/agent-swarm/pull/2306) | perf(worker): cut boot API calls with a skills bundle and a boot render cache |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14985](https://github.com/QwenLM/qwen-code/pull/14985) | fix(daemon): give the ACP initialize handshake its own startup budget |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14982](https://github.com/QwenLM/qwen-code/pull/14982) | fix(core): make the always-on context warning accurate for CJK and actionable |
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2298](https://github.com/desplega-ai/agent-swarm/pull/2298) | fix(codex): keep session instructions out of AGENTS.md |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14844](https://github.com/QwenLM/qwen-code/pull/14844) | fix(cli): prefer the user's global npm on Windows |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14824](https://github.com/QwenLM/qwen-code/pull/14824) | fix(review): refuse the findings artifact by name and print the expected schema |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9543](https://github.com/microsoft/agent-framework/pull/9543) | Python: Handle missing reasoning text in DevUI |
@@ -241,7 +242,6 @@ I focus on agent development, agent safety, and edge inference.
 | [workers-sdk](https://github.com/cloudflare/workers-sdk) | [#16090](https://github.com/cloudflare/workers-sdk/pull/16090) | \[deploy-helpers\] Add result-only output for Preview deployments |
 | [volclava](https://github.com/bytedance/volclava) | [#119](https://github.com/bytedance/volclava/pull/119) | fix: preserve askedHosts for submit request cleanup |
 | [OSV.dev](https://github.com/google/osv.dev) | [#6102](https://github.com/google/osv.dev/pull/6102) | fix(website): collapse long affected range event lists |
-| [lexical](https://github.com/facebook/lexical) | [#9268](https://github.com/facebook/lexical/pull/9268) | \[lexical-website\] Documentation Update: guard node references in later callbacks |
 | [nanobot](https://github.com/HKUDS/nanobot) | [#5826](https://github.com/HKUDS/nanobot/pull/5826) | perf(session): accelerate canonical history search with FTS5 |
 | [React Spectrum](https://github.com/adobe/react-spectrum) | [#10604](https://github.com/adobe/react-spectrum/pull/10604) | fix: support custom focus targets in DateRangePicker |
 | [volclava](https://github.com/bytedance/volclava) | [#90](https://github.com/bytedance/volclava/pull/90) | fix: select RPC and NIS build dependencies by platform |
