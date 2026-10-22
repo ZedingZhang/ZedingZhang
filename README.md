@@ -27,13 +27,13 @@ I focus on agent development, agent safety, and edge inference.
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-40 merged PRs across 18 upstream projects.
+41 merged PRs across 18 upstream projects.
 
 | Project | Merged | What the PRs cover | Highlight fixes |
 |---------|:------:|--------------------|-----------------|
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (926★) | **12** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
 | [MNN](https://github.com/alibaba/MNN) (16.3k★) | **4** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings | [#4894](https://github.com/alibaba/MNN/pull/4894) Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs.<br>[#4888](https://github.com/alibaba/MNN/pull/4888) Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes.<br>[#4555](https://github.com/alibaba/MNN/pull/4555) Correct embedding model filenames and tensor IO in QNN export. |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.3k★) | **3** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.3k★) | **4** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing | [#1929](https://github.com/uber/NullAway/pull/1929) Prevent initialization-check crashes in `@NullMarked` constructors inside unmarked classes.<br>[#1848](https://github.com/uber/NullAway/pull/1848) Treat Maven `@Parameter` fields as externally initialized, avoiding false diagnostics. |
 | [nanobot](https://github.com/HKUDS/nanobot) (49.3k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support | [#6132](https://github.com/HKUDS/nanobot/pull/6132) Normalize DeepSeek minimal reasoning effort to low so thinking and tool-call history stay consistent.<br>[#5800](https://github.com/HKUDS/nanobot/pull/5800) Add opt-in Discord replies for regular, attachment, and streaming responses. |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) (28.6k★) | **2** | Managed-agent API error handling for missing tool publications | [#13602](https://github.com/QwenLM/qwen-code/pull/13602) Return a consistent 404 for unknown tool publications instead of an internal server error. |
@@ -83,10 +83,11 @@ I focus on agent development, agent safety, and edge inference.
 </details>
 
 <details>
-<summary>All 3 merged Microsoft Agent Framework PRs</summary>
+<summary>All 4 merged Microsoft Agent Framework PRs</summary>
 
 | PR | What changed |
 |:--:|--------------|
+| [#9543](https://github.com/microsoft/agent-framework/pull/9543) | Python: Handle missing reasoning text in DevUI |
 | [#9269](https://github.com/microsoft/agent-framework/pull/9269) | .NET: Preserve caller cancellation in memory providers |
 | [#8551](https://github.com/microsoft/agent-framework/pull/8551) | Python: fix(orchestrations): preserve user multimodal content during handoff |
 | [#8536](https://github.com/microsoft/agent-framework/pull/8536) | Python: Reject empty available\_modes in mode helpers |
@@ -235,7 +236,7 @@ I focus on agent development, agent safety, and edge inference.
 </details>
 
 <details>
-<summary>Open PRs (19)</summary>
+<summary>Open PRs (18)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
@@ -245,7 +246,6 @@ I focus on agent development, agent safety, and edge inference.
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14982](https://github.com/QwenLM/qwen-code/pull/14982) | fix(core): make the always-on context warning accurate for CJK and actionable |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14844](https://github.com/QwenLM/qwen-code/pull/14844) | fix(cli): prefer the user's global npm on Windows |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14824](https://github.com/QwenLM/qwen-code/pull/14824) | fix(review): refuse the findings artifact by name and print the expected schema |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9543](https://github.com/microsoft/agent-framework/pull/9543) | Python: Handle missing reasoning text in DevUI |
 | [nanobot](https://github.com/HKUDS/nanobot) | [#6194](https://github.com/HKUDS/nanobot/pull/6194) | fix(api): release idle session locks |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14026](https://github.com/QwenLM/qwen-code/pull/14026) | refactor(cli): share compression token count formatting |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#13954](https://github.com/QwenLM/qwen-code/pull/13954) | fix(ci): enforce Flyway migration ordering |
