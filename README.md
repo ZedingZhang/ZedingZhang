@@ -236,10 +236,13 @@ I focus on agent development, agent safety, and edge inference.
 </details>
 
 <details>
-<summary>Open PRs (20)</summary>
+<summary>Open PRs (22)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9619](https://github.com/microsoft/agent-framework/pull/9619) | Python: Fix A2A dependency bounds test environment |
+| [celery](https://github.com/celery/celery) | [#10939](https://github.com/celery/celery/pull/10939) | Log connection retry traceback at debug level |
+| [celery](https://github.com/celery/celery) | [#10938](https://github.com/celery/celery/pull/10938) | Fix MultiParser to honor its configured Node class |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9616](https://github.com/microsoft/agent-framework/pull/9616) | Python: Preserve OpenAI Responses SSE error metadata |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#15311](https://github.com/QwenLM/qwen-code/pull/15311) | fix(web-shell): refresh standalone sessions after allocation |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#15178](https://github.com/QwenLM/qwen-code/pull/15178) | feat(agents): make default background execution configurable |
@@ -259,7 +262,6 @@ I focus on agent development, agent safety, and edge inference.
 | [React Spectrum](https://github.com/adobe/react-spectrum) | [#10604](https://github.com/adobe/react-spectrum/pull/10604) | fix: support custom focus targets in DateRangePicker |
 | [volclava](https://github.com/bytedance/volclava) | [#90](https://github.com/bytedance/volclava/pull/90) | fix: select RPC and NIS build dependencies by platform |
 | [lexical](https://github.com/facebook/lexical) | [#9106](https://github.com/facebook/lexical/pull/9106) | \[lexical\]\[lexical-clipboard\]\[lexical-code-core\]\[lexical-code-prism\]\[lexical-code-shiki\]\[lexical-eslint-plugin\]\[lexical-extension\]\[lexical-list\]\[lexical-playground\]\[lexical-react\]\[lexical-table\] Feature: flag accidental nested editor updates |
-| [aws-cdk](https://github.com/aws/aws-cdk) | [#38698](https://github.com/aws/aws-cdk/pull/38698) | docs(core): document special construct IDs |
 
 </details>
 
