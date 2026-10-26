@@ -27,14 +27,14 @@ I focus on agent development, agent safety, and edge inference.
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-47 merged PRs across 18 upstream projects.
+48 merged PRs across 18 upstream projects.
 
 | Project | Merged | What the PRs cover | Highlight fixes |
 |---------|:------:|--------------------|-----------------|
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (946★) | **14** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.3k★) | **6** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
+| [celery](https://github.com/celery/celery) (29.1k★) | **4** | Log connection retry traceback at debug level; Fix Manager warning output during retries; Fix MultiParser to honor its configured Node class | [#10939](https://github.com/celery/celery/pull/10939) Log connection retry traceback at debug level<br>[#10948](https://github.com/celery/celery/pull/10948) Fix Manager warning output during retries |
 | [MNN](https://github.com/alibaba/MNN) (16.3k★) | **4** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings | [#4894](https://github.com/alibaba/MNN/pull/4894) Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs.<br>[#4888](https://github.com/alibaba/MNN/pull/4888) Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes.<br>[#4555](https://github.com/alibaba/MNN/pull/4555) Correct embedding model filenames and tensor IO in QNN export. |
-| [celery](https://github.com/celery/celery) (29.1k★) | **3** | Fix Manager warning output during retries; Fix MultiParser to honor its configured Node class; test: assert exact task replacement nesting levels | [#10948](https://github.com/celery/celery/pull/10948) Fix Manager warning output during retries<br>[#10938](https://github.com/celery/celery/pull/10938) Fix MultiParser to honor its configured Node class |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing | [#1929](https://github.com/uber/NullAway/pull/1929) Prevent initialization-check crashes in `@NullMarked` constructors inside unmarked classes.<br>[#1848](https://github.com/uber/NullAway/pull/1848) Treat Maven `@Parameter` fields as externally initialized, avoiding false diagnostics. |
 | [nanobot](https://github.com/HKUDS/nanobot) (49.4k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support | [#6132](https://github.com/HKUDS/nanobot/pull/6132) Normalize DeepSeek minimal reasoning effort to low so thinking and tool-call history stay consistent.<br>[#5800](https://github.com/HKUDS/nanobot/pull/5800) Add opt-in Discord replies for regular, attachment, and streaming responses. |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) (28.7k★) | **2** | Managed-agent API error handling for missing tool publications | [#13602](https://github.com/QwenLM/qwen-code/pull/13602) Return a consistent 404 for unknown tool publications instead of an internal server error. |
@@ -87,6 +87,18 @@ I focus on agent development, agent safety, and edge inference.
 </details>
 
 <details>
+<summary>All 4 merged celery PRs</summary>
+
+| PR | What changed |
+|:--:|--------------|
+| [#10939](https://github.com/celery/celery/pull/10939) | Log connection retry traceback at debug level |
+| [#10948](https://github.com/celery/celery/pull/10948) | Fix Manager warning output during retries |
+| [#10938](https://github.com/celery/celery/pull/10938) | Fix MultiParser to honor its configured Node class |
+| [#10925](https://github.com/celery/celery/pull/10925) | test: assert exact task replacement nesting levels |
+
+</details>
+
+<details>
 <summary>All 4 merged MNN PRs</summary>
 
 | PR | What changed |
@@ -95,17 +107,6 @@ I focus on agent development, agent safety, and edge inference.
 | [#4888](https://github.com/alibaba/MNN/pull/4888) | \[LLM:Bugfix\] Route Omni attention masks by mode |
 | [#4806](https://github.com/alibaba/MNN/pull/4806) | \[LLM:Bugfix\] Pass calibration input IDs to AWQ position IDs |
 | [#4555](https://github.com/alibaba/MNN/pull/4555) | \[LLM:Bugfix\] Fix embedding QNN export paths |
-
-</details>
-
-<details>
-<summary>All 3 merged celery PRs</summary>
-
-| PR | What changed |
-|:--:|--------------|
-| [#10948](https://github.com/celery/celery/pull/10948) | Fix Manager warning output during retries |
-| [#10938](https://github.com/celery/celery/pull/10938) | Fix MultiParser to honor its configured Node class |
-| [#10925](https://github.com/celery/celery/pull/10925) | test: assert exact task replacement nesting levels |
 
 </details>
 
@@ -242,12 +243,11 @@ I focus on agent development, agent safety, and edge inference.
 </details>
 
 <details>
-<summary>Open PRs (20)</summary>
+<summary>Open PRs (19)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
 | [celery](https://github.com/celery/celery) | [#10945](https://github.com/celery/celery/pull/10945) | Keep the first SUCCESS in the Cassandra backend |
-| [celery](https://github.com/celery/celery) | [#10939](https://github.com/celery/celery/pull/10939) | Log connection retry traceback at debug level |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#15311](https://github.com/QwenLM/qwen-code/pull/15311) | fix(web-shell): refresh standalone sessions after allocation |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#15178](https://github.com/QwenLM/qwen-code/pull/15178) | feat(agents): make default background execution configurable |
 | [lexical](https://github.com/facebook/lexical) | [#9414](https://github.com/facebook/lexical/pull/9414) | \[lexical-markdown\] Bug Fix: Treat the backslash as ASCII punctuation in emphasis flanking |
