@@ -27,12 +27,12 @@ I focus on agent development, agent safety, and edge inference.
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-46 merged PRs across 18 upstream projects.
+47 merged PRs across 18 upstream projects.
 
 | Project | Merged | What the PRs cover | Highlight fixes |
 |---------|:------:|--------------------|-----------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (945★) | **14** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.3k★) | **5** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (946★) | **14** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.3k★) | **6** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
 | [MNN](https://github.com/alibaba/MNN) (16.3k★) | **4** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings | [#4894](https://github.com/alibaba/MNN/pull/4894) Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs.<br>[#4888](https://github.com/alibaba/MNN/pull/4888) Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes.<br>[#4555](https://github.com/alibaba/MNN/pull/4555) Correct embedding model filenames and tensor IO in QNN export. |
 | [celery](https://github.com/celery/celery) (29.1k★) | **3** | Fix Manager warning output during retries; Fix MultiParser to honor its configured Node class; test: assert exact task replacement nesting levels | [#10948](https://github.com/celery/celery/pull/10948) Fix Manager warning output during retries<br>[#10938](https://github.com/celery/celery/pull/10938) Fix MultiParser to honor its configured Node class |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing | [#1929](https://github.com/uber/NullAway/pull/1929) Prevent initialization-check crashes in `@NullMarked` constructors inside unmarked classes.<br>[#1848](https://github.com/uber/NullAway/pull/1848) Treat Maven `@Parameter` fields as externally initialized, avoiding false diagnostics. |
@@ -73,10 +73,11 @@ I focus on agent development, agent safety, and edge inference.
 </details>
 
 <details>
-<summary>All 5 merged Microsoft Agent Framework PRs</summary>
+<summary>All 6 merged Microsoft Agent Framework PRs</summary>
 
 | PR | What changed |
 |:--:|--------------|
+| [#9616](https://github.com/microsoft/agent-framework/pull/9616) | Python: Preserve OpenAI Responses SSE error metadata |
 | [#9619](https://github.com/microsoft/agent-framework/pull/9619) | Python: Fix A2A dependency bounds test environment |
 | [#9543](https://github.com/microsoft/agent-framework/pull/9543) | Python: Handle missing reasoning text in DevUI |
 | [#9269](https://github.com/microsoft/agent-framework/pull/9269) | .NET: Preserve caller cancellation in memory providers |
@@ -241,13 +242,12 @@ I focus on agent development, agent safety, and edge inference.
 </details>
 
 <details>
-<summary>Open PRs (21)</summary>
+<summary>Open PRs (20)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
 | [celery](https://github.com/celery/celery) | [#10945](https://github.com/celery/celery/pull/10945) | Keep the first SUCCESS in the Cassandra backend |
 | [celery](https://github.com/celery/celery) | [#10939](https://github.com/celery/celery/pull/10939) | Log connection retry traceback at debug level |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9616](https://github.com/microsoft/agent-framework/pull/9616) | Python: Preserve OpenAI Responses SSE error metadata |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#15311](https://github.com/QwenLM/qwen-code/pull/15311) | fix(web-shell): refresh standalone sessions after allocation |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#15178](https://github.com/QwenLM/qwen-code/pull/15178) | feat(agents): make default background execution configurable |
 | [lexical](https://github.com/facebook/lexical) | [#9414](https://github.com/facebook/lexical/pull/9414) | \[lexical-markdown\] Bug Fix: Treat the backslash as ASCII punctuation in emphasis flanking |
