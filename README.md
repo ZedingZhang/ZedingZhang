@@ -1,6 +1,6 @@
 # [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=3500&pause=1000&color=58A6FF&width=650&height=40&lines=Hi!+I'm+Zeding+Zhang.)](https://git.io/typing-svg)
 
-I focus on agent development, agent safety, and edge inference.
+I focus on agent development, agent safety, edge inference, and backend development.
 
 ## Contribution Activity
 
