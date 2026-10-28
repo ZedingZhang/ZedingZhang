@@ -27,13 +27,13 @@ I focus on agent development, agent safety, edge inference, and backend developm
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-50 merged PRs across 18 upstream projects.
+51 merged PRs across 18 upstream projects.
 
 | Project | Merged | What the PRs cover | Highlight fixes |
 |---------|:------:|--------------------|-----------------|
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (954★) | **16** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.3k★) | **6** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
-| [celery](https://github.com/celery/celery) (29.1k★) | **4** | Log connection retry traceback at debug level; Fix Manager warning output during retries; Fix MultiParser to honor its configured Node class | [#10939](https://github.com/celery/celery/pull/10939) Log connection retry traceback at debug level<br>[#10948](https://github.com/celery/celery/pull/10948) Fix Manager warning output during retries |
+| [celery](https://github.com/celery/celery) (29.1k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries | [#10945](https://github.com/celery/celery/pull/10945) Keep the first SUCCESS in the Cassandra backend<br>[#10939](https://github.com/celery/celery/pull/10939) Log connection retry traceback at debug level |
 | [MNN](https://github.com/alibaba/MNN) (16.3k★) | **4** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings | [#4894](https://github.com/alibaba/MNN/pull/4894) Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs.<br>[#4888](https://github.com/alibaba/MNN/pull/4888) Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes.<br>[#4555](https://github.com/alibaba/MNN/pull/4555) Correct embedding model filenames and tensor IO in QNN export. |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing | [#1929](https://github.com/uber/NullAway/pull/1929) Prevent initialization-check crashes in `@NullMarked` constructors inside unmarked classes.<br>[#1848](https://github.com/uber/NullAway/pull/1848) Treat Maven `@Parameter` fields as externally initialized, avoiding false diagnostics. |
 | [nanobot](https://github.com/HKUDS/nanobot) (49.5k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support | [#6132](https://github.com/HKUDS/nanobot/pull/6132) Normalize DeepSeek minimal reasoning effort to low so thinking and tool-call history stay consistent.<br>[#5800](https://github.com/HKUDS/nanobot/pull/5800) Add opt-in Discord replies for regular, attachment, and streaming responses. |
@@ -43,7 +43,7 @@ I focus on agent development, agent safety, edge inference, and backend developm
 | [Filament](https://github.com/google/filament) (20.7k★) | **1** | Vulkan depth/stencil render-target capability detection | [#10424](https://github.com/google/filament/pull/10424) Query the depth/stencil attachment feature bit when checking Vulkan format support. |
 | [React Spectrum](https://github.com/adobe/react-spectrum) (16.0k★) | **1** | Calendar year-picker correctness at constrained date-range boundaries | [#10536](https://github.com/adobe/react-spectrum/pull/10536) Include the final selectable year and clamp its focused date to the allowed range. |
 | [CubeSandbox](https://github.com/TencentCloud/CubeSandbox) (13.1k★) | **1** | OpenAI Agents SDK integration documentation in English and Chinese | [#1386](https://github.com/TencentCloud/CubeSandbox/pull/1386) Document OpenAI Agents SDK integration and migration from E2B Cloud to CubeSandbox. |
-| [AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) (7.1k★) | **1** | Vulnerability-rule consistency across case-sensitive and case-insensitive filesystems | [#569](https://github.com/Tencent/AI-Infra-Guard/pull/569) Remove duplicate rules with case-colliding paths and reject future collisions in validation. |
+| [AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) (7.2k★) | **1** | Vulnerability-rule consistency across case-sensitive and case-insensitive filesystems | [#569](https://github.com/Tencent/AI-Infra-Guard/pull/569) Remove duplicate rules with case-colliding paths and reject future collisions in validation. |
 | [PyRIT](https://github.com/microsoft/PyRIT) (4.7k★) | **1** | Accessibility of selected configuration paths in the AI red-teaming interface | [#2643](https://github.com/microsoft/PyRIT/pull/2643) Improve selected configuration-path contrast in both light and dark themes. |
 | [fastjson2](https://github.com/alibaba/fastjson2) (4.4k★) | **1** | Dynamic ClassLoader isolation when multiple fastjson2 copies coexist | [#7873](https://github.com/alibaba/fastjson2/pull/7873) Keep generated writers in the current fastjson2 type universe when the context ClassLoader loads another copy. |
 | [OSV.dev](https://github.com/google/osv.dev) (3.0k★) | **1** | Vulnerability severity-source attribution on detail pages | [#5933](https://github.com/google/osv.dev/pull/5933) Display severity sources so users can distinguish NVD, CNA, and self-attributed assessments. |
@@ -89,10 +89,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
-<summary>All 4 merged celery PRs</summary>
+<summary>All 5 merged celery PRs</summary>
 
 | PR | What changed |
 |:--:|--------------|
+| [#10945](https://github.com/celery/celery/pull/10945) | Keep the first SUCCESS in the Cassandra backend |
 | [#10939](https://github.com/celery/celery/pull/10939) | Log connection retry traceback at debug level |
 | [#10948](https://github.com/celery/celery/pull/10948) | Fix Manager warning output during retries |
 | [#10938](https://github.com/celery/celery/pull/10938) | Fix MultiParser to honor its configured Node class |
@@ -249,11 +250,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2537](https://github.com/desplega-ai/agent-swarm/pull/2537) | fix(runner): save the default lead profile on first boot |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9773](https://github.com/microsoft/agent-framework/pull/9773) | .NET: Preserve GitHub Copilot reasoning token usage |
 | [celery](https://github.com/celery/celery) | [#10976](https://github.com/celery/celery/pull/10976) | feat(cli): add --color to force colored output |
 | [celery](https://github.com/celery/celery) | [#10971](https://github.com/celery/celery/pull/10971) | fix(canvas): preserve arguments when cloning chains |
 | [MNN](https://github.com/alibaba/MNN) | [#5049](https://github.com/alibaba/MNN/pull/5049) | \[CPU:Bugfix\] Accumulate ARM82 average pooling in FP32 |
-| [celery](https://github.com/celery/celery) | [#10945](https://github.com/celery/celery/pull/10945) | Keep the first SUCCESS in the Cassandra backend |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#15311](https://github.com/QwenLM/qwen-code/pull/15311) | fix(web-shell): refresh standalone sessions after allocation |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#15178](https://github.com/QwenLM/qwen-code/pull/15178) | feat(agents): make default background execution configurable |
 | [lexical](https://github.com/facebook/lexical) | [#9414](https://github.com/facebook/lexical/pull/9414) | \[lexical-markdown\] Bug Fix: Treat the backslash as ASCII punctuation in emphasis flanking |
