@@ -27,16 +27,16 @@ I focus on agent development, agent safety, edge inference, and backend developm
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-59 merged PRs across 18 upstream projects.
+61 merged PRs across 18 upstream projects.
 
 | Project | Merged | What the PRs cover | Highlight fixes |
 |---------|:------:|--------------------|-----------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (982★) | **24** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.5k★) | **6** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (983★) | **25** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.5k★) | **7** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
 | [celery](https://github.com/celery/celery) (29.1k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries | [#10945](https://github.com/celery/celery/pull/10945) Keep the first SUCCESS in the Cassandra backend<br>[#10939](https://github.com/celery/celery/pull/10939) Log connection retry traceback at debug level |
 | [MNN](https://github.com/alibaba/MNN) (16.3k★) | **4** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings | [#4894](https://github.com/alibaba/MNN/pull/4894) Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs.<br>[#4888](https://github.com/alibaba/MNN/pull/4888) Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes.<br>[#4555](https://github.com/alibaba/MNN/pull/4555) Correct embedding model filenames and tensor IO in QNN export. |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing | [#1929](https://github.com/uber/NullAway/pull/1929) Prevent initialization-check crashes in `@NullMarked` constructors inside unmarked classes.<br>[#1848](https://github.com/uber/NullAway/pull/1848) Treat Maven `@Parameter` fields as externally initialized, avoiding false diagnostics. |
-| [nanobot](https://github.com/HKUDS/nanobot) (49.7k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support | [#6132](https://github.com/HKUDS/nanobot/pull/6132) Normalize DeepSeek minimal reasoning effort to low so thinking and tool-call history stay consistent.<br>[#5800](https://github.com/HKUDS/nanobot/pull/5800) Add opt-in Discord replies for regular, attachment, and streaming responses. |
+| [nanobot](https://github.com/HKUDS/nanobot) (49.8k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support | [#6132](https://github.com/HKUDS/nanobot/pull/6132) Normalize DeepSeek minimal reasoning effort to low so thinking and tool-call history stay consistent.<br>[#5800](https://github.com/HKUDS/nanobot/pull/5800) Add opt-in Discord replies for regular, attachment, and streaming responses. |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) (28.9k★) | **2** | Managed-agent API error handling for missing tool publications | [#13602](https://github.com/QwenLM/qwen-code/pull/13602) Return a consistent 404 for unknown tool publications instead of an internal server error. |
 | [Core ML Tools](https://github.com/apple/coremltools) (5.4k★) | **2** | Model conversion correctness: scalar squeeze values and symbolic upsample output shapes | [#2840](https://github.com/apple/coremltools/pull/2840) Preserve known upsample dimensions so symbolic 1D interpolation followed by Conv1d converts correctly.<br>[#2862](https://github.com/apple/coremltools/pull/2862) Normalize scalar squeeze results to the MIL input dtype. |
 | [Reticle](https://github.com/reticlehq/reticle) (1.3k★) | **2** | Browser verification and setup: expected-failure signals and automatic plain HTML integration | [#1488](https://github.com/reticlehq/reticle/pull/1488) Recognize explicit refusal signals when an expected failure is the correct application outcome.<br>[#1466](https://github.com/reticlehq/reticle/pull/1466) Automatically connect plain HTML projects with package.json while preserving CSP edits. |
@@ -51,10 +51,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 | [cuOpt](https://github.com/NVIDIA/cuopt) (1.1k★) | **1** | Quickstart documentation link maintenance | [#1925](https://github.com/NVIDIA/cuopt/pull/1925) Replace broken NVIDIA Brev documentation links in the Python and server quickstarts. |
 
 <details>
-<summary>All 24 merged Agent Swarm PRs</summary>
+<summary>All 25 merged Agent Swarm PRs</summary>
 
 | PR | What changed |
 |:--:|--------------|
+| [#2643](https://github.com/desplega-ai/agent-swarm/pull/2643) | docs: remove obsolete harness verification TTL setting |
 | [#2618](https://github.com/desplega-ai/agent-swarm/pull/2618) | fix: correct pi and Codex usage recording |
 | [#2581](https://github.com/desplega-ai/agent-swarm/pull/2581) | refactor(entrypoint): move API readiness polling to Bun |
 | [#2577](https://github.com/desplega-ai/agent-swarm/pull/2577) | feat(runtime-pools): add optional persistent caches |
@@ -83,10 +84,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
-<summary>All 6 merged Microsoft Agent Framework PRs</summary>
+<summary>All 7 merged Microsoft Agent Framework PRs</summary>
 
 | PR | What changed |
 |:--:|--------------|
+| [#9773](https://github.com/microsoft/agent-framework/pull/9773) | .NET: Preserve GitHub Copilot reasoning token usage |
 | [#9616](https://github.com/microsoft/agent-framework/pull/9616) | Python: Preserve OpenAI Responses SSE error metadata |
 | [#9619](https://github.com/microsoft/agent-framework/pull/9619) | Python: Fix A2A dependency bounds test environment |
 | [#9543](https://github.com/microsoft/agent-framework/pull/9543) | Python: Handle missing reasoning text in DevUI |
@@ -258,8 +260,8 @@ I focus on agent development, agent safety, edge inference, and backend developm
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2648](https://github.com/desplega-ai/agent-swarm/pull/2648) | fix(runner): remove obsolete YOLO mode |
 | [celery](https://github.com/celery/celery) | [#10986](https://github.com/celery/celery/pull/10986) | Avoid misleading root diagnostics when group entries are missing |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9773](https://github.com/microsoft/agent-framework/pull/9773) | .NET: Preserve GitHub Copilot reasoning token usage |
 | [celery](https://github.com/celery/celery) | [#10976](https://github.com/celery/celery/pull/10976) | feat(cli): add --color to force colored output |
 | [celery](https://github.com/celery/celery) | [#10971](https://github.com/celery/celery/pull/10971) | fix(canvas): preserve arguments when cloning chains |
 | [MNN](https://github.com/alibaba/MNN) | [#5049](https://github.com/alibaba/MNN/pull/5049) | \[CPU:Bugfix\] Accumulate ARM82 average pooling in FP32 |
