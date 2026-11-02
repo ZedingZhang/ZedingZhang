@@ -256,10 +256,19 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
-<summary>Open PRs (23)</summary>
+<summary>Open PRs (32)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9993](https://github.com/microsoft/agent-framework/pull/9993) | Python: Prefer injected Qdrant clients over connection settings |
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9991](https://github.com/microsoft/agent-framework/pull/9991) | Python: Honor injected Foundry embedding clients without endpoint settings |
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9987](https://github.com/microsoft/agent-framework/pull/9987) | Python: Prefer an injected Azure OpenAI deployment over environment model aliases |
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9985](https://github.com/microsoft/agent-framework/pull/9985) | Python: Prefer injected Oracle clients over connection settings |
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9984](https://github.com/microsoft/agent-framework/pull/9984) | Python: Skip Claude client settings when a client is injected |
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9983](https://github.com/microsoft/agent-framework/pull/9983) | Python: Prefer injected Postgres clients over connection settings |
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9982](https://github.com/microsoft/agent-framework/pull/9982) | Python: Prefer injected MongoDB clients over connection settings |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2650](https://github.com/desplega-ai/agent-swarm/pull/2650) | fix: redact swarm setup links and save credentials privately |
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9981](https://github.com/microsoft/agent-framework/pull/9981) | Python: Respect FOUNDRY\_MODEL in FoundryEvals |
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2648](https://github.com/desplega-ai/agent-swarm/pull/2648) | fix(runner): remove obsolete YOLO mode |
 | [celery](https://github.com/celery/celery) | [#10986](https://github.com/celery/celery/pull/10986) | Avoid misleading root diagnostics when group entries are missing |
 | [celery](https://github.com/celery/celery) | [#10976](https://github.com/celery/celery/pull/10976) | feat(cli): add --color to force colored output |
