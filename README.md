@@ -27,11 +27,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-65 merged PRs across 18 upstream projects.
+66 merged PRs across 18 upstream projects.
 
 | Project | Merged | What the PRs cover | Highlight fixes |
 |---------|:------:|--------------------|-----------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (992★) | **27** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (992★) | **28** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.5k★) | **9** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
 | [celery](https://github.com/celery/celery) (29.1k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries | [#10945](https://github.com/celery/celery/pull/10945) Keep the first SUCCESS in the Cassandra backend<br>[#10939](https://github.com/celery/celery/pull/10939) Log connection retry traceback at debug level |
 | [MNN](https://github.com/alibaba/MNN) (16.3k★) | **4** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings | [#4894](https://github.com/alibaba/MNN/pull/4894) Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs.<br>[#4888](https://github.com/alibaba/MNN/pull/4888) Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes.<br>[#4555](https://github.com/alibaba/MNN/pull/4555) Correct embedding model filenames and tensor IO in QNN export. |
@@ -42,7 +42,7 @@ I focus on agent development, agent safety, edge inference, and backend developm
 | [Reticle](https://github.com/reticlehq/reticle) (1.3k★) | **2** | Browser verification and setup: expected-failure signals and automatic plain HTML integration | [#1488](https://github.com/reticlehq/reticle/pull/1488) Recognize explicit refusal signals when an expected failure is the correct application outcome.<br>[#1466](https://github.com/reticlehq/reticle/pull/1466) Automatically connect plain HTML projects with package.json while preserving CSP edits. |
 | [Filament](https://github.com/google/filament) (20.7k★) | **1** | Vulkan depth/stencil render-target capability detection | [#10424](https://github.com/google/filament/pull/10424) Query the depth/stencil attachment feature bit when checking Vulkan format support. |
 | [React Spectrum](https://github.com/adobe/react-spectrum) (16.0k★) | **1** | Calendar year-picker correctness at constrained date-range boundaries | [#10536](https://github.com/adobe/react-spectrum/pull/10536) Include the final selectable year and clamp its focused date to the allowed range. |
-| [CubeSandbox](https://github.com/TencentCloud/CubeSandbox) (13.1k★) | **1** | OpenAI Agents SDK integration documentation in English and Chinese | [#1386](https://github.com/TencentCloud/CubeSandbox/pull/1386) Document OpenAI Agents SDK integration and migration from E2B Cloud to CubeSandbox. |
+| [CubeSandbox](https://github.com/TencentCloud/CubeSandbox) (13.2k★) | **1** | OpenAI Agents SDK integration documentation in English and Chinese | [#1386](https://github.com/TencentCloud/CubeSandbox/pull/1386) Document OpenAI Agents SDK integration and migration from E2B Cloud to CubeSandbox. |
 | [AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) (7.4k★) | **1** | Vulnerability-rule consistency across case-sensitive and case-insensitive filesystems | [#569](https://github.com/Tencent/AI-Infra-Guard/pull/569) Remove duplicate rules with case-colliding paths and reject future collisions in validation. |
 | [PyRIT](https://github.com/microsoft/PyRIT) (4.7k★) | **1** | Accessibility of selected configuration paths in the AI red-teaming interface | [#2643](https://github.com/microsoft/PyRIT/pull/2643) Improve selected configuration-path contrast in both light and dark themes. |
 | [fastjson2](https://github.com/alibaba/fastjson2) (4.4k★) | **1** | Dynamic ClassLoader isolation when multiple fastjson2 copies coexist | [#7873](https://github.com/alibaba/fastjson2/pull/7873) Keep generated writers in the current fastjson2 type universe when the context ClassLoader loads another copy. |
@@ -51,10 +51,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 | [cuOpt](https://github.com/NVIDIA/cuopt) (1.1k★) | **1** | Quickstart documentation link maintenance | [#1925](https://github.com/NVIDIA/cuopt/pull/1925) Replace broken NVIDIA Brev documentation links in the Python and server quickstarts. |
 
 <details>
-<summary>All 27 merged Agent Swarm PRs</summary>
+<summary>All 28 merged Agent Swarm PRs</summary>
 
 | PR | What changed |
 |:--:|--------------|
+| [#2694](https://github.com/desplega-ai/agent-swarm/pull/2694) | fix(scripts): add structuredClone to QuickJS |
 | [#2648](https://github.com/desplega-ai/agent-swarm/pull/2648) | fix(runner): remove obsolete YOLO mode |
 | [#2650](https://github.com/desplega-ai/agent-swarm/pull/2650) | fix: redact swarm setup links and save credentials privately |
 | [#2643](https://github.com/desplega-ai/agent-swarm/pull/2643) | docs: remove obsolete harness verification TTL setting |
@@ -260,12 +261,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
-<summary>Open PRs (31)</summary>
+<summary>Open PRs (30)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2695](https://github.com/desplega-ai/agent-swarm/pull/2695) | feat(claude): support SDK interrupt and redirect |
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2694](https://github.com/desplega-ai/agent-swarm/pull/2694) | fix(scripts): add structuredClone to QuickJS |
 | [OpenHands](https://github.com/OpenHands/OpenHands) | [#19295](https://github.com/OpenHands/OpenHands/pull/19295) | feat(onboarding): add an operator opt-in to skip first-run setup |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9991](https://github.com/microsoft/agent-framework/pull/9991) | Python: Honor injected Foundry embedding clients without endpoint settings |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9985](https://github.com/microsoft/agent-framework/pull/9985) | Python: Prefer injected Oracle clients over connection settings |
