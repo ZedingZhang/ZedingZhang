@@ -27,12 +27,12 @@ I focus on agent development, agent safety, edge inference, and backend developm
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-66 merged PRs across 18 upstream projects.
+71 merged PRs across 18 upstream projects.
 
 | Project | Merged | What the PRs cover | Highlight fixes |
 |---------|:------:|--------------------|-----------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (993★) | **28** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.5k★) | **9** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (995★) | **28** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.5k★) | **14** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
 | [celery](https://github.com/celery/celery) (29.1k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries | [#10945](https://github.com/celery/celery/pull/10945) Keep the first SUCCESS in the Cassandra backend<br>[#10939](https://github.com/celery/celery/pull/10939) Log connection retry traceback at debug level |
 | [MNN](https://github.com/alibaba/MNN) (16.3k★) | **4** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings | [#4894](https://github.com/alibaba/MNN/pull/4894) Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs.<br>[#4888](https://github.com/alibaba/MNN/pull/4888) Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes.<br>[#4555](https://github.com/alibaba/MNN/pull/4555) Correct embedding model filenames and tensor IO in QNN export. |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing | [#1929](https://github.com/uber/NullAway/pull/1929) Prevent initialization-check crashes in `@NullMarked` constructors inside unmarked classes.<br>[#1848](https://github.com/uber/NullAway/pull/1848) Treat Maven `@Parameter` fields as externally initialized, avoiding false diagnostics. |
@@ -87,10 +87,15 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
-<summary>All 9 merged Microsoft Agent Framework PRs</summary>
+<summary>All 14 merged Microsoft Agent Framework PRs</summary>
 
 | PR | What changed |
 |:--:|--------------|
+| [#9985](https://github.com/microsoft/agent-framework/pull/9985) | Python: Prefer injected Oracle clients over connection settings |
+| [#9984](https://github.com/microsoft/agent-framework/pull/9984) | Python: Skip Claude client settings when a client is injected |
+| [#9983](https://github.com/microsoft/agent-framework/pull/9983) | Python: Prefer injected Postgres clients over connection settings |
+| [#9982](https://github.com/microsoft/agent-framework/pull/9982) | Python: Prefer injected MongoDB clients over connection settings |
+| [#9981](https://github.com/microsoft/agent-framework/pull/9981) | Python: Respect FOUNDRY\_MODEL in FoundryEvals |
 | [#9993](https://github.com/microsoft/agent-framework/pull/9993) | Python: Prefer injected Qdrant clients over connection settings |
 | [#9987](https://github.com/microsoft/agent-framework/pull/9987) | Python: Prefer an injected Azure OpenAI deployment over environment model aliases |
 | [#9773](https://github.com/microsoft/agent-framework/pull/9773) | .NET: Preserve GitHub Copilot reasoning token usage |
@@ -261,18 +266,14 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
-<summary>Open PRs (30)</summary>
+<summary>Open PRs (26)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
+| [browser](https://github.com/lightpanda-io/browser) | [#4444](https://github.com/lightpanda-io/browser/pull/4444) | parser: preserve XML namespace declarations and CDATA sections |
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2695](https://github.com/desplega-ai/agent-swarm/pull/2695) | feat(claude): support SDK interrupt and redirect |
 | [OpenHands](https://github.com/OpenHands/OpenHands) | [#19295](https://github.com/OpenHands/OpenHands/pull/19295) | feat(onboarding): add an operator opt-in to skip first-run setup |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9991](https://github.com/microsoft/agent-framework/pull/9991) | Python: Honor injected Foundry embedding clients without endpoint settings |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9985](https://github.com/microsoft/agent-framework/pull/9985) | Python: Prefer injected Oracle clients over connection settings |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9984](https://github.com/microsoft/agent-framework/pull/9984) | Python: Skip Claude client settings when a client is injected |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9983](https://github.com/microsoft/agent-framework/pull/9983) | Python: Prefer injected Postgres clients over connection settings |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9982](https://github.com/microsoft/agent-framework/pull/9982) | Python: Prefer injected MongoDB clients over connection settings |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#9981](https://github.com/microsoft/agent-framework/pull/9981) | Python: Respect FOUNDRY\_MODEL in FoundryEvals |
 | [celery](https://github.com/celery/celery) | [#10986](https://github.com/celery/celery/pull/10986) | Avoid misleading root diagnostics when group entries are missing |
 | [celery](https://github.com/celery/celery) | [#10976](https://github.com/celery/celery/pull/10976) | feat(cli): add --color to force colored output |
 | [celery](https://github.com/celery/celery) | [#10971](https://github.com/celery/celery/pull/10971) | fix(canvas): preserve arguments when cloning chains |
