@@ -269,10 +269,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
-<summary>Open PRs (25)</summary>
+<summary>Open PRs (26)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2740](https://github.com/desplega-ai/agent-swarm/pull/2740) | perf(workflows): scope definition cleanup to deleted runs |
 | [hermes-agent](https://github.com/NousResearch/hermes-agent) | [#149018](https://github.com/NousResearch/hermes-agent/pull/149018) | fix(desktop): unpin chats on their owning connection |
 | [browser](https://github.com/lightpanda-io/browser) | [#4444](https://github.com/lightpanda-io/browser/pull/4444) | parser: preserve XML namespace declarations and CDATA sections |
 | [OpenHands](https://github.com/OpenHands/OpenHands) | [#19295](https://github.com/OpenHands/OpenHands/pull/19295) | feat(onboarding): add an operator opt-in to skip first-run setup |
