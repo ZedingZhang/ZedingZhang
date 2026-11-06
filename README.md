@@ -270,10 +270,13 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
-<summary>Open PRs (26)</summary>
+<summary>Open PRs (29)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2823](https://github.com/desplega-ai/agent-swarm/pull/2823) | refactor(entrypoint): move provider binary checks to Bun |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2819](https://github.com/desplega-ai/agent-swarm/pull/2819) | feat(workflows): add opt-in terminal run retention |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2817](https://github.com/desplega-ai/agent-swarm/pull/2817) | fix: validate Slack tree stall threshold |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#10114](https://github.com/microsoft/agent-framework/pull/10114) | Python: Defer experimental AgentFactory creation in WorkflowFactory |
 | [hermes-agent](https://github.com/NousResearch/hermes-agent) | [#149018](https://github.com/NousResearch/hermes-agent/pull/149018) | fix(desktop): unpin chats on their owning connection |
 | [browser](https://github.com/lightpanda-io/browser) | [#4444](https://github.com/lightpanda-io/browser/pull/4444) | parser: preserve XML namespace declarations and CDATA sections |
