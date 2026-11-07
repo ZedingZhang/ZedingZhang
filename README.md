@@ -27,11 +27,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-75 merged PRs across 18 upstream projects.
+77 merged PRs across 18 upstream projects.
 
 | Project | Merged | What the PRs cover | Highlight fixes |
 |---------|:------:|--------------------|-----------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (1.0k★) | **31** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (1.0k★) | **33** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.6k★) | **15** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
 | [celery](https://github.com/celery/celery) (29.1k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries | [#10945](https://github.com/celery/celery/pull/10945) Keep the first SUCCESS in the Cassandra backend<br>[#10939](https://github.com/celery/celery/pull/10939) Log connection retry traceback at debug level |
 | [MNN](https://github.com/alibaba/MNN) (16.4k★) | **4** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings | [#4894](https://github.com/alibaba/MNN/pull/4894) Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs.<br>[#4888](https://github.com/alibaba/MNN/pull/4888) Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes.<br>[#4555](https://github.com/alibaba/MNN/pull/4555) Correct embedding model filenames and tensor IO in QNN export. |
@@ -39,7 +39,7 @@ I focus on agent development, agent safety, edge inference, and backend developm
 | [nanobot](https://github.com/HKUDS/nanobot) (49.9k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support | [#6132](https://github.com/HKUDS/nanobot/pull/6132) Normalize DeepSeek minimal reasoning effort to low so thinking and tool-call history stay consistent.<br>[#5800](https://github.com/HKUDS/nanobot/pull/5800) Add opt-in Discord replies for regular, attachment, and streaming responses. |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) (29.1k★) | **2** | Managed-agent API error handling for missing tool publications | [#13602](https://github.com/QwenLM/qwen-code/pull/13602) Return a consistent 404 for unknown tool publications instead of an internal server error. |
 | [Core ML Tools](https://github.com/apple/coremltools) (5.4k★) | **2** | Model conversion correctness: scalar squeeze values and symbolic upsample output shapes | [#2840](https://github.com/apple/coremltools/pull/2840) Preserve known upsample dimensions so symbolic 1D interpolation followed by Conv1d converts correctly.<br>[#2862](https://github.com/apple/coremltools/pull/2862) Normalize scalar squeeze results to the MIL input dtype. |
-| [Reticle](https://github.com/reticlehq/reticle) (1.2k★) | **2** | Browser verification and setup: expected-failure signals and automatic plain HTML integration | [#1488](https://github.com/reticlehq/reticle/pull/1488) Recognize explicit refusal signals when an expected failure is the correct application outcome.<br>[#1466](https://github.com/reticlehq/reticle/pull/1466) Automatically connect plain HTML projects with package.json while preserving CSP edits. |
+| [Reticle](https://github.com/reticlehq/reticle) (1.3k★) | **2** | Browser verification and setup: expected-failure signals and automatic plain HTML integration | [#1488](https://github.com/reticlehq/reticle/pull/1488) Recognize explicit refusal signals when an expected failure is the correct application outcome.<br>[#1466](https://github.com/reticlehq/reticle/pull/1466) Automatically connect plain HTML projects with package.json while preserving CSP edits. |
 | [Filament](https://github.com/google/filament) (20.7k★) | **1** | Vulkan depth/stencil render-target capability detection | [#10424](https://github.com/google/filament/pull/10424) Query the depth/stencil attachment feature bit when checking Vulkan format support. |
 | [React Spectrum](https://github.com/adobe/react-spectrum) (16.0k★) | **1** | Calendar year-picker correctness at constrained date-range boundaries | [#10536](https://github.com/adobe/react-spectrum/pull/10536) Include the final selectable year and clamp its focused date to the allowed range. |
 | [CubeSandbox](https://github.com/TencentCloud/CubeSandbox) (13.2k★) | **1** | OpenAI Agents SDK integration documentation in English and Chinese | [#1386](https://github.com/TencentCloud/CubeSandbox/pull/1386) Document OpenAI Agents SDK integration and migration from E2B Cloud to CubeSandbox. |
@@ -51,10 +51,12 @@ I focus on agent development, agent safety, edge inference, and backend developm
 | [cuOpt](https://github.com/NVIDIA/cuopt) (1.1k★) | **1** | Quickstart documentation link maintenance | [#1925](https://github.com/NVIDIA/cuopt/pull/1925) Replace broken NVIDIA Brev documentation links in the Python and server quickstarts. |
 
 <details>
-<summary>All 31 merged Agent Swarm PRs</summary>
+<summary>All 33 merged Agent Swarm PRs</summary>
 
 | PR | What changed |
 |:--:|--------------|
+| [#2823](https://github.com/desplega-ai/agent-swarm/pull/2823) | refactor(entrypoint): move provider binary checks to Bun |
+| [#2817](https://github.com/desplega-ai/agent-swarm/pull/2817) | fix: validate Slack tree stall threshold |
 | [#2740](https://github.com/desplega-ai/agent-swarm/pull/2740) | perf(workflows): scope definition cleanup to deleted runs |
 | [#2730](https://github.com/desplega-ai/agent-swarm/pull/2730) | fix(workflows): validate deployment circuit-breaker limits |
 | [#2695](https://github.com/desplega-ai/agent-swarm/pull/2695) | feat(claude): support SDK interrupt and redirect |
@@ -270,13 +272,12 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
-<summary>Open PRs (29)</summary>
+<summary>Open PRs (28)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2823](https://github.com/desplega-ai/agent-swarm/pull/2823) | refactor(entrypoint): move provider binary checks to Bun |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2858](https://github.com/desplega-ai/agent-swarm/pull/2858) | fix(worker): validate provider dependencies at task start |
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2819](https://github.com/desplega-ai/agent-swarm/pull/2819) | feat(workflows): add opt-in terminal run retention |
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2817](https://github.com/desplega-ai/agent-swarm/pull/2817) | fix: validate Slack tree stall threshold |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#10114](https://github.com/microsoft/agent-framework/pull/10114) | Python: Defer experimental AgentFactory creation in WorkflowFactory |
 | [hermes-agent](https://github.com/NousResearch/hermes-agent) | [#149018](https://github.com/NousResearch/hermes-agent/pull/149018) | fix(desktop): unpin chats on their owning connection |
 | [browser](https://github.com/lightpanda-io/browser) | [#4444](https://github.com/lightpanda-io/browser/pull/4444) | parser: preserve XML namespace declarations and CDATA sections |
