@@ -27,17 +27,17 @@ I focus on agent development, agent safety, edge inference, and backend developm
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-77 merged PRs across 18 upstream projects.
+81 merged PRs across 18 upstream projects.
 
 | Project | Merged | What the PRs cover | Highlight fixes |
 |---------|:------:|--------------------|-----------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (1.0k★) | **33** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (1.0k★) | **34** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution | [#2090](https://github.com/desplega-ai/agent-swarm/pull/2090) Retry transient MCP setup failures before a Pi session loses its swarm tools.<br>[#1981](https://github.com/desplega-ai/agent-swarm/pull/1981) Validate ACP targets and commands before workers claim tasks they cannot start.<br>[#2037](https://github.com/desplega-ai/agent-swarm/pull/2037) Make the QuickJS worker pool configurable, with validated concurrency limits. |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.6k★) | **15** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
 | [celery](https://github.com/celery/celery) (29.1k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries | [#10945](https://github.com/celery/celery/pull/10945) Keep the first SUCCESS in the Cassandra backend<br>[#10939](https://github.com/celery/celery/pull/10939) Log connection retry traceback at debug level |
+| [Qwen Code](https://github.com/QwenLM/qwen-code) (29.1k★) | **5** | Managed-agent API error handling for missing tool publications | [#13602](https://github.com/QwenLM/qwen-code/pull/13602) Return a consistent 404 for unknown tool publications instead of an internal server error. |
 | [MNN](https://github.com/alibaba/MNN) (16.4k★) | **4** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings | [#4894](https://github.com/alibaba/MNN/pull/4894) Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs.<br>[#4888](https://github.com/alibaba/MNN/pull/4888) Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes.<br>[#4555](https://github.com/alibaba/MNN/pull/4555) Correct embedding model filenames and tensor IO in QNN export. |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing | [#1929](https://github.com/uber/NullAway/pull/1929) Prevent initialization-check crashes in `@NullMarked` constructors inside unmarked classes.<br>[#1848](https://github.com/uber/NullAway/pull/1848) Treat Maven `@Parameter` fields as externally initialized, avoiding false diagnostics. |
 | [nanobot](https://github.com/HKUDS/nanobot) (49.9k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support | [#6132](https://github.com/HKUDS/nanobot/pull/6132) Normalize DeepSeek minimal reasoning effort to low so thinking and tool-call history stay consistent.<br>[#5800](https://github.com/HKUDS/nanobot/pull/5800) Add opt-in Discord replies for regular, attachment, and streaming responses. |
-| [Qwen Code](https://github.com/QwenLM/qwen-code) (29.1k★) | **2** | Managed-agent API error handling for missing tool publications | [#13602](https://github.com/QwenLM/qwen-code/pull/13602) Return a consistent 404 for unknown tool publications instead of an internal server error. |
 | [Core ML Tools](https://github.com/apple/coremltools) (5.4k★) | **2** | Model conversion correctness: scalar squeeze values and symbolic upsample output shapes | [#2840](https://github.com/apple/coremltools/pull/2840) Preserve known upsample dimensions so symbolic 1D interpolation followed by Conv1d converts correctly.<br>[#2862](https://github.com/apple/coremltools/pull/2862) Normalize scalar squeeze results to the MIL input dtype. |
 | [Reticle](https://github.com/reticlehq/reticle) (1.3k★) | **2** | Browser verification and setup: expected-failure signals and automatic plain HTML integration | [#1488](https://github.com/reticlehq/reticle/pull/1488) Recognize explicit refusal signals when an expected failure is the correct application outcome.<br>[#1466](https://github.com/reticlehq/reticle/pull/1466) Automatically connect plain HTML projects with package.json while preserving CSP edits. |
 | [Filament](https://github.com/google/filament) (20.7k★) | **1** | Vulkan depth/stencil render-target capability detection | [#10424](https://github.com/google/filament/pull/10424) Query the depth/stencil attachment feature bit when checking Vulkan format support. |
@@ -51,10 +51,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 | [cuOpt](https://github.com/NVIDIA/cuopt) (1.1k★) | **1** | Quickstart documentation link maintenance | [#1925](https://github.com/NVIDIA/cuopt/pull/1925) Replace broken NVIDIA Brev documentation links in the Python and server quickstarts. |
 
 <details>
-<summary>All 33 merged Agent Swarm PRs</summary>
+<summary>All 34 merged Agent Swarm PRs</summary>
 
 | PR | What changed |
 |:--:|--------------|
+| [#2858](https://github.com/desplega-ai/agent-swarm/pull/2858) | fix(worker): validate provider dependencies at task start |
 | [#2823](https://github.com/desplega-ai/agent-swarm/pull/2823) | refactor(entrypoint): move provider binary checks to Bun |
 | [#2817](https://github.com/desplega-ai/agent-swarm/pull/2817) | fix: validate Slack tree stall threshold |
 | [#2740](https://github.com/desplega-ai/agent-swarm/pull/2740) | perf(workflows): scope definition cleanup to deleted runs |
@@ -128,6 +129,19 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
+<summary>All 5 merged Qwen Code PRs</summary>
+
+| PR | What changed |
+|:--:|--------------|
+| [#14824](https://github.com/QwenLM/qwen-code/pull/14824) | fix(review): refuse the findings artifact by name and print the expected schema |
+| [#15178](https://github.com/QwenLM/qwen-code/pull/15178) | feat(agents): make default background execution configurable |
+| [#15311](https://github.com/QwenLM/qwen-code/pull/15311) | fix(web-shell): refresh standalone sessions after allocation |
+| [#14636](https://github.com/QwenLM/qwen-code/pull/14636) | test(cli): retry ENOTEMPTY in hosted harness teardowns |
+| [#13602](https://github.com/QwenLM/qwen-code/pull/13602) | fix(managed-agent): return 404 for unknown tool publications |
+
+</details>
+
+<details>
 <summary>All 4 merged MNN PRs</summary>
 
 | PR | What changed |
@@ -157,16 +171,6 @@ I focus on agent development, agent safety, edge inference, and backend developm
 |:--:|--------------|
 | [#6132](https://github.com/HKUDS/nanobot/pull/6132) | fix(deepseek): map minimal reasoning effort to low |
 | [#5800](https://github.com/HKUDS/nanobot/pull/5800) | feat(discord): add replyToMessage parity with Telegram |
-
-</details>
-
-<details>
-<summary>All 2 merged Qwen Code PRs</summary>
-
-| PR | What changed |
-|:--:|--------------|
-| [#14636](https://github.com/QwenLM/qwen-code/pull/14636) | test(cli): retry ENOTEMPTY in hosted harness teardowns |
-| [#13602](https://github.com/QwenLM/qwen-code/pull/13602) | fix(managed-agent): return 404 for unknown tool publications |
 
 </details>
 
@@ -272,11 +276,10 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
-<summary>Open PRs (28)</summary>
+<summary>Open PRs (24)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2858](https://github.com/desplega-ai/agent-swarm/pull/2858) | fix(worker): validate provider dependencies at task start |
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2819](https://github.com/desplega-ai/agent-swarm/pull/2819) | feat(workflows): add opt-in terminal run retention |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#10114](https://github.com/microsoft/agent-framework/pull/10114) | Python: Defer experimental AgentFactory creation in WorkflowFactory |
 | [hermes-agent](https://github.com/NousResearch/hermes-agent) | [#149018](https://github.com/NousResearch/hermes-agent/pull/149018) | fix(desktop): unpin chats on their owning connection |
@@ -286,13 +289,10 @@ I focus on agent development, agent safety, edge inference, and backend developm
 | [celery](https://github.com/celery/celery) | [#10976](https://github.com/celery/celery/pull/10976) | feat(cli): add --color to force colored output |
 | [celery](https://github.com/celery/celery) | [#10971](https://github.com/celery/celery/pull/10971) | fix(canvas): preserve arguments when cloning chains |
 | [MNN](https://github.com/alibaba/MNN) | [#5049](https://github.com/alibaba/MNN/pull/5049) | \[CPU:Bugfix\] Accumulate ARM82 average pooling in FP32 |
-| [Qwen Code](https://github.com/QwenLM/qwen-code) | [#15311](https://github.com/QwenLM/qwen-code/pull/15311) | fix(web-shell): refresh standalone sessions after allocation |
-| [Qwen Code](https://github.com/QwenLM/qwen-code) | [#15178](https://github.com/QwenLM/qwen-code/pull/15178) | feat(agents): make default background execution configurable |
 | [lexical](https://github.com/meta/lexical) | [#9414](https://github.com/meta/lexical/pull/9414) | \[lexical-markdown\] Chore: Cover backslash emphasis imports and formatted text round trips |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14985](https://github.com/QwenLM/qwen-code/pull/14985) | fix(daemon): separate ACP startup budgets and bound restore waits |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14982](https://github.com/QwenLM/qwen-code/pull/14982) | fix(core): make the always-on context warning accurate for CJK and actionable |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14844](https://github.com/QwenLM/qwen-code/pull/14844) | fix(cli): prefer the user's global npm on Windows |
-| [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14824](https://github.com/QwenLM/qwen-code/pull/14824) | fix(review): refuse the findings artifact by name and print the expected schema |
 | [nanobot](https://github.com/HKUDS/nanobot) | [#6194](https://github.com/HKUDS/nanobot/pull/6194) | fix(api): release idle session locks |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14026](https://github.com/QwenLM/qwen-code/pull/14026) | refactor(cli): share compression token count formatting |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#13954](https://github.com/QwenLM/qwen-code/pull/13954) | fix(ci): enforce Flyway migration ordering |
