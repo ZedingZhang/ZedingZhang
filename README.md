@@ -27,7 +27,7 @@ I focus on agent development, agent safety, edge inference, and backend developm
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-81 merged PRs across 18 upstream projects.
+82 merged PRs across 18 upstream projects.
 
 | Project | Merged | What the PRs cover | Highlight fixes |
 |---------|:------:|--------------------|-----------------|
@@ -35,7 +35,7 @@ I focus on agent development, agent safety, edge inference, and backend developm
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.6k★) | **15** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation | [#8551](https://github.com/microsoft/agent-framework/pull/8551) Preserve user images, files, and vector-store references during agent handoffs.<br>[#8536](https://github.com/microsoft/agent-framework/pull/8536) Reject explicitly empty mode lists instead of silently falling back to built-in modes. |
 | [celery](https://github.com/celery/celery) (29.2k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries | [#10945](https://github.com/celery/celery/pull/10945) Keep the first SUCCESS in the Cassandra backend<br>[#10939](https://github.com/celery/celery/pull/10939) Log connection retry traceback at debug level |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) (29.1k★) | **5** | Managed-agent API error handling for missing tool publications | [#13602](https://github.com/QwenLM/qwen-code/pull/13602) Return a consistent 404 for unknown tool publications instead of an internal server error. |
-| [MNN](https://github.com/alibaba/MNN) (16.4k★) | **4** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings | [#4894](https://github.com/alibaba/MNN/pull/4894) Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs.<br>[#4888](https://github.com/alibaba/MNN/pull/4888) Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes.<br>[#4555](https://github.com/alibaba/MNN/pull/4555) Correct embedding model filenames and tensor IO in QNN export. |
+| [MNN](https://github.com/alibaba/MNN) (16.4k★) | **5** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings | [#4894](https://github.com/alibaba/MNN/pull/4894) Refresh stale PLE inputs between successive Omni text requests while preserving multimodal inputs.<br>[#4888](https://github.com/alibaba/MNN/pull/4888) Route Omni attention masks by generation or embedding mode to avoid rank-0 mask crashes.<br>[#4555](https://github.com/alibaba/MNN/pull/4555) Correct embedding model filenames and tensor IO in QNN export. |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing | [#1929](https://github.com/uber/NullAway/pull/1929) Prevent initialization-check crashes in `@NullMarked` constructors inside unmarked classes.<br>[#1848](https://github.com/uber/NullAway/pull/1848) Treat Maven `@Parameter` fields as externally initialized, avoiding false diagnostics. |
 | [nanobot](https://github.com/HKUDS/nanobot) (49.9k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support | [#6132](https://github.com/HKUDS/nanobot/pull/6132) Normalize DeepSeek minimal reasoning effort to low so thinking and tool-call history stay consistent.<br>[#5800](https://github.com/HKUDS/nanobot/pull/5800) Add opt-in Discord replies for regular, attachment, and streaming responses. |
 | [Core ML Tools](https://github.com/apple/coremltools) (5.5k★) | **2** | Model conversion correctness: scalar squeeze values and symbolic upsample output shapes | [#2840](https://github.com/apple/coremltools/pull/2840) Preserve known upsample dimensions so symbolic 1D interpolation followed by Conv1d converts correctly.<br>[#2862](https://github.com/apple/coremltools/pull/2862) Normalize scalar squeeze results to the MIL input dtype. |
@@ -142,10 +142,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
-<summary>All 4 merged MNN PRs</summary>
+<summary>All 5 merged MNN PRs</summary>
 
 | PR | What changed |
 |:--:|--------------|
+| [#5049](https://github.com/alibaba/MNN/pull/5049) | \[CPU:Bugfix\] Accumulate ARM82 average pooling in FP32 |
 | [#4894](https://github.com/alibaba/MNN/pull/4894) | \[LLM:Bugfix\] Refresh PLE for successive Omni text requests |
 | [#4888](https://github.com/alibaba/MNN/pull/4888) | \[LLM:Bugfix\] Route Omni attention masks by mode |
 | [#4806](https://github.com/alibaba/MNN/pull/4806) | \[LLM:Bugfix\] Pass calibration input IDs to AWQ position IDs |
@@ -276,7 +277,7 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
-<summary>Open PRs (24)</summary>
+<summary>Open PRs (23)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
@@ -288,7 +289,6 @@ I focus on agent development, agent safety, edge inference, and backend developm
 | [celery](https://github.com/celery/celery) | [#10986](https://github.com/celery/celery/pull/10986) | Avoid misleading root diagnostics when group entries are missing |
 | [celery](https://github.com/celery/celery) | [#10976](https://github.com/celery/celery/pull/10976) | feat(cli): add --color to force colored output |
 | [celery](https://github.com/celery/celery) | [#10971](https://github.com/celery/celery/pull/10971) | fix(canvas): preserve arguments when cloning chains |
-| [MNN](https://github.com/alibaba/MNN) | [#5049](https://github.com/alibaba/MNN/pull/5049) | \[CPU:Bugfix\] Accumulate ARM82 average pooling in FP32 |
 | [lexical](https://github.com/meta/lexical) | [#9414](https://github.com/meta/lexical/pull/9414) | \[lexical-markdown\] Chore: Cover backslash emphasis imports and formatted text round trips |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14985](https://github.com/QwenLM/qwen-code/pull/14985) | fix(daemon): separate ACP startup budgets and bound restore waits |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) | [#14982](https://github.com/QwenLM/qwen-code/pull/14982) | fix(core): make the always-on context warning accurate for CJK and actionable |
