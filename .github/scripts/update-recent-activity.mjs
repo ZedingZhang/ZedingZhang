@@ -176,22 +176,15 @@ function renderContributions() {
     "",
     `${mergedPullRequests.length} merged PRs across ${sortedProjects.length} upstream projects.`,
     "",
-    "| Project | Merged | What the PRs cover | Highlight fixes |",
-    "|---------|:------:|--------------------|-----------------|",
+    "| Project | Merged | What the PRs cover |",
+    "|---------|:------:|--------------------|",
     ...sortedProjects.map(({ repository, pullRequests }) => {
       const notes = projectNotes[repository.nameWithOwner];
       const summary = notes?.summary ?? pullRequests
         .slice(0, 3)
         .map((pr) => pr.title)
         .join("; ");
-      const highlights = notes?.highlights ?? pullRequests
-        .slice(0, 2)
-        .map((pr) => ({ number: pr.number }));
-      const fixes = highlights.flatMap((highlight) => {
-        const pr = pullRequests.find((item) => item.number === highlight.number);
-        return pr ? [formatPullRequest(pr, highlight.description)] : [];
-      }).join("<br>");
-      return `| ${formatProject(repository)} | **${pullRequests.length}** | ${escapeMarkdown(summary)} | ${fixes} |`;
+      return `| ${formatProject(repository)} | **${pullRequests.length}** | ${escapeMarkdown(summary)} |`;
     }),
     "",
     ...sortedProjects.flatMap(({ repository, pullRequests }) => [
@@ -229,10 +222,6 @@ function formatProject(repository) {
     ? `${(repository.stargazerCount / 1000).toFixed(1)}k`
     : String(repository.stargazerCount);
   return `[${escapeMarkdown(projectName(repository))}](${repository.url}) (${stars}★)`;
-}
-
-function formatPullRequest(pullRequest, description = pullRequest.title) {
-  return `[#${pullRequest.number}](${pullRequest.url}) ${escapeMarkdown(description)}`;
 }
 
 function escapeMarkdown(value) {
