@@ -27,12 +27,12 @@ I focus on agent development, agent safety, edge inference, and backend developm
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-85 merged PRs across 18 upstream projects.
+87 merged PRs across 18 upstream projects.
 
 | Project | Merged | What the PRs cover |
 |---------|:------:|--------------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (1.0k★) | **37** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.6k★) | **15** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (1.0k★) | **38** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution |
+| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.6k★) | **16** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation |
 | [celery](https://github.com/celery/celery) (29.2k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) (29.2k★) | **5** | Managed-agent API error handling for missing tool publications |
 | [MNN](https://github.com/alibaba/MNN) (16.5k★) | **5** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings |
@@ -51,10 +51,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 | [cuOpt](https://github.com/NVIDIA/cuopt) (1.1k★) | **1** | Quickstart documentation link maintenance |
 
 <details>
-<summary>All 37 merged Agent Swarm PRs</summary>
+<summary>All 38 merged Agent Swarm PRs</summary>
 
 | PR | What changed |
 |:--:|--------------|
+| [#2985](https://github.com/desplega-ai/agent-swarm/pull/2985) | fix: fall back from invalid context-preamble token budgets |
 | [#2928](https://github.com/desplega-ai/agent-swarm/pull/2928) | fix: preserve event wait subscriptions when a run resumes |
 | [#2920](https://github.com/desplega-ai/agent-swarm/pull/2920) | fix(acp): normalize ACP\_TARGET values |
 | [#2919](https://github.com/desplega-ai/agent-swarm/pull/2919) | fix: detect GitLab remotes by hostname |
@@ -96,10 +97,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
-<summary>All 15 merged Microsoft Agent Framework PRs</summary>
+<summary>All 16 merged Microsoft Agent Framework PRs</summary>
 
 | PR | What changed |
 |:--:|--------------|
+| [#10204](https://github.com/microsoft/agent-framework/pull/10204) | Python: close the owned stream in functional workflow agents |
 | [#9991](https://github.com/microsoft/agent-framework/pull/9991) | Python: Honor injected Foundry embedding clients without endpoint settings |
 | [#9985](https://github.com/microsoft/agent-framework/pull/9985) | Python: Prefer injected Oracle clients over connection settings |
 | [#9984](https://github.com/microsoft/agent-framework/pull/9984) | Python: Skip Claude client settings when a client is injected |
@@ -280,13 +282,15 @@ I focus on agent development, agent safety, edge inference, and backend developm
 </details>
 
 <details>
-<summary>Open PRs (27)</summary>
+<summary>Open PRs (29)</summary>
 
 | Project | PR | What I'm working on |
 |---------|:--:|---------------------|
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2984](https://github.com/desplega-ai/agent-swarm/pull/2984) | fix: reject malformed worker concurrency values |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2983](https://github.com/desplega-ai/agent-swarm/pull/2983) | fix(cli): reject malformed e2b stack wizard integers |
+| [hermes-agent](https://github.com/NousResearch/hermes-agent) | [#152514](https://github.com/NousResearch/hermes-agent/pull/152514) | fix(vault): pass selected page origin to code prompts |
 | [MNN](https://github.com/alibaba/MNN) | [#5120](https://github.com/alibaba/MNN/pull/5120) | \[Vulkan:Bugfix\] Record Attention commands after descriptor updates |
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2953](https://github.com/desplega-ai/agent-swarm/pull/2953) | feat(workflows): filter webhook deliveries by header and JSON field |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#10204](https://github.com/microsoft/agent-framework/pull/10204) | Python: close the owned stream in functional workflow agents |
 | [browser](https://github.com/lightpanda-io/browser) | [#4548](https://github.com/lightpanda-io/browser/pull/4548) | input: skip inert subtrees during mouse hit testing |
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) | [#2819](https://github.com/desplega-ai/agent-swarm/pull/2819) | feat(workflows): add opt-in terminal run retention |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) | [#10114](https://github.com/microsoft/agent-framework/pull/10114) | Python: Defer experimental AgentFactory creation in WorkflowFactory |
