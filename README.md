@@ -27,7 +27,7 @@ I focus on agent development, agent safety, edge inference, and backend developm
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-94 merged PRs across 18 upstream projects.
+95 merged PRs across 19 upstream projects.
 
 | Project | Merged | What the PRs cover |
 |---------|:------:|--------------------|
@@ -40,6 +40,7 @@ I focus on agent development, agent safety, edge inference, and backend developm
 | [nanobot](https://github.com/HKUDS/nanobot) (50.0k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support |
 | [Core ML Tools](https://github.com/apple/coremltools) (5.5k★) | **2** | Model conversion correctness: scalar squeeze values and symbolic upsample output shapes |
 | [Reticle](https://github.com/reticlehq/reticle) (1.3k★) | **2** | Browser verification and setup: expected-failure signals and automatic plain HTML integration |
+| [browser](https://github.com/lightpanda-io/browser) (41.9k★) | **1** | input: skip inert subtrees during mouse hit testing |
 | [Filament](https://github.com/google/filament) (20.7k★) | **1** | Vulkan depth/stencil render-target capability detection |
 | [React Spectrum](https://github.com/adobe/react-spectrum) (16.0k★) | **1** | Calendar year-picker correctness at constrained date-range boundaries |
 | [CubeSandbox](https://github.com/TencentCloud/CubeSandbox) (13.2k★) | **1** | OpenAI Agents SDK integration documentation in English and Chinese |
