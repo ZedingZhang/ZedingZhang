@@ -58,9 +58,6 @@ const eligiblePullRequests = pullRequests.filter(
 const mergedPullRequests = eligiblePullRequests
   .filter((pullRequest) => Boolean(pullRequest.mergedAt))
   .sort((left, right) => comparePullRequests(left, right, "mergedAt"));
-const openPullRequests = eligiblePullRequests
-  .filter((pullRequest) => pullRequest.state === "OPEN")
-  .sort((left, right) => comparePullRequests(left, right, "createdAt"));
 
 const projects = new Map();
 for (const pullRequest of mergedPullRequests) {
@@ -186,28 +183,6 @@ function renderContributions() {
         .join("; ");
       return `| ${formatProject(repository)} | **${pullRequests.length}** | ${escapeMarkdown(summary)} |`;
     }),
-    "",
-    ...sortedProjects.flatMap(({ repository, pullRequests }) => [
-      "<details>",
-      `<summary>All ${pullRequests.length} merged ${escapeHtml(projectName(repository))} ${pullRequests.length === 1 ? "PR" : "PRs"}</summary>`,
-      "",
-      "| PR | What changed |",
-      "|:--:|--------------|",
-      ...pullRequests.map((pr) => `| [#${pr.number}](${pr.url}) | ${escapeMarkdown(pr.title)} |`),
-      "",
-      "</details>",
-      "",
-    ]),
-    "<details>",
-    `<summary>Open PRs (${openPullRequests.length})</summary>`,
-    "",
-    "| Project | PR | What I'm working on |",
-    "|---------|:--:|---------------------|",
-    ...openPullRequests.map((pr) =>
-      `| [${escapeMarkdown(projectName(pr.repository))}](${pr.repository.url}) | [#${pr.number}](${pr.url}) | ${escapeMarkdown(pr.title)} |`,
-    ),
-    "",
-    "</details>",
     "",
     endMarker,
   ].join("\n");
