@@ -27,13 +27,13 @@ I focus on agent development, agent safety, edge inference, and backend developm
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-96 merged PRs across 19 upstream projects.
+97 merged PRs across 19 upstream projects.
 
 | Project | Merged | What the PRs cover |
 |---------|:------:|--------------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (1.0k★) | **45** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (1.0k★) | **46** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.6k★) | **17** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation |
-| [Qwen Code](https://github.com/QwenLM/qwen-code) (29.5k★) | **5** | Managed-agent API error handling for missing tool publications |
+| [Qwen Code](https://github.com/QwenLM/qwen-code) (29.6k★) | **5** | Managed-agent API error handling for missing tool publications |
 | [celery](https://github.com/celery/celery) (29.2k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries |
 | [MNN](https://github.com/alibaba/MNN) (16.5k★) | **5** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing |
