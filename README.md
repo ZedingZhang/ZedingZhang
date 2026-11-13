@@ -33,11 +33,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 |---------|:------:|--------------------|
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (1.0k★) | **48** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution |
 | [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.7k★) | **17** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation |
-| [Qwen Code](https://github.com/QwenLM/qwen-code) (29.7k★) | **5** | Managed-agent API error handling for missing tool publications |
+| [Qwen Code](https://github.com/QwenLM/qwen-code) (30.0k★) | **5** | Managed-agent API error handling for missing tool publications |
 | [celery](https://github.com/celery/celery) (29.2k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries |
 | [MNN](https://github.com/alibaba/MNN) (16.5k★) | **5** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing |
-| [nanobot](https://github.com/HKUDS/nanobot) (50.0k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support |
+| [nanobot](https://github.com/HKUDS/nanobot) (50.1k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support |
 | [Core ML Tools](https://github.com/apple/coremltools) (5.5k★) | **2** | Model conversion correctness: scalar squeeze values and symbolic upsample output shapes |
 | [Reticle](https://github.com/reticlehq/reticle) (1.3k★) | **2** | Browser verification and setup: expected-failure signals and automatic plain HTML integration |
 | [browser](https://github.com/lightpanda-io/browser) (42.0k★) | **1** | input: skip inert subtrees during mouse hit testing |
