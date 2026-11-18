@@ -27,11 +27,11 @@ Focus on agent development, agent safety, edge inference, and backend developmen
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-95 merged PRs across 18 upstream projects.
+99 merged PRs across 18 upstream projects.
 
 | Project | Merged | What the PRs cover |
 |---------|:------:|--------------------|
-| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (1.1k★) | **61** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution |
+| [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (1.1k★) | **65** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) (30.7k★) | **5** | Managed-agent API error handling for missing tool publications |
 | [celery](https://github.com/celery/celery) (29.2k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries |
 | [MNN](https://github.com/alibaba/MNN) (16.6k★) | **5** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings |
