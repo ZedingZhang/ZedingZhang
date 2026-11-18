@@ -27,12 +27,11 @@ I focus on agent development, agent safety, edge inference, and backend developm
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-113 merged PRs across 20 upstream projects.
+95 merged PRs across 18 upstream projects.
 
 | Project | Merged | What the PRs cover |
 |---------|:------:|--------------------|
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (1.1k★) | **61** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution |
-| [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) (14.7k★) | **17** | Agent orchestration correctness: multimodal handoff preservation and explicit mode validation |
 | [Qwen Code](https://github.com/QwenLM/qwen-code) (30.7k★) | **5** | Managed-agent API error handling for missing tool publications |
 | [celery](https://github.com/celery/celery) (29.2k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries |
 | [MNN](https://github.com/alibaba/MNN) (16.6k★) | **5** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings |
@@ -40,7 +39,7 @@ I focus on agent development, agent safety, edge inference, and backend developm
 | [nanobot](https://github.com/HKUDS/nanobot) (50.2k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support |
 | [Core ML Tools](https://github.com/apple/coremltools) (5.5k★) | **2** | Model conversion correctness: scalar squeeze values and symbolic upsample output shapes |
 | [Reticle](https://github.com/reticlehq/reticle) (1.3k★) | **2** | Browser verification and setup: expected-failure signals and automatic plain HTML integration |
-| [claude-mem](https://github.com/thedotmack/claude-mem) (118.0k★) | **1** | fix(cli): resolve the installed worker script on start |
+| [claude-mem](https://github.com/thedotmack/claude-mem) (118.1k★) | **1** | fix(cli): resolve the installed worker script on start |
 | [browser](https://github.com/lightpanda-io/browser) (42.2k★) | **1** | input: skip inert subtrees during mouse hit testing |
 | [Filament](https://github.com/google/filament) (20.8k★) | **1** | Vulkan depth/stencil render-target capability detection |
 | [React Spectrum](https://github.com/adobe/react-spectrum) (16.0k★) | **1** | Calendar year-picker correctness at constrained date-range boundaries |
@@ -49,7 +48,6 @@ I focus on agent development, agent safety, edge inference, and backend developm
 | [PyRIT](https://github.com/microsoft/PyRIT) (4.9k★) | **1** | Accessibility of selected configuration paths in the AI red-teaming interface |
 | [fastjson2](https://github.com/alibaba/fastjson2) (4.4k★) | **1** | Dynamic ClassLoader isolation when multiple fastjson2 copies coexist |
 | [OSV.dev](https://github.com/google/osv.dev) (3.1k★) | **1** | Vulnerability severity-source attribution on detail pages |
-| [ONNX Runtime GenAI](https://github.com/microsoft/onnxruntime-genai) (1.2k★) | **1** | C# chat-client access to the cached generation state |
 | [cuOpt](https://github.com/NVIDIA/cuopt) (1.1k★) | **1** | Quickstart documentation link maintenance |
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:end-->
