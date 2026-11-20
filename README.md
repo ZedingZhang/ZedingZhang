@@ -40,7 +40,7 @@ Focus on agent development, agent safety, edge inference, and backend developmen
 | [Core ML Tools](https://github.com/apple/coremltools) (5.5k★) | **2** | Model conversion correctness: scalar squeeze values and symbolic upsample output shapes |
 | [Reticle](https://github.com/reticlehq/reticle) (1.3k★) | **2** | Browser verification and setup: expected-failure signals and automatic plain HTML integration |
 | [claude-mem](https://github.com/thedotmack/claude-mem) (118.5k★) | **1** | fix(cli): resolve the installed worker script on start |
-| [browser](https://github.com/lightpanda-io/browser) (42.2k★) | **1** | input: skip inert subtrees during mouse hit testing |
+| [browser](https://github.com/lightpanda-io/browser) (42.3k★) | **1** | input: skip inert subtrees during mouse hit testing |
 | [Filament](https://github.com/google/filament) (20.8k★) | **1** | Vulkan depth/stencil render-target capability detection |
 | [React Spectrum](https://github.com/adobe/react-spectrum) (16.1k★) | **1** | Calendar year-picker correctness at constrained date-range boundaries |
 | [CubeSandbox](https://github.com/TencentCloud/CubeSandbox) (13.4k★) | **1** | OpenAI Agents SDK integration documentation in English and Chinese |
