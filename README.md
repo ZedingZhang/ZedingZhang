@@ -27,7 +27,7 @@ Focus on agent development, agent safety, edge inference, and backend developmen
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-114 merged PRs across 20 upstream projects.
+115 merged PRs across 20 upstream projects.
 
 | Project | Merged | What the PRs cover |
 |---------|:------:|--------------------|
@@ -35,9 +35,9 @@ Focus on agent development, agent safety, edge inference, and backend developmen
 | [Qwen Code](https://github.com/QwenLM/qwen-code) (30.8k★) | **5** | Managed-agent API error handling for missing tool publications |
 | [celery](https://github.com/celery/celery) (29.3k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries |
 | [MNN](https://github.com/alibaba/MNN) (16.6k★) | **5** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings |
+| [claude-mem](https://github.com/thedotmack/claude-mem) (118.8k★) | **3** | fix(agent-cost-report): handle missing observer models in cost rollups; fix: detect OpenCode 2.x connections for My Work refresh; fix(cli): resolve the installed worker script on start |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing |
-| [claude-mem](https://github.com/thedotmack/claude-mem) (118.8k★) | **2** | fix: detect OpenCode 2.x connections for My Work refresh; fix(cli): resolve the installed worker script on start |
-| [nanobot](https://github.com/HKUDS/nanobot) (50.2k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support |
+| [nanobot](https://github.com/HKUDS/nanobot) (50.3k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support |
 | [Core ML Tools](https://github.com/apple/coremltools) (5.5k★) | **2** | Model conversion correctness: scalar squeeze values and symbolic upsample output shapes |
 | [Reticle](https://github.com/reticlehq/reticle) (1.3k★) | **2** | Browser verification and setup: expected-failure signals and automatic plain HTML integration |
 | [browser](https://github.com/lightpanda-io/browser) (42.3k★) | **1** | input: skip inert subtrees during mouse hit testing |
