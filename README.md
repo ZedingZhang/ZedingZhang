@@ -27,7 +27,7 @@ Focus on agent development, agent safety, edge inference, and backend developmen
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-111 merged PRs across 19 upstream projects.
+112 merged PRs across 20 upstream projects.
 
 | Project | Merged | What the PRs cover |
 |---------|:------:|--------------------|
@@ -36,7 +36,7 @@ Focus on agent development, agent safety, edge inference, and backend developmen
 | [celery](https://github.com/celery/celery) (29.3k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries |
 | [MNN](https://github.com/alibaba/MNN) (16.6k★) | **5** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing |
-| [claude-mem](https://github.com/thedotmack/claude-mem) (118.6k★) | **2** | fix: detect OpenCode 2.x connections for My Work refresh; fix(cli): resolve the installed worker script on start |
+| [claude-mem](https://github.com/thedotmack/claude-mem) (118.7k★) | **2** | fix: detect OpenCode 2.x connections for My Work refresh; fix(cli): resolve the installed worker script on start |
 | [nanobot](https://github.com/HKUDS/nanobot) (50.2k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support |
 | [Core ML Tools](https://github.com/apple/coremltools) (5.5k★) | **2** | Model conversion correctness: scalar squeeze values and symbolic upsample output shapes |
 | [Reticle](https://github.com/reticlehq/reticle) (1.3k★) | **2** | Browser verification and setup: expected-failure signals and automatic plain HTML integration |
@@ -44,6 +44,7 @@ Focus on agent development, agent safety, edge inference, and backend developmen
 | [Filament](https://github.com/google/filament) (20.8k★) | **1** | Vulkan depth/stencil render-target capability detection |
 | [React Spectrum](https://github.com/adobe/react-spectrum) (16.1k★) | **1** | Calendar year-picker correctness at constrained date-range boundaries |
 | [CubeSandbox](https://github.com/TencentCloud/CubeSandbox) (13.4k★) | **1** | OpenAI Agents SDK integration documentation in English and Chinese |
+| [PI-Desktop](https://github.com/vastsa/PI-Desktop) (8.1k★) | **1** | fix(windows): 应用内更新时沿用已注册的安装范围 |
 | [AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) (7.6k★) | **1** | Vulnerability-rule consistency across case-sensitive and case-insensitive filesystems |
 | [PyRIT](https://github.com/microsoft/PyRIT) (5.0k★) | **1** | Accessibility of selected configuration paths in the AI red-teaming interface |
 | [fastjson2](https://github.com/alibaba/fastjson2) (4.4k★) | **1** | Dynamic ClassLoader isolation when multiple fastjson2 copies coexist |
