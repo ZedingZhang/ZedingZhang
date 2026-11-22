@@ -32,10 +32,10 @@ Focus on agent development, agent safety, edge inference, and backend developmen
 | Project | Merged | What the PRs cover |
 |---------|:------:|--------------------|
 | [Agent Swarm](https://github.com/desplega-ai/agent-swarm) (1.1k★) | **77** | Agent runtime reliability: MCP setup retries, worker readiness, credential checks, and configurable script execution |
-| [Qwen Code](https://github.com/QwenLM/qwen-code) (30.8k★) | **5** | Managed-agent API error handling for missing tool publications |
+| [Qwen Code](https://github.com/QwenLM/qwen-code) (30.9k★) | **5** | Managed-agent API error handling for missing tool publications |
 | [celery](https://github.com/celery/celery) (29.3k★) | **5** | Keep the first SUCCESS in the Cassandra backend; Log connection retry traceback at debug level; Fix Manager warning output during retries |
 | [MNN](https://github.com/alibaba/MNN) (16.6k★) | **5** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings |
-| [claude-mem](https://github.com/thedotmack/claude-mem) (118.8k★) | **3** | fix(agent-cost-report): handle missing observer models in cost rollups; fix: detect OpenCode 2.x connections for My Work refresh; fix(cli): resolve the installed worker script on start |
+| [claude-mem](https://github.com/thedotmack/claude-mem) (118.9k★) | **3** | fix(agent-cost-report): handle missing observer models in cost rollups; fix: detect OpenCode 2.x connections for My Work refresh; fix(cli): resolve the installed worker script on start |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing |
 | [nanobot](https://github.com/HKUDS/nanobot) (50.3k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support |
 | [Core ML Tools](https://github.com/apple/coremltools) (5.5k★) | **2** | Model conversion correctness: scalar squeeze values and symbolic upsample output shapes |
