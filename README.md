@@ -27,7 +27,7 @@ Focus on agent development, agent safety, edge inference, and backend developmen
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-115 merged PRs across 20 upstream projects.
+117 merged PRs across 20 upstream projects.
 
 | Project | Merged | What the PRs cover |
 |---------|:------:|--------------------|
@@ -37,6 +37,7 @@ Focus on agent development, agent safety, edge inference, and backend developmen
 | [MNN](https://github.com/alibaba/MNN) (16.6k★) | **5** | Edge LLM inference and export: Omni request state, attention masks, AWQ calibration, and QNN embeddings |
 | [claude-mem](https://github.com/thedotmack/claude-mem) (118.9k★) | **3** | fix(agent-cost-report): handle missing observer models in cost rollups; fix: detect OpenCode 2.x connections for My Work refresh; fix(cli): resolve the installed worker script on start |
 | [NullAway](https://github.com/uber/NullAway) (4.1k★) | **3** | Java null-safety analysis: constructor initialization checks, Maven-injected fields, and GitHub Actions security auditing |
+| [PiDeck](https://github.com/ayuayue/PiDeck) (1.2k★) | **3** | fix: 修复 Linux 混合大小写项目归档后找不到 pi 会话的问题; fix: 恢复归档父会话时带回平铺子代理会话; fix: 跳过过短的流式 TPS 采样窗口 |
 | [nanobot](https://github.com/HKUDS/nanobot) (50.3k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support |
 | [Core ML Tools](https://github.com/apple/coremltools) (5.5k★) | **2** | Model conversion correctness: scalar squeeze values and symbolic upsample output shapes |
 | [Reticle](https://github.com/reticlehq/reticle) (1.3k★) | **2** | Browser verification and setup: expected-failure signals and automatic plain HTML integration |
@@ -49,7 +50,6 @@ Focus on agent development, agent safety, edge inference, and backend developmen
 | [PyRIT](https://github.com/microsoft/PyRIT) (5.0k★) | **1** | Accessibility of selected configuration paths in the AI red-teaming interface |
 | [fastjson2](https://github.com/alibaba/fastjson2) (4.4k★) | **1** | Dynamic ClassLoader isolation when multiple fastjson2 copies coexist |
 | [OSV.dev](https://github.com/google/osv.dev) (3.1k★) | **1** | Vulnerability severity-source attribution on detail pages |
-| [PiDeck](https://github.com/ayuayue/PiDeck) (1.2k★) | **1** | fix: 跳过过短的流式 TPS 采样窗口 |
 | [cuOpt](https://github.com/NVIDIA/cuopt) (1.1k★) | **1** | Quickstart documentation link maintenance |
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:end-->
