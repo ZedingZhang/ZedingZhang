@@ -27,7 +27,7 @@ Focus on agent development, agent safety, edge inference, and backend developmen
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-119 merged PRs across 21 upstream projects.
+120 merged PRs across 22 upstream projects.
 
 | Project | Merged | What the PRs cover |
 |---------|:------:|--------------------|
@@ -41,6 +41,7 @@ Focus on agent development, agent safety, edge inference, and backend developmen
 | [nanobot](https://github.com/HKUDS/nanobot) (50.3k★) | **2** | Agent provider compatibility and messaging: DeepSeek reasoning semantics and Discord reply support |
 | [Core ML Tools](https://github.com/apple/coremltools) (5.5k★) | **2** | Model conversion correctness: scalar squeeze values and symbolic upsample output shapes |
 | [Reticle](https://github.com/reticlehq/reticle) (1.3k★) | **2** | Browser verification and setup: expected-failure signals and automatic plain HTML integration |
+| [ragflow](https://github.com/infiniflow/ragflow) (94.6k★) | **1** | fix(parser): validate SoMark highlight coordinates against the enclosing page |
 | [browser](https://github.com/lightpanda-io/browser) (42.4k★) | **1** | input: skip inert subtrees during mouse hit testing |
 | [lexical](https://github.com/meta/lexical) (24.0k★) | **1** | \[lexical-markdown\] Chore: Cover backslash emphasis imports and formatted text round trips |
 | [Filament](https://github.com/google/filament) (20.8k★) | **1** | Vulkan depth/stencil render-target capability detection |
