@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="666" viewBox="0 0 880 666" fill="none" role="img" aria-label="ZedingZhang open source merged PR counts by repository">
+  <defs>
+    <linearGradient id="barGrad-dark" x1="219" y1="0" x2="836" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1F6FEB"/>
+      <stop offset="100%" stop-color="#58A6FF"/>
+    </linearGradient>
+  </defs>
+  <text x="219.00" y="646" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#8B949E">0</text>
+  <line x1="373.25" y1="14" x2="373.25" y2="630" stroke="#30363D" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+  <text x="373.25" y="646" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#8B949E">20</text>
+  <line x1="527.50" y1="14" x2="527.50" y2="630" stroke="#30363D" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+  <text x="527.50" y="646" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#8B949E">40</text>
+  <line x1="681.75" y1="14" x2="681.75" y2="630" stroke="#30363D" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+  <text x="681.75" y="646" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#8B949E">60</text>
+  <line x1="836.00" y1="14" x2="836.00" y2="630" stroke="#30363D" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+  <text x="836.00" y="646" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#8B949E">80</text>
+  <line x1="219" y1="14" x2="219" y2="630" stroke="#30363D" stroke-width="1"/>
+  <rect x="14" y="15" width="856" height="26" rx="4" fill="#8B949E" fill-opacity="0.06"/>
+  <text x="207" y="32.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">desplega-ai/</tspan><tspan fill="#E6EDF3" font-weight="600">agent-swarm</tspan></text>
+  <path d="M 219 20 H 816.57 Q 820.57 20 820.57 24.00 V 32.00 Q 820.57 36 816.57 36 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="828.6" y="32.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">78</text>
+  <text x="207" y="60.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">thedotmack/</tspan><tspan fill="#E6EDF3" font-weight="600">claude-mem</tspan></text>
+  <path d="M 219 48 H 253.56 Q 257.56 48 257.56 52.00 V 60.00 Q 257.56 64 253.56 64 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="265.6" y="60.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">5</text>
+  <rect x="14" y="71" width="856" height="26" rx="4" fill="#8B949E" fill-opacity="0.06"/>
+  <text x="207" y="88.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">QwenLM/</tspan><tspan fill="#E6EDF3" font-weight="600">qwen-code</tspan></text>
+  <path d="M 219 76 H 253.56 Q 257.56 76 257.56 80.00 V 88.00 Q 257.56 92 253.56 92 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="265.6" y="88.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">5</text>
+  <text x="207" y="116.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">celery/</tspan><tspan fill="#E6EDF3" font-weight="600">celery</tspan></text>
+  <path d="M 219 104 H 253.56 Q 257.56 104 257.56 108.00 V 116.00 Q 257.56 120 253.56 120 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="265.6" y="116.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">5</text>
+  <rect x="14" y="127" width="856" height="26" rx="4" fill="#8B949E" fill-opacity="0.06"/>
+  <text x="207" y="144.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">alibaba/</tspan><tspan fill="#E6EDF3" font-weight="600">MNN</tspan></text>
+  <path d="M 219 132 H 253.56 Q 257.56 132 257.56 136.00 V 144.00 Q 257.56 148 253.56 148 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="265.6" y="144.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">5</text>
+  <text x="207" y="172.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">ayuayue/</tspan><tspan fill="#E6EDF3" font-weight="600">PiDeck</tspan></text>
+  <path d="M 219 160 H 245.85 Q 249.85 160 249.85 164.00 V 172.00 Q 249.85 176 245.85 176 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="257.9" y="172.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">4</text>
+  <rect x="14" y="183" width="856" height="26" rx="4" fill="#8B949E" fill-opacity="0.06"/>
+  <text x="207" y="200.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">uber/</tspan><tspan fill="#E6EDF3" font-weight="600">NullAway</tspan></text>
+  <path d="M 219 188 H 238.14 Q 242.14 188 242.14 192.00 V 200.00 Q 242.14 204 238.14 204 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="250.1" y="200.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">3</text>
+  <text x="207" y="228.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">infiniflow/</tspan><tspan fill="#E6EDF3" font-weight="600">ragflow</tspan></text>
+  <path d="M 219 216 H 230.43 Q 234.43 216 234.43 220.00 V 228.00 Q 234.43 232 230.43 232 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="242.4" y="228.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">2</text>
+  <rect x="14" y="239" width="856" height="26" rx="4" fill="#8B949E" fill-opacity="0.06"/>
+  <text x="207" y="256.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">HKUDS/</tspan><tspan fill="#E6EDF3" font-weight="600">nanobot</tspan></text>
+  <path d="M 219 244 H 230.43 Q 234.43 244 234.43 248.00 V 256.00 Q 234.43 260 230.43 260 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="242.4" y="256.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">2</text>
+  <text x="207" y="284.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">apple/</tspan><tspan fill="#E6EDF3" font-weight="600">coremltools</tspan></text>
+  <path d="M 219 272 H 230.43 Q 234.43 272 234.43 276.00 V 284.00 Q 234.43 288 230.43 288 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="242.4" y="284.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">2</text>
+  <rect x="14" y="295" width="856" height="26" rx="4" fill="#8B949E" fill-opacity="0.06"/>
+  <text x="207" y="312.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">reticlehq/</tspan><tspan fill="#E6EDF3" font-weight="600">reticle</tspan></text>
+  <path d="M 219 300 H 230.43 Q 234.43 300 234.43 304.00 V 312.00 Q 234.43 316 230.43 316 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="242.4" y="312.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">2</text>
+  <text x="207" y="340.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">lightpanda-io/</tspan><tspan fill="#E6EDF3" font-weight="600">browser</tspan></text>
+  <path d="M 219 328 H 222.86 Q 226.71 328 226.71 331.86 V 340.14 Q 226.71 344 222.86 344 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="234.7" y="340.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">1</text>
+  <rect x="14" y="351" width="856" height="26" rx="4" fill="#8B949E" fill-opacity="0.06"/>
+  <text x="207" y="368.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">meta/</tspan><tspan fill="#E6EDF3" font-weight="600">lexical</tspan></text>
+  <path d="M 219 356 H 222.86 Q 226.71 356 226.71 359.86 V 368.14 Q 226.71 372 222.86 372 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="234.7" y="368.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">1</text>
+  <text x="207" y="396.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">google/</tspan><tspan fill="#E6EDF3" font-weight="600">filament</tspan></text>
+  <path d="M 219 384 H 222.86 Q 226.71 384 226.71 387.86 V 396.14 Q 226.71 400 222.86 400 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="234.7" y="396.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">1</text>
+  <rect x="14" y="407" width="856" height="26" rx="4" fill="#8B949E" fill-opacity="0.06"/>
+  <text x="207" y="424.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">adobe/</tspan><tspan fill="#E6EDF3" font-weight="600">react-spectrum</tspan></text>
+  <path d="M 219 412 H 222.86 Q 226.71 412 226.71 415.86 V 424.14 Q 226.71 428 222.86 428 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="234.7" y="424.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">1</text>
+  <text x="207" y="452.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">TencentCloud/</tspan><tspan fill="#E6EDF3" font-weight="600">CubeSandbox</tspan></text>
+  <path d="M 219 440 H 222.86 Q 226.71 440 226.71 443.86 V 452.14 Q 226.71 456 222.86 456 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="234.7" y="452.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">1</text>
+  <rect x="14" y="463" width="856" height="26" rx="4" fill="#8B949E" fill-opacity="0.06"/>
+  <text x="207" y="480.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">vastsa/</tspan><tspan fill="#E6EDF3" font-weight="600">PI-Desktop</tspan></text>
+  <path d="M 219 468 H 222.86 Q 226.71 468 226.71 471.86 V 480.14 Q 226.71 484 222.86 484 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="234.7" y="480.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">1</text>
+  <text x="207" y="508.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">Tencent/</tspan><tspan fill="#E6EDF3" font-weight="600">AI-Infra-Guard</tspan></text>
+  <path d="M 219 496 H 222.86 Q 226.71 496 226.71 499.86 V 508.14 Q 226.71 512 222.86 512 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="234.7" y="508.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">1</text>
+  <rect x="14" y="519" width="856" height="26" rx="4" fill="#8B949E" fill-opacity="0.06"/>
+  <text x="207" y="536.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">microsoft/</tspan><tspan fill="#E6EDF3" font-weight="600">PyRIT</tspan></text>
+  <path d="M 219 524 H 222.86 Q 226.71 524 226.71 527.86 V 536.14 Q 226.71 540 222.86 540 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="234.7" y="536.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">1</text>
+  <text x="207" y="564.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">alibaba/</tspan><tspan fill="#E6EDF3" font-weight="600">fastjson2</tspan></text>
+  <path d="M 219 552 H 222.86 Q 226.71 552 226.71 555.86 V 564.14 Q 226.71 568 222.86 568 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="234.7" y="564.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">1</text>
+  <rect x="14" y="575" width="856" height="26" rx="4" fill="#8B949E" fill-opacity="0.06"/>
+  <text x="207" y="592.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">google/</tspan><tspan fill="#E6EDF3" font-weight="600">osv.dev</tspan></text>
+  <path d="M 219 580 H 222.86 Q 226.71 580 226.71 583.86 V 592.14 Q 226.71 596 222.86 596 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="234.7" y="592.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">1</text>
+  <text x="207" y="620.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">NVIDIA/</tspan><tspan fill="#E6EDF3" font-weight="600">cuopt</tspan></text>
+  <path d="M 219 608 H 222.86 Q 226.71 608 226.71 611.86 V 620.14 Q 226.71 624 222.86 624 H 219 Z" fill="url(#barGrad-dark)"/>
+  <text x="234.7" y="620.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3">1</text>
+  <text x="527.5" y="661" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8B949E">Merged PRs</text>
+</svg>
