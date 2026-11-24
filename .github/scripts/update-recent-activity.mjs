@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 
 const username = process.env.GH_USERNAME;
 const token = process.env.GITHUB_TOKEN;
@@ -9,9 +9,6 @@ const excludedRepos = new Set(
 if (!username) throw new Error("GH_USERNAME is required");
 if (!token) throw new Error("GITHUB_TOKEN is required");
 const normalizedUsername = username.toLowerCase();
-const projectNotes = JSON.parse(
-  await readFile(new URL("../contributions.json", import.meta.url), "utf8"),
-);
 
 const pullRequestQuery = `
   query PullRequestHistory($login: String!, $after: String) {
@@ -86,6 +83,15 @@ if (start === -1 || end === -1 || end < start) {
     "Open Source Contributions markers are missing or out of order in README.md",
   );
 }
+
+const lightChartPath = "assets/open-source-contributions-light.svg";
+const darkChartPath = "assets/open-source-contributions-dark.svg";
+
+await mkdir("assets", { recursive: true });
+await Promise.all([
+  writeFile(lightChartPath, renderBarChartSvg(sortedProjects, "light"), "utf8"),
+  writeFile(darkChartPath, renderBarChartSvg(sortedProjects, "dark"), "utf8"),
+]);
 
 const generated = renderContributions();
 const updated =
@@ -173,38 +179,178 @@ function renderContributions() {
     "",
     `${mergedPullRequests.length} merged PRs across ${sortedProjects.length} upstream projects.`,
     "",
-    "| Project | Merged | What the PRs cover |",
-    "|---------|:------:|--------------------|",
-    ...sortedProjects.map(({ repository, pullRequests }) => {
-      const notes = projectNotes[repository.nameWithOwner];
-      const summary = notes?.summary ?? pullRequests
-        .slice(0, 3)
-        .map((pr) => pr.title)
-        .join("; ");
-      return `| ${formatProject(repository)} | **${pullRequests.length}** | ${escapeMarkdown(summary)} |`;
-    }),
+    '<p align="center">',
+    "  <picture>",
+    "    <source",
+    '      media="(prefers-color-scheme: dark)"',
+    '      srcset="./assets/open-source-contributions-dark.svg"',
+    "    />",
+    "    <source",
+    '      media="(prefers-color-scheme: light)"',
+    '      srcset="./assets/open-source-contributions-light.svg"',
+    "    />",
+    "    <img",
+    `      alt="${escapeHtml(`${username}'s open source merged pull requests across ${sortedProjects.length} upstream projects`)}"`,
+    '      src="./assets/open-source-contributions-light.svg"',
+    '      width="100%"',
+    "    />",
+    "  </picture>",
+    "</p>",
     "",
     endMarker,
   ].join("\n");
 }
 
-function projectName(repository) {
-  return projectNotes[repository.nameWithOwner]?.name ?? repository.name;
+function renderBarChartSvg(projectEntries, mode) {
+  const SANS =
+    "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif";
+  const MONO =
+    "ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace";
+
+  const themes = {
+    light: {
+      barStart: "#0969DA",
+      barEnd: "#218BFF",
+      ownerText: "#656D76",
+      repoText: "#1F2328",
+      valueText: "#1F2328",
+      axisText: "#57606A",
+      axisLine: "#D0D7DE",
+      gridLine: "#D0D7DE",
+      gridOpacity: "0.6",
+      rowStripe: "#8C959F",
+      rowStripeOpacity: "0.05",
+    },
+    dark: {
+      barStart: "#1F6FEB",
+      barEnd: "#58A6FF",
+      ownerText: "#8B949E",
+      repoText: "#E6EDF3",
+      valueText: "#E6EDF3",
+      axisText: "#8B949E",
+      axisLine: "#30363D",
+      gridLine: "#30363D",
+      gridOpacity: "0.7",
+      rowStripe: "#8B949E",
+      rowStripeOpacity: "0.06",
+    },
+  };
+
+  const t = themes[mode];
+  const width = 880;
+  const padLeft = 14;
+  const padRight = 44;
+  const padTop = 14;
+  const padBottom = 36;
+  const rowHeight = 28;
+  const barHeight = 16;
+  const barYOffset = 6;
+
+  const maxLabelChars = Math.max(
+    ...projectEntries.map((entry) => entry.repository.nameWithOwner.length),
+    16,
+  );
+  const labelWidth = Math.min(
+    265,
+    Math.max(204, Math.ceil(maxLabelChars * 7.6) + 22),
+  );
+  const axisX = padLeft + labelWidth;
+  const barAreaWidth = width - axisX - padRight;
+  const chartHeight = Math.max(1, projectEntries.length) * rowHeight;
+  const height = padTop + chartHeight + padBottom;
+
+  const maxCount = Math.max(
+    0,
+    ...projectEntries.map((entry) => entry.pullRequests.length),
+  );
+  const { axisMax, ticks } = computeNiceScale(maxCount);
+
+  const gridAndTicks = ticks
+    .map((tick) => {
+      const x = axisX + (tick / axisMax) * barAreaWidth;
+      const xStr = x.toFixed(2);
+      const grid =
+        tick === 0
+          ? ""
+          : `  <line x1="${xStr}" y1="${padTop}" x2="${xStr}" y2="${padTop + chartHeight}" stroke="${t.gridLine}" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="${t.gridOpacity}"/>\n`;
+      const label = `  <text x="${xStr}" y="${padTop + chartHeight + 16}" text-anchor="middle" font-family="${MONO}" font-size="11" fill="${t.axisText}">${tick}</text>`;
+      return `${grid}${label}`;
+    })
+    .join("\n");
+
+  const rows = projectEntries
+    .map((entry, index) => {
+      const rowY = padTop + index * rowHeight;
+      const count = entry.pullRequests.length;
+      const nameWithOwner = entry.repository.nameWithOwner;
+      const slashIndex = nameWithOwner.indexOf("/");
+      const owner = slashIndex === -1 ? "" : nameWithOwner.slice(0, slashIndex);
+      const repo =
+        slashIndex === -1 ? nameWithOwner : nameWithOwner.slice(slashIndex + 1);
+
+      const stripe =
+        index % 2 === 0
+          ? `  <rect x="${padLeft}" y="${rowY + 1}" width="${width - padLeft - 10}" height="${rowHeight - 2}" rx="4" fill="${t.rowStripe}" fill-opacity="${t.rowStripeOpacity}"/>\n`
+          : "";
+
+      const labelText = owner
+        ? `<tspan fill="${t.ownerText}" font-weight="400">${escapeXml(owner)}/</tspan><tspan fill="${t.repoText}" font-weight="600">${escapeXml(repo)}</tspan>`
+        : `<tspan fill="${t.repoText}" font-weight="600">${escapeXml(repo)}</tspan>`;
+
+      const rawBarWidth = (count / axisMax) * barAreaWidth;
+      const barWidth = Math.max(5, rawBarWidth);
+      const bx2 = axisX + barWidth;
+      const by = rowY + barYOffset;
+      const r = Math.min(4, barWidth / 2);
+      const barPath = [
+        `M ${axisX} ${by}`,
+        `H ${(bx2 - r).toFixed(2)}`,
+        `Q ${bx2.toFixed(2)} ${by} ${bx2.toFixed(2)} ${(by + r).toFixed(2)}`,
+        `V ${(by + barHeight - r).toFixed(2)}`,
+        `Q ${bx2.toFixed(2)} ${by + barHeight} ${(bx2 - r).toFixed(2)} ${by + barHeight}`,
+        `H ${axisX}`,
+        "Z",
+      ].join(" ");
+
+      const countX = (bx2 + 8).toFixed(1);
+
+      return `${stripe}  <text x="${axisX - 12}" y="${rowY + 18.5}" text-anchor="end" font-family="${SANS}" font-size="12.5">${labelText}</text>
+  <path d="${barPath}" fill="url(#barGrad-${mode})"/>
+  <text x="${countX}" y="${rowY + 18.5}" font-family="${MONO}" font-size="12" font-weight="600" fill="${t.valueText}">${count}</text>`;
+    })
+    .join("\n");
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" role="img" aria-label="${escapeXml(`${username} open source merged PR counts by repository`)}">
+  <defs>
+    <linearGradient id="barGrad-${mode}" x1="${axisX}" y1="0" x2="${axisX + barAreaWidth}" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="${t.barStart}"/>
+      <stop offset="100%" stop-color="${t.barEnd}"/>
+    </linearGradient>
+  </defs>
+${gridAndTicks}
+  <line x1="${axisX}" y1="${padTop}" x2="${axisX}" y2="${padTop + chartHeight}" stroke="${t.axisLine}" stroke-width="1"/>
+${rows}
+  <text x="${(axisX + barAreaWidth / 2).toFixed(1)}" y="${padTop + chartHeight + 31}" text-anchor="middle" font-family="${SANS}" font-size="11" fill="${t.axisText}">Merged PRs</text>
+</svg>
+`;
 }
 
-function formatProject(repository) {
-  const stars = repository.stargazerCount >= 1000
-    ? `${(repository.stargazerCount / 1000).toFixed(1)}k`
-    : String(repository.stargazerCount);
-  return `[${escapeMarkdown(projectName(repository))}](${repository.url}) (${stars}★)`;
+function computeNiceScale(maxCount) {
+  if (maxCount <= 0) {
+    return { axisMax: 1, ticks: [0, 1] };
+  }
+  const steps = [1, 2, 5, 10, 20, 25, 50, 100, 200, 500, 1000, 2000, 5000];
+  const step =
+    steps.find((candidate) => Math.ceil(maxCount / candidate) <= 5) ??
+    Math.ceil(maxCount / 5);
+  const tickCount = Math.max(1, Math.ceil(maxCount / step));
+  const axisMax = tickCount * step;
+  const ticks = Array.from({ length: tickCount + 1 }, (_, index) => index * step);
+  return { axisMax, ticks };
 }
 
-function escapeMarkdown(value) {
-  return escapeHtml(value)
-    .replaceAll("\\", "\\\\")
-    .replace(/([\[\]*_])/g, "\\$1")
-    .replaceAll("|", "&#124;")
-    .replace(/[\r\n]+/g, " ");
+function escapeXml(value) {
+  return escapeHtml(value).replaceAll("'", "&#39;");
 }
 
 function escapeHtml(value) {
