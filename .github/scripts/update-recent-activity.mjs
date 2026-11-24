@@ -265,8 +265,8 @@ function renderBarChartSvg(projectEntries, mode) {
   );
   const { axisMax, ticks } = computeNiceScale(maxCount);
   const staggerStep = Math.min(
-    70,
-    Math.floor(1400 / Math.max(1, projectEntries.length)),
+    140,
+    Math.floor(2800 / Math.max(1, projectEntries.length)),
   );
 
   const gridAndTicks = ticks
@@ -302,7 +302,7 @@ function renderBarChartSvg(projectEntries, mode) {
         : `<tspan fill="${t.repoText}" font-weight="600">${escapeXml(repo)}</tspan>`;
 
       const delayMs = index * staggerStep;
-      const valueDelayMs = delayMs + 640;
+      const valueDelayMs = delayMs + 1280;
       const rawBarWidth = (count / axisMax) * barAreaWidth;
       const barWidth = Math.max(5, rawBarWidth);
       const by = rowY + barYOffset;
@@ -358,11 +358,11 @@ function renderBarChartSvg(projectEntries, mode) {
     .bar {
       transform-origin: 0 0;
       transform: scaleX(0);
-      animation: barGrow 1400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+      animation: barGrow 2800ms cubic-bezier(0.22, 1, 0.36, 1) both;
     }
     .bar-value {
       opacity: 0;
-      animation: valueFade 600ms ease-out both;
+      animation: valueFade 1200ms ease-out both;
     }
   </style>
 ${gridAndTicks}

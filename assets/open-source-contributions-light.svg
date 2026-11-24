@@ -27,11 +27,11 @@
     .bar {
       transform-origin: 0 0;
       transform: scaleX(0);
-      animation: barGrow 1400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+      animation: barGrow 2800ms cubic-bezier(0.22, 1, 0.36, 1) both;
     }
     .bar-value {
       opacity: 0;
-      animation: valueFade 600ms ease-out both;
+      animation: valueFade 1200ms ease-out both;
     }
   </style>
   <text x="219.00" y="646" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">0</text>
@@ -50,164 +50,164 @@
     <path class="bar" d="M 0 0 H 597.57 Q 601.57 0 601.57 4.00 V 12.00 Q 601.57 16 597.57 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 0ms;"/>
   </g>
   <g transform="translate(828.6, 32.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 640ms;">78</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1280ms;">78</text>
   </g>
   <text x="207" y="60.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">thedotmack/</tspan><tspan fill="#1F2328" font-weight="600">claude-mem</tspan></text>
   <g transform="translate(219, 48)">
-    <path class="bar" d="M 0 0 H 34.56 Q 38.56 0 38.56 4.00 V 12.00 Q 38.56 16 34.56 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 63ms;"/>
+    <path class="bar" d="M 0 0 H 34.56 Q 38.56 0 38.56 4.00 V 12.00 Q 38.56 16 34.56 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 127ms;"/>
   </g>
   <g transform="translate(265.6, 60.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 703ms;">5</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1407ms;">5</text>
   </g>
   <rect x="14" y="71" width="856" height="26" rx="4" fill="#8C959F" fill-opacity="0.05"/>
   <text x="207" y="88.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">QwenLM/</tspan><tspan fill="#1F2328" font-weight="600">qwen-code</tspan></text>
   <g transform="translate(219, 76)">
-    <path class="bar" d="M 0 0 H 34.56 Q 38.56 0 38.56 4.00 V 12.00 Q 38.56 16 34.56 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 126ms;"/>
+    <path class="bar" d="M 0 0 H 34.56 Q 38.56 0 38.56 4.00 V 12.00 Q 38.56 16 34.56 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 254ms;"/>
   </g>
   <g transform="translate(265.6, 88.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 766ms;">5</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1534ms;">5</text>
   </g>
   <text x="207" y="116.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">celery/</tspan><tspan fill="#1F2328" font-weight="600">celery</tspan></text>
   <g transform="translate(219, 104)">
-    <path class="bar" d="M 0 0 H 34.56 Q 38.56 0 38.56 4.00 V 12.00 Q 38.56 16 34.56 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 189ms;"/>
+    <path class="bar" d="M 0 0 H 34.56 Q 38.56 0 38.56 4.00 V 12.00 Q 38.56 16 34.56 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 381ms;"/>
   </g>
   <g transform="translate(265.6, 116.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 829ms;">5</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1661ms;">5</text>
   </g>
   <rect x="14" y="127" width="856" height="26" rx="4" fill="#8C959F" fill-opacity="0.05"/>
   <text x="207" y="144.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">alibaba/</tspan><tspan fill="#1F2328" font-weight="600">MNN</tspan></text>
   <g transform="translate(219, 132)">
-    <path class="bar" d="M 0 0 H 34.56 Q 38.56 0 38.56 4.00 V 12.00 Q 38.56 16 34.56 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 252ms;"/>
+    <path class="bar" d="M 0 0 H 34.56 Q 38.56 0 38.56 4.00 V 12.00 Q 38.56 16 34.56 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 508ms;"/>
   </g>
   <g transform="translate(265.6, 144.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 892ms;">5</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1788ms;">5</text>
   </g>
   <text x="207" y="172.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">ayuayue/</tspan><tspan fill="#1F2328" font-weight="600">PiDeck</tspan></text>
   <g transform="translate(219, 160)">
-    <path class="bar" d="M 0 0 H 26.85 Q 30.85 0 30.85 4.00 V 12.00 Q 30.85 16 26.85 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 315ms;"/>
+    <path class="bar" d="M 0 0 H 26.85 Q 30.85 0 30.85 4.00 V 12.00 Q 30.85 16 26.85 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 635ms;"/>
   </g>
   <g transform="translate(257.9, 172.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 955ms;">4</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1915ms;">4</text>
   </g>
   <rect x="14" y="183" width="856" height="26" rx="4" fill="#8C959F" fill-opacity="0.05"/>
   <text x="207" y="200.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">uber/</tspan><tspan fill="#1F2328" font-weight="600">NullAway</tspan></text>
   <g transform="translate(219, 188)">
-    <path class="bar" d="M 0 0 H 19.14 Q 23.14 0 23.14 4.00 V 12.00 Q 23.14 16 19.14 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 378ms;"/>
+    <path class="bar" d="M 0 0 H 19.14 Q 23.14 0 23.14 4.00 V 12.00 Q 23.14 16 19.14 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 762ms;"/>
   </g>
   <g transform="translate(250.1, 200.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1018ms;">3</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 2042ms;">3</text>
   </g>
   <text x="207" y="228.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">infiniflow/</tspan><tspan fill="#1F2328" font-weight="600">ragflow</tspan></text>
   <g transform="translate(219, 216)">
-    <path class="bar" d="M 0 0 H 11.43 Q 15.43 0 15.43 4.00 V 12.00 Q 15.43 16 11.43 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 441ms;"/>
+    <path class="bar" d="M 0 0 H 11.43 Q 15.43 0 15.43 4.00 V 12.00 Q 15.43 16 11.43 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 889ms;"/>
   </g>
   <g transform="translate(242.4, 228.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1081ms;">2</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 2169ms;">2</text>
   </g>
   <rect x="14" y="239" width="856" height="26" rx="4" fill="#8C959F" fill-opacity="0.05"/>
   <text x="207" y="256.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">HKUDS/</tspan><tspan fill="#1F2328" font-weight="600">nanobot</tspan></text>
   <g transform="translate(219, 244)">
-    <path class="bar" d="M 0 0 H 11.43 Q 15.43 0 15.43 4.00 V 12.00 Q 15.43 16 11.43 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 504ms;"/>
+    <path class="bar" d="M 0 0 H 11.43 Q 15.43 0 15.43 4.00 V 12.00 Q 15.43 16 11.43 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 1016ms;"/>
   </g>
   <g transform="translate(242.4, 256.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1144ms;">2</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 2296ms;">2</text>
   </g>
   <text x="207" y="284.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">apple/</tspan><tspan fill="#1F2328" font-weight="600">coremltools</tspan></text>
   <g transform="translate(219, 272)">
-    <path class="bar" d="M 0 0 H 11.43 Q 15.43 0 15.43 4.00 V 12.00 Q 15.43 16 11.43 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 567ms;"/>
+    <path class="bar" d="M 0 0 H 11.43 Q 15.43 0 15.43 4.00 V 12.00 Q 15.43 16 11.43 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 1143ms;"/>
   </g>
   <g transform="translate(242.4, 284.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1207ms;">2</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 2423ms;">2</text>
   </g>
   <rect x="14" y="295" width="856" height="26" rx="4" fill="#8C959F" fill-opacity="0.05"/>
   <text x="207" y="312.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">reticlehq/</tspan><tspan fill="#1F2328" font-weight="600">reticle</tspan></text>
   <g transform="translate(219, 300)">
-    <path class="bar" d="M 0 0 H 11.43 Q 15.43 0 15.43 4.00 V 12.00 Q 15.43 16 11.43 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 630ms;"/>
+    <path class="bar" d="M 0 0 H 11.43 Q 15.43 0 15.43 4.00 V 12.00 Q 15.43 16 11.43 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 1270ms;"/>
   </g>
   <g transform="translate(242.4, 312.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1270ms;">2</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 2550ms;">2</text>
   </g>
   <text x="207" y="340.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">lightpanda-io/</tspan><tspan fill="#1F2328" font-weight="600">browser</tspan></text>
   <g transform="translate(219, 328)">
-    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 693ms;"/>
+    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 1397ms;"/>
   </g>
   <g transform="translate(234.7, 340.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1333ms;">1</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 2677ms;">1</text>
   </g>
   <rect x="14" y="351" width="856" height="26" rx="4" fill="#8C959F" fill-opacity="0.05"/>
   <text x="207" y="368.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">meta/</tspan><tspan fill="#1F2328" font-weight="600">lexical</tspan></text>
   <g transform="translate(219, 356)">
-    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 756ms;"/>
+    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 1524ms;"/>
   </g>
   <g transform="translate(234.7, 368.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1396ms;">1</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 2804ms;">1</text>
   </g>
   <text x="207" y="396.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">google/</tspan><tspan fill="#1F2328" font-weight="600">filament</tspan></text>
   <g transform="translate(219, 384)">
-    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 819ms;"/>
+    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 1651ms;"/>
   </g>
   <g transform="translate(234.7, 396.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1459ms;">1</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 2931ms;">1</text>
   </g>
   <rect x="14" y="407" width="856" height="26" rx="4" fill="#8C959F" fill-opacity="0.05"/>
   <text x="207" y="424.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">adobe/</tspan><tspan fill="#1F2328" font-weight="600">react-spectrum</tspan></text>
   <g transform="translate(219, 412)">
-    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 882ms;"/>
+    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 1778ms;"/>
   </g>
   <g transform="translate(234.7, 424.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1522ms;">1</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 3058ms;">1</text>
   </g>
   <text x="207" y="452.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">TencentCloud/</tspan><tspan fill="#1F2328" font-weight="600">CubeSandbox</tspan></text>
   <g transform="translate(219, 440)">
-    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 945ms;"/>
+    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 1905ms;"/>
   </g>
   <g transform="translate(234.7, 452.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1585ms;">1</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 3185ms;">1</text>
   </g>
   <rect x="14" y="463" width="856" height="26" rx="4" fill="#8C959F" fill-opacity="0.05"/>
   <text x="207" y="480.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">vastsa/</tspan><tspan fill="#1F2328" font-weight="600">PI-Desktop</tspan></text>
   <g transform="translate(219, 468)">
-    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 1008ms;"/>
+    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 2032ms;"/>
   </g>
   <g transform="translate(234.7, 480.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1648ms;">1</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 3312ms;">1</text>
   </g>
   <text x="207" y="508.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">Tencent/</tspan><tspan fill="#1F2328" font-weight="600">AI-Infra-Guard</tspan></text>
   <g transform="translate(219, 496)">
-    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 1071ms;"/>
+    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 2159ms;"/>
   </g>
   <g transform="translate(234.7, 508.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1711ms;">1</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 3439ms;">1</text>
   </g>
   <rect x="14" y="519" width="856" height="26" rx="4" fill="#8C959F" fill-opacity="0.05"/>
   <text x="207" y="536.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">microsoft/</tspan><tspan fill="#1F2328" font-weight="600">PyRIT</tspan></text>
   <g transform="translate(219, 524)">
-    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 1134ms;"/>
+    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 2286ms;"/>
   </g>
   <g transform="translate(234.7, 536.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1774ms;">1</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 3566ms;">1</text>
   </g>
   <text x="207" y="564.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">alibaba/</tspan><tspan fill="#1F2328" font-weight="600">fastjson2</tspan></text>
   <g transform="translate(219, 552)">
-    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 1197ms;"/>
+    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 2413ms;"/>
   </g>
   <g transform="translate(234.7, 564.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1837ms;">1</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 3693ms;">1</text>
   </g>
   <rect x="14" y="575" width="856" height="26" rx="4" fill="#8C959F" fill-opacity="0.05"/>
   <text x="207" y="592.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">google/</tspan><tspan fill="#1F2328" font-weight="600">osv.dev</tspan></text>
   <g transform="translate(219, 580)">
-    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 1260ms;"/>
+    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 2540ms;"/>
   </g>
   <g transform="translate(234.7, 592.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1900ms;">1</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 3820ms;">1</text>
   </g>
   <text x="207" y="620.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">NVIDIA/</tspan><tspan fill="#1F2328" font-weight="600">cuopt</tspan></text>
   <g transform="translate(219, 608)">
-    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 1323ms;"/>
+    <path class="bar" d="M 0 0 H 3.86 Q 7.71 0 7.71 3.86 V 12.14 Q 7.71 16 3.86 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 2667ms;"/>
   </g>
   <g transform="translate(234.7, 620.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1963ms;">1</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 3947ms;">1</text>
   </g>
   <text x="527.5" y="661" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#57606A">Merged PRs</text>
 </svg>
