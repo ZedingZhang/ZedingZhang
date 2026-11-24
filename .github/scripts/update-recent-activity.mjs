@@ -358,7 +358,7 @@ function renderBarChartSvg(projectEntries, mode) {
     .bar {
       transform-origin: 0 0;
       transform: scaleX(0);
-      animation: barGrow 2800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+      animation: barGrow 1400ms cubic-bezier(0.22, 1, 0.36, 1) both;
     }
     .bar-value {
       opacity: 0;
