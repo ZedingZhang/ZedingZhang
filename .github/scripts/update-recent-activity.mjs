@@ -215,6 +215,7 @@ function renderBarChartSvg(projectEntries, mode) {
       repoText: "#1F2328",
       valueText: "#1F2328",
       axisText: "#57606A",
+      starIcon: "#BF8700",
       axisLine: "#D0D7DE",
       gridLine: "#D0D7DE",
       gridOpacity: "0.6",
@@ -228,6 +229,7 @@ function renderBarChartSvg(projectEntries, mode) {
       repoText: "#E6EDF3",
       valueText: "#E6EDF3",
       axisText: "#8B949E",
+      starIcon: "#E3B341",
       axisLine: "#30363D",
       gridLine: "#30363D",
       gridOpacity: "0.7",
@@ -251,10 +253,21 @@ function renderBarChartSvg(projectEntries, mode) {
     16,
   );
   const labelWidth = Math.min(
-    265,
-    Math.max(204, Math.ceil(maxLabelChars * 7.6) + 22),
+    250,
+    Math.max(196, Math.ceil(maxLabelChars * 7.4) + 16),
   );
-  const axisX = padLeft + labelWidth;
+  const maxStarChars = Math.max(
+    ...projectEntries.map(
+      (entry) => formatStars(entry.repository.stargazerCount).length + 1,
+    ),
+    5,
+  );
+  const starGap = 10;
+  const starWidth = Math.max(54, Math.ceil(maxStarChars * 6.8) + 8);
+  const axisGap = 12;
+  const repoRightX = padLeft + labelWidth;
+  const starRightX = repoRightX + starGap + starWidth;
+  const axisX = starRightX + axisGap;
   const barAreaWidth = width - axisX - padRight;
   const chartHeight = Math.max(1, projectEntries.length) * rowHeight;
   const height = padTop + chartHeight + padBottom;
@@ -318,8 +331,10 @@ function renderBarChartSvg(projectEntries, mode) {
       ].join(" ");
 
       const countX = (axisX + barWidth + 8).toFixed(1);
+      const stars = formatStars(entry.repository.stargazerCount);
 
-      return `${stripe}  <text x="${axisX - 12}" y="${rowY + 18.5}" text-anchor="end" font-family="${SANS}" font-size="12.5">${labelText}</text>
+      return `${stripe}  <text x="${repoRightX}" y="${rowY + 18.5}" text-anchor="end" font-family="${SANS}" font-size="12.5">${labelText}</text>
+  <text x="${starRightX}" y="${rowY + 18.5}" text-anchor="end" font-family="${MONO}" font-size="11" font-weight="500"><tspan fill="${t.axisText}">${escapeXml(stars)}</tspan><tspan font-family="${SANS}" fill="${t.starIcon}" dx="1.5">&#9733;</tspan></text>
   <g transform="translate(${axisX}, ${by})">
     <path class="bar" d="${barPath}" fill="url(#barGrad-${mode})" style="animation-delay: ${delayMs}ms;"/>
   </g>
@@ -385,6 +400,12 @@ function computeNiceScale(maxCount) {
   const axisMax = tickCount * step;
   const ticks = Array.from({ length: tickCount + 1 }, (_, index) => index * step);
   return { axisMax, ticks };
+}
+
+function formatStars(stargazerCount) {
+  return stargazerCount >= 1000
+    ? `${(stargazerCount / 1000).toFixed(1)}k`
+    : String(stargazerCount);
 }
 
 function escapeXml(value) {
