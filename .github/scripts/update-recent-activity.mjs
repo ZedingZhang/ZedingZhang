@@ -264,6 +264,10 @@ function renderBarChartSvg(projectEntries, mode) {
     ...projectEntries.map((entry) => entry.pullRequests.length),
   );
   const { axisMax, ticks } = computeNiceScale(maxCount);
+  const staggerStep = Math.min(
+    35,
+    Math.floor(700 / Math.max(1, projectEntries.length)),
+  );
 
   const gridAndTicks = ticks
     .map((tick) => {
@@ -297,36 +301,70 @@ function renderBarChartSvg(projectEntries, mode) {
         ? `<tspan fill="${t.ownerText}" font-weight="400">${escapeXml(owner)}/</tspan><tspan fill="${t.repoText}" font-weight="600">${escapeXml(repo)}</tspan>`
         : `<tspan fill="${t.repoText}" font-weight="600">${escapeXml(repo)}</tspan>`;
 
+      const delayMs = index * staggerStep;
+      const valueDelayMs = delayMs + 320;
       const rawBarWidth = (count / axisMax) * barAreaWidth;
       const barWidth = Math.max(5, rawBarWidth);
-      const bx2 = axisX + barWidth;
       const by = rowY + barYOffset;
       const r = Math.min(4, barWidth / 2);
       const barPath = [
-        `M ${axisX} ${by}`,
-        `H ${(bx2 - r).toFixed(2)}`,
-        `Q ${bx2.toFixed(2)} ${by} ${bx2.toFixed(2)} ${(by + r).toFixed(2)}`,
-        `V ${(by + barHeight - r).toFixed(2)}`,
-        `Q ${bx2.toFixed(2)} ${by + barHeight} ${(bx2 - r).toFixed(2)} ${by + barHeight}`,
-        `H ${axisX}`,
+        "M 0 0",
+        `H ${(barWidth - r).toFixed(2)}`,
+        `Q ${barWidth.toFixed(2)} 0 ${barWidth.toFixed(2)} ${r.toFixed(2)}`,
+        `V ${(barHeight - r).toFixed(2)}`,
+        `Q ${barWidth.toFixed(2)} ${barHeight} ${(barWidth - r).toFixed(2)} ${barHeight}`,
+        "H 0",
         "Z",
       ].join(" ");
 
-      const countX = (bx2 + 8).toFixed(1);
+      const countX = (axisX + barWidth + 8).toFixed(1);
 
       return `${stripe}  <text x="${axisX - 12}" y="${rowY + 18.5}" text-anchor="end" font-family="${SANS}" font-size="12.5">${labelText}</text>
-  <path d="${barPath}" fill="url(#barGrad-${mode})"/>
-  <text x="${countX}" y="${rowY + 18.5}" font-family="${MONO}" font-size="12" font-weight="600" fill="${t.valueText}">${count}</text>`;
+  <g transform="translate(${axisX}, ${by})">
+    <path class="bar" d="${barPath}" fill="url(#barGrad-${mode})" style="animation-delay: ${delayMs}ms;"/>
+  </g>
+  <g transform="translate(${countX}, ${rowY + 18.5})">
+    <text class="bar-value" x="0" y="0" font-family="${MONO}" font-size="12" font-weight="600" fill="${t.valueText}" style="animation-delay: ${valueDelayMs}ms;">${count}</text>
+  </g>`;
     })
     .join("\n");
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" role="img" aria-label="${escapeXml(`${username} open source merged PR counts by repository`)}">
   <defs>
-    <linearGradient id="barGrad-${mode}" x1="${axisX}" y1="0" x2="${axisX + barAreaWidth}" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="barGrad-${mode}" x1="0" y1="0" x2="${barAreaWidth}" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="${t.barStart}"/>
       <stop offset="100%" stop-color="${t.barEnd}"/>
     </linearGradient>
   </defs>
+  <style>
+    @keyframes barGrow {
+      from {
+        transform: scaleX(0);
+      }
+      to {
+        transform: scaleX(1);
+      }
+    }
+    @keyframes valueFade {
+      from {
+        opacity: 0;
+        transform: translateX(-6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .bar {
+      transform-origin: 0 0;
+      transform: scaleX(0);
+      animation: barGrow 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+    .bar-value {
+      opacity: 0;
+      animation: valueFade 300ms ease-out both;
+    }
+  </style>
 ${gridAndTicks}
   <line x1="${axisX}" y1="${padTop}" x2="${axisX}" y2="${padTop + chartHeight}" stroke="${t.axisLine}" stroke-width="1"/>
 ${rows}
