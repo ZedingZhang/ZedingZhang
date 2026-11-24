@@ -26,13 +26,13 @@ jobs:
       - name: Commit updated contributions
         shell: bash
         run: |
-          if git diff --quiet -- README.md assets/open-source-contributions-light.svg assets/open-source-contributions-dark.svg && [ -z "$(git ls-files --others --exclude-standard -- assets/open-source-contributions-light.svg assets/open-source-contributions-dark.svg)" ]; then
+          if [ -z "$(git status --porcelain -- README.md assets/open-source-contributions)" ]; then
             echo "Open source contributions are already up to date."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md assets/open-source-contributions-light.svg assets/open-source-contributions-dark.svg
+          git add -A README.md assets/open-source-contributions
           git commit -m "chore: update open source contributions"
           git push

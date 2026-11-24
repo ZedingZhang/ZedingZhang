@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 
 const username = process.env.GH_USERNAME;
 const token = process.env.GITHUB_TOKEN;
@@ -9,6 +9,42 @@ const excludedRepos = new Set(
 if (!username) throw new Error("GH_USERNAME is required");
 if (!token) throw new Error("GITHUB_TOKEN is required");
 const normalizedUsername = username.toLowerCase();
+
+const CHART_SANS =
+  "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif";
+const CHART_MONO =
+  "ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace";
+
+const CHART_THEMES = {
+  light: {
+    barStart: "#0969DA",
+    barEnd: "#218BFF",
+    ownerText: "#656D76",
+    repoText: "#1F2328",
+    valueText: "#1F2328",
+    axisText: "#57606A",
+    starIcon: "#BF8700",
+    axisLine: "#D0D7DE",
+    gridLine: "#D0D7DE",
+    gridOpacity: "0.6",
+    rowStripe: "#8C959F",
+    rowStripeOpacity: "0.05",
+  },
+  dark: {
+    barStart: "#1F6FEB",
+    barEnd: "#58A6FF",
+    ownerText: "#8B949E",
+    repoText: "#E6EDF3",
+    valueText: "#E6EDF3",
+    axisText: "#8B949E",
+    starIcon: "#E3B341",
+    axisLine: "#30363D",
+    gridLine: "#30363D",
+    gridOpacity: "0.7",
+    rowStripe: "#8B949E",
+    rowStripeOpacity: "0.06",
+  },
+};
 
 const pullRequestQuery = `
   query PullRequestHistory($login: String!, $after: String) {
@@ -84,16 +120,29 @@ if (start === -1 || end === -1 || end < start) {
   );
 }
 
-const lightChartPath = "assets/open-source-contributions-light.svg";
-const darkChartPath = "assets/open-source-contributions-dark.svg";
+const chartDir = "assets/open-source-contributions";
+const layout = computeChartLayout(sortedProjects);
 
-await mkdir("assets", { recursive: true });
+await rm(chartDir, { recursive: true, force: true });
+await mkdir(chartDir, { recursive: true });
+
 await Promise.all([
-  writeFile(lightChartPath, renderBarChartSvg(sortedProjects, "light"), "utf8"),
-  writeFile(darkChartPath, renderBarChartSvg(sortedProjects, "dark"), "utf8"),
+  ...sortedProjects.flatMap((entry, index) => {
+    const rowSlug = `row-${String(index).padStart(2, "0")}`;
+    return ["light", "dark"].map((mode) =>
+      writeFile(
+        `${chartDir}/${rowSlug}-${mode}.svg`,
+        renderRowSvg(entry, index, layout, mode),
+        "utf8",
+      ),
+    );
+  }),
+  ...["light", "dark"].map((mode) =>
+    writeFile(`${chartDir}/axis-${mode}.svg`, renderAxisSvg(layout, mode), "utf8"),
+  ),
 ]);
 
-const generated = renderContributions();
+const generated = renderContributions(sortedProjects);
 const updated =
   readme.slice(0, start) + generated + readme.slice(end + endMarker.length);
 
@@ -173,80 +222,42 @@ function comparePullRequests(left, right, dateField) {
   );
 }
 
-function renderContributions() {
+function renderContributions(projectEntries) {
+  const rowBlocks = projectEntries.map((entry, index) => {
+    const rowSlug = `row-${String(index).padStart(2, "0")}`;
+    const count = entry.pullRequests.length;
+    const stars = formatStars(entry.repository.stargazerCount);
+    const prLabel = count === 1 ? "merged PR" : "merged PRs";
+    const repoName = entry.repository.nameWithOwner;
+    const title = escapeHtml(`${repoName} — ${count} ${prLabel} (${stars}★)`);
+    const alt = escapeHtml(`${repoName}: ${count} ${prLabel} (${stars}★)`);
+    const url = escapeHtml(entry.repository.url);
+
+    return `<div><a href="${url}" title="${title}"><picture><source media="(prefers-color-scheme: dark)" srcset="./${chartDir}/${rowSlug}-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./${chartDir}/${rowSlug}-light.svg" /><img alt="${alt}" src="./${chartDir}/${rowSlug}-light.svg" width="100%" align="top" /></picture></a></div>`;
+  });
+
+  const axisBlock = `<div><picture><source media="(prefers-color-scheme: dark)" srcset="./${chartDir}/axis-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./${chartDir}/axis-light.svg" /><img alt="Merged PRs axis" src="./${chartDir}/axis-light.svg" width="100%" align="top" /></picture></div>`;
+
   return [
     startMarker,
     "",
-    `${mergedPullRequests.length} merged PRs across ${sortedProjects.length} upstream projects.`,
+    `${mergedPullRequests.length} merged PRs across ${projectEntries.length} upstream projects.`,
     "",
-    '<p align="center">',
-    "  <picture>",
-    "    <source",
-    '      media="(prefers-color-scheme: dark)"',
-    '      srcset="./assets/open-source-contributions-dark.svg"',
-    "    />",
-    "    <source",
-    '      media="(prefers-color-scheme: light)"',
-    '      srcset="./assets/open-source-contributions-light.svg"',
-    "    />",
-    "    <img",
-    `      alt="${escapeHtml(`${username}'s open source merged pull requests across ${sortedProjects.length} upstream projects`)}"`,
-    '      src="./assets/open-source-contributions-light.svg"',
-    '      width="100%"',
-    "    />",
-    "  </picture>",
-    "</p>",
+    ...rowBlocks,
+    axisBlock,
     "",
     endMarker,
   ].join("\n");
 }
 
-function renderBarChartSvg(projectEntries, mode) {
-  const SANS =
-    "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif";
-  const MONO =
-    "ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace";
-
-  const themes = {
-    light: {
-      barStart: "#0969DA",
-      barEnd: "#218BFF",
-      ownerText: "#656D76",
-      repoText: "#1F2328",
-      valueText: "#1F2328",
-      axisText: "#57606A",
-      starIcon: "#BF8700",
-      axisLine: "#D0D7DE",
-      gridLine: "#D0D7DE",
-      gridOpacity: "0.6",
-      rowStripe: "#8C959F",
-      rowStripeOpacity: "0.05",
-    },
-    dark: {
-      barStart: "#1F6FEB",
-      barEnd: "#58A6FF",
-      ownerText: "#8B949E",
-      repoText: "#E6EDF3",
-      valueText: "#E6EDF3",
-      axisText: "#8B949E",
-      starIcon: "#E3B341",
-      axisLine: "#30363D",
-      gridLine: "#30363D",
-      gridOpacity: "0.7",
-      rowStripe: "#8B949E",
-      rowStripeOpacity: "0.06",
-    },
-  };
-
-  const t = themes[mode];
+function computeChartLayout(projectEntries) {
   const width = 880;
   const padLeft = 14;
   const padRight = 44;
-  const padTop = 14;
-  const padBottom = 36;
   const rowHeight = 28;
   const barHeight = 16;
   const barYOffset = 6;
+  const axisHeight = 36;
 
   const maxLabelChars = Math.max(
     ...projectEntries.map((entry) => entry.repository.nameWithOwner.length),
@@ -269,8 +280,6 @@ function renderBarChartSvg(projectEntries, mode) {
   const starRightX = repoRightX + starGap + starWidth;
   const axisX = starRightX + axisGap;
   const barAreaWidth = width - axisX - padRight;
-  const chartHeight = Math.max(1, projectEntries.length) * rowHeight;
-  const height = padTop + chartHeight + padBottom;
 
   const maxCount = Math.max(
     0,
@@ -282,69 +291,83 @@ function renderBarChartSvg(projectEntries, mode) {
     Math.floor(2800 / Math.max(1, projectEntries.length)),
   );
 
-  const gridAndTicks = ticks
+  return {
+    width,
+    padLeft,
+    rowHeight,
+    barHeight,
+    barYOffset,
+    axisHeight,
+    repoRightX,
+    starRightX,
+    axisX,
+    barAreaWidth,
+    axisMax,
+    ticks,
+    staggerStep,
+  };
+}
+
+function renderRowSvg(entry, index, layout, mode) {
+  const t = CHART_THEMES[mode];
+  const {
+    width,
+    padLeft,
+    rowHeight,
+    barHeight,
+    barYOffset,
+    repoRightX,
+    starRightX,
+    axisX,
+    barAreaWidth,
+    axisMax,
+    ticks,
+    staggerStep,
+  } = layout;
+
+  const count = entry.pullRequests.length;
+  const nameWithOwner = entry.repository.nameWithOwner;
+  const slashIndex = nameWithOwner.indexOf("/");
+  const owner = slashIndex === -1 ? "" : nameWithOwner.slice(0, slashIndex);
+  const repo =
+    slashIndex === -1 ? nameWithOwner : nameWithOwner.slice(slashIndex + 1);
+  const stars = formatStars(entry.repository.stargazerCount);
+
+  const gridLines = ticks
+    .filter((tick) => tick > 0)
     .map((tick) => {
-      const x = axisX + (tick / axisMax) * barAreaWidth;
-      const xStr = x.toFixed(2);
-      const grid =
-        tick === 0
-          ? ""
-          : `  <line x1="${xStr}" y1="${padTop}" x2="${xStr}" y2="${padTop + chartHeight}" stroke="${t.gridLine}" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="${t.gridOpacity}"/>\n`;
-      const label = `  <text x="${xStr}" y="${padTop + chartHeight + 16}" text-anchor="middle" font-family="${MONO}" font-size="11" fill="${t.axisText}">${tick}</text>`;
-      return `${grid}${label}`;
+      const xStr = (axisX + (tick / axisMax) * barAreaWidth).toFixed(2);
+      return `  <line x1="${xStr}" y1="0" x2="${xStr}" y2="${rowHeight}" stroke="${t.gridLine}" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="${t.gridOpacity}"/>`;
     })
     .join("\n");
 
-  const rows = projectEntries
-    .map((entry, index) => {
-      const rowY = padTop + index * rowHeight;
-      const count = entry.pullRequests.length;
-      const nameWithOwner = entry.repository.nameWithOwner;
-      const slashIndex = nameWithOwner.indexOf("/");
-      const owner = slashIndex === -1 ? "" : nameWithOwner.slice(0, slashIndex);
-      const repo =
-        slashIndex === -1 ? nameWithOwner : nameWithOwner.slice(slashIndex + 1);
+  const stripe =
+    index % 2 === 0
+      ? `  <rect x="${padLeft}" y="1" width="${width - padLeft - 10}" height="${rowHeight - 2}" rx="4" fill="${t.rowStripe}" fill-opacity="${t.rowStripeOpacity}"/>\n`
+      : "";
 
-      const stripe =
-        index % 2 === 0
-          ? `  <rect x="${padLeft}" y="${rowY + 1}" width="${width - padLeft - 10}" height="${rowHeight - 2}" rx="4" fill="${t.rowStripe}" fill-opacity="${t.rowStripeOpacity}"/>\n`
-          : "";
+  const labelText = owner
+    ? `<tspan fill="${t.ownerText}" font-weight="400">${escapeXml(owner)}/</tspan><tspan fill="${t.repoText}" font-weight="600">${escapeXml(repo)}</tspan>`
+    : `<tspan fill="${t.repoText}" font-weight="600">${escapeXml(repo)}</tspan>`;
 
-      const labelText = owner
-        ? `<tspan fill="${t.ownerText}" font-weight="400">${escapeXml(owner)}/</tspan><tspan fill="${t.repoText}" font-weight="600">${escapeXml(repo)}</tspan>`
-        : `<tspan fill="${t.repoText}" font-weight="600">${escapeXml(repo)}</tspan>`;
+  const delayMs = index * staggerStep;
+  const valueDelayMs = delayMs + 1280;
+  const rawBarWidth = (count / axisMax) * barAreaWidth;
+  const barWidth = Math.max(5, rawBarWidth);
+  const r = Math.min(4, barWidth / 2);
+  const barPath = [
+    "M 0 0",
+    `H ${(barWidth - r).toFixed(2)}`,
+    `Q ${barWidth.toFixed(2)} 0 ${barWidth.toFixed(2)} ${r.toFixed(2)}`,
+    `V ${(barHeight - r).toFixed(2)}`,
+    `Q ${barWidth.toFixed(2)} ${barHeight} ${(barWidth - r).toFixed(2)} ${barHeight}`,
+    "H 0",
+    "Z",
+  ].join(" ");
 
-      const delayMs = index * staggerStep;
-      const valueDelayMs = delayMs + 1280;
-      const rawBarWidth = (count / axisMax) * barAreaWidth;
-      const barWidth = Math.max(5, rawBarWidth);
-      const by = rowY + barYOffset;
-      const r = Math.min(4, barWidth / 2);
-      const barPath = [
-        "M 0 0",
-        `H ${(barWidth - r).toFixed(2)}`,
-        `Q ${barWidth.toFixed(2)} 0 ${barWidth.toFixed(2)} ${r.toFixed(2)}`,
-        `V ${(barHeight - r).toFixed(2)}`,
-        `Q ${barWidth.toFixed(2)} ${barHeight} ${(barWidth - r).toFixed(2)} ${barHeight}`,
-        "H 0",
-        "Z",
-      ].join(" ");
+  const countX = (axisX + barWidth + 8).toFixed(1);
 
-      const countX = (axisX + barWidth + 8).toFixed(1);
-      const stars = formatStars(entry.repository.stargazerCount);
-
-      return `${stripe}  <text x="${repoRightX}" y="${rowY + 18.5}" text-anchor="end" font-family="${SANS}" font-size="12.5">${labelText}</text>
-  <text x="${starRightX}" y="${rowY + 18.5}" text-anchor="end" font-family="${MONO}" font-size="11" font-weight="500"><tspan fill="${t.axisText}">${escapeXml(stars)}</tspan><tspan font-family="${SANS}" fill="${t.starIcon}" dx="1.5">&#9733;</tspan></text>
-  <g transform="translate(${axisX}, ${by})">
-    <path class="bar" d="${barPath}" fill="url(#barGrad-${mode})" style="animation-delay: ${delayMs}ms;"/>
-  </g>
-  <g transform="translate(${countX}, ${rowY + 18.5})">
-    <text class="bar-value" x="0" y="0" font-family="${MONO}" font-size="12" font-weight="600" fill="${t.valueText}" style="animation-delay: ${valueDelayMs}ms;">${count}</text>
-  </g>`;
-    })
-    .join("\n");
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" role="img" aria-label="${escapeXml(`${username} open source merged PR counts by repository`)}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${rowHeight}" viewBox="0 0 ${width} ${rowHeight}" fill="none" role="img" aria-label="${escapeXml(`${nameWithOwner}: ${count} merged PRs (${stars}★)`)}">
   <defs>
     <linearGradient id="barGrad-${mode}" x1="0" y1="0" x2="${barAreaWidth}" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="${t.barStart}"/>
@@ -380,10 +403,34 @@ function renderBarChartSvg(projectEntries, mode) {
       animation: valueFade 1200ms ease-out both;
     }
   </style>
-${gridAndTicks}
-  <line x1="${axisX}" y1="${padTop}" x2="${axisX}" y2="${padTop + chartHeight}" stroke="${t.axisLine}" stroke-width="1"/>
-${rows}
-  <text x="${(axisX + barAreaWidth / 2).toFixed(1)}" y="${padTop + chartHeight + 31}" text-anchor="middle" font-family="${SANS}" font-size="11" fill="${t.axisText}">Merged PRs</text>
+${gridLines}
+  <line x1="${axisX}" y1="0" x2="${axisX}" y2="${rowHeight}" stroke="${t.axisLine}" stroke-width="1"/>
+${stripe}  <text x="${repoRightX}" y="18.5" text-anchor="end" font-family="${CHART_SANS}" font-size="12.5">${labelText}</text>
+  <text x="${starRightX}" y="18.5" text-anchor="end" font-family="${CHART_MONO}" font-size="11" font-weight="500"><tspan fill="${t.axisText}">${escapeXml(stars)}</tspan><tspan font-family="${CHART_SANS}" fill="${t.starIcon}" dx="1.5">&#9733;</tspan></text>
+  <g transform="translate(${axisX}, ${barYOffset})">
+    <path class="bar" d="${barPath}" fill="url(#barGrad-${mode})" style="animation-delay: ${delayMs}ms;"/>
+  </g>
+  <g transform="translate(${countX}, 18.5)">
+    <text class="bar-value" x="0" y="0" font-family="${CHART_MONO}" font-size="12" font-weight="600" fill="${t.valueText}" style="animation-delay: ${valueDelayMs}ms;">${count}</text>
+  </g>
+</svg>
+`;
+}
+
+function renderAxisSvg(layout, mode) {
+  const t = CHART_THEMES[mode];
+  const { width, axisHeight, axisX, barAreaWidth, axisMax, ticks } = layout;
+
+  const tickLabels = ticks
+    .map((tick) => {
+      const xStr = (axisX + (tick / axisMax) * barAreaWidth).toFixed(2);
+      return `  <text x="${xStr}" y="16" text-anchor="middle" font-family="${CHART_MONO}" font-size="11" fill="${t.axisText}">${tick}</text>`;
+    })
+    .join("\n");
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${axisHeight}" viewBox="0 0 ${width} ${axisHeight}" fill="none" role="img" aria-label="Merged PRs axis">
+${tickLabels}
+  <text x="${(axisX + barAreaWidth / 2).toFixed(1)}" y="31" text-anchor="middle" font-family="${CHART_SANS}" font-size="11" fill="${t.axisText}">Merged PRs</text>
 </svg>
 `;
 }
