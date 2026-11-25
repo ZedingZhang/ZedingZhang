@@ -44,9 +44,9 @@
   <text x="210" y="18.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">ayuayue/</tspan><tspan fill="#1F2328" font-weight="600">PiDeck</tspan></text>
   <text x="276" y="18.5" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="500"><tspan fill="#57606A">1.2k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#BF8700" dx="1.5">&#9733;</tspan></text>
   <g transform="translate(288, 6)">
-    <path class="bar" d="M 0 0 H 39.84 Q 43.84 0 43.84 4.00 V 12.00 Q 43.84 16 39.84 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 254ms;"/>
+    <path class="bar" d="M 0 0 H 39.84 Q 43.84 0 43.84 4.00 V 12.00 Q 43.84 16 39.84 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 242ms;"/>
   </g>
   <g transform="translate(339.8, 18.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1534ms;">8</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 1522ms;">8</text>
   </g>
 </svg>

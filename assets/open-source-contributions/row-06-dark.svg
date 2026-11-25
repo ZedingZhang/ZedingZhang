@@ -44,9 +44,9 @@
   <text x="210" y="18.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">infiniflow/</tspan><tspan fill="#E6EDF3" font-weight="600">ragflow</tspan></text>
   <text x="276" y="18.5" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="500"><tspan fill="#8B949E">94.7k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#E3B341" dx="1.5">&#9733;</tspan></text>
   <g transform="translate(288, 6)">
-    <path class="bar" d="M 0 0 H 12.44 Q 16.44 0 16.44 4.00 V 12.00 Q 16.44 16 12.44 16 H 0 Z" fill="url(#barGrad-dark)" style="animation-delay: 762ms;"/>
+    <path class="bar" d="M 0 0 H 12.44 Q 16.44 0 16.44 4.00 V 12.00 Q 16.44 16 12.44 16 H 0 Z" fill="url(#barGrad-dark)" style="animation-delay: 726ms;"/>
   </g>
   <g transform="translate(312.4, 18.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3" style="animation-delay: 2042ms;">3</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3" style="animation-delay: 2006ms;">3</text>
   </g>
 </svg>

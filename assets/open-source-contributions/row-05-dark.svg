@@ -43,9 +43,9 @@
   <text x="210" y="18.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#8B949E" font-weight="400">alibaba/</tspan><tspan fill="#E6EDF3" font-weight="600">MNN</tspan></text>
   <text x="276" y="18.5" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="500"><tspan fill="#8B949E">16.6k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#E3B341" dx="1.5">&#9733;</tspan></text>
   <g transform="translate(288, 6)">
-    <path class="bar" d="M 0 0 H 23.40 Q 27.40 0 27.40 4.00 V 12.00 Q 27.40 16 23.40 16 H 0 Z" fill="url(#barGrad-dark)" style="animation-delay: 635ms;"/>
+    <path class="bar" d="M 0 0 H 23.40 Q 27.40 0 27.40 4.00 V 12.00 Q 27.40 16 23.40 16 H 0 Z" fill="url(#barGrad-dark)" style="animation-delay: 605ms;"/>
   </g>
   <g transform="translate(323.4, 18.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3" style="animation-delay: 1915ms;">5</text>
+    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#E6EDF3" style="animation-delay: 1885ms;">5</text>
   </g>
 </svg>
