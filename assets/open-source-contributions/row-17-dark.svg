@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="TencentCloud/CubeSandbox: 1 merged PRs, 13.5k★">
   <defs>
     <linearGradient id="prBarGrad-dark" x1="0" y1="0" x2="-249" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#1F6FEB"/>
-      <stop offset="100%" stop-color="#58A6FF"/>
+      <stop offset="0%" stop-color="#4B7096"/>
+      <stop offset="100%" stop-color="#7CA0C4"/>
     </linearGradient>
     <linearGradient id="starBarGrad-dark" x1="0" y1="0" x2="250" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#466E6C"/>
@@ -67,14 +67,14 @@
   <g transform="translate(279.0, 23.5)">
     <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#E6EDF3" style="animation-delay: 3337ms;">1</text>
   </g>
-  <rect x="301" y="5" width="251" height="28" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1"/>
-  <text x="313" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14"><tspan fill="#8B949E" font-weight="400">TencentCloud/</tspan><tspan fill="#58A6FF" font-weight="600">CubeSandbox</tspan></text>
+  <rect x="301" y="5" width="251" height="28" rx="6" fill="#161B22" stroke="#2E353D" stroke-width="1"/>
+  <text x="313" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14"><tspan fill="#8B949E" font-weight="400">TencentCloud/</tspan><tspan fill="#80A4C8" font-weight="600">CubeSandbox</tspan></text>
   <g transform="translate(531, 14)" stroke="#8B949E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <path d="M 3 1.5 H 8.5 V 7"/>
     <path d="M 8.5 1.5 L 1.5 8.5"/>
   </g>
   <g transform="translate(562, 10)">
-    <path class="bar" d="M 0 0 H 18.45 Q 22.45 0 22.45 4.00 V 14.00 Q 22.45 18 18.45 18 H 0 Z" fill="url(#starBarGrad-dark)" style="animation-delay: 2057ms;"/>
+    <path class="bar" d="M 0 0 H 18.46 Q 22.46 0 22.46 4.00 V 14.00 Q 22.46 18 18.46 18 H 0 Z" fill="url(#starBarGrad-dark)" style="animation-delay: 2057ms;"/>
   </g>
   <g transform="translate(592.5, 23)">
     <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 3337ms;"><tspan fill="#8B949E">13.5k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#7BA5A0" dx="1.5">&#9733;</tspan></text>

@@ -27,12 +27,12 @@ const MONTH_NAMES = [
 
 const ACTIVITY_THEMES = {
   light: {
-    commits: "#3D6E9E",
-    prs: "#699E96",
-    issues: "#C48374",
-    reviews: "#8D7EA8",
-    other: "#CFD7DF",
-    titleText: "#1F2328",
+    commits: "#446688",
+    prs: "#6D9C94",
+    issues: "#B78478",
+    reviews: "#8C7FA4",
+    other: "#CFD6DE",
+    titleText: "#24292F",
     valueText: "#57606A",
     axisText: "#57606A",
     axisLine: "#D0D7DE",
@@ -40,10 +40,10 @@ const ACTIVITY_THEMES = {
     gridOpacity: "0.6",
   },
   dark: {
-    commits: "#4882BD",
-    prs: "#6BA69D",
-    issues: "#CB8B7C",
-    reviews: "#9C8EC0",
+    commits: "#4E759C",
+    prs: "#6EA299",
+    issues: "#BE8C80",
+    reviews: "#998CB5",
     other: "#48515C",
     titleText: "#E6EDF3",
     valueText: "#8B949E",
