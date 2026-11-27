@@ -27,7 +27,7 @@ Focusing on agent development, agent safety, edge inference, and backend systems
 
 <!--OPEN_SOURCE_CONTRIBUTIONS:start-->
 
-148 merged PRs across 23 upstream projects.
+148 merged PRs across 23 upstream projects — click any row to open the repository.
 
 <div><a href="https://github.com/desplega-ai/agent-swarm" title="desplega-ai/agent-swarm — 86 merged PRs (1.1k★)"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/open-source-contributions/row-00-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/open-source-contributions/row-00-light.svg" /><img alt="desplega-ai/agent-swarm: 86 merged PRs (1.1k★)" src="./assets/open-source-contributions/row-00-light.svg" width="100%" align="top" /></picture></a></div>
 <div><a href="https://github.com/thedotmack/claude-mem" title="thedotmack/claude-mem — 10 merged PRs (120.0k★)"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/open-source-contributions/row-01-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/open-source-contributions/row-01-light.svg" /><img alt="thedotmack/claude-mem: 10 merged PRs (120.0k★)" src="./assets/open-source-contributions/row-01-light.svg" width="100%" align="top" /></picture></a></div>

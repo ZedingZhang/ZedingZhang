@@ -21,8 +21,11 @@ const CHART_THEMES = {
     barEnd: "#218BFF",
     starBarStart: "#4F7977",
     starBarEnd: "#7FA4A0",
-    ownerText: "#656D76",
-    repoText: "#1F2328",
+    ownerText: "#57606A",
+    repoText: "#0969DA",
+    pillFill: "#F6F8FA",
+    pillStroke: "#D8DEE4",
+    linkIcon: "#6E7781",
     valueText: "#1F2328",
     axisText: "#57606A",
     starIcon: "#648B88",
@@ -38,7 +41,10 @@ const CHART_THEMES = {
     starBarStart: "#466E6C",
     starBarEnd: "#7BA5A0",
     ownerText: "#8B949E",
-    repoText: "#E6EDF3",
+    repoText: "#58A6FF",
+    pillFill: "#161B22",
+    pillStroke: "#30363D",
+    linkIcon: "#8B949E",
     valueText: "#E6EDF3",
     axisText: "#8B949E",
     starIcon: "#7BA5A0",
@@ -245,7 +251,7 @@ function renderContributions(projectEntries) {
   return [
     startMarker,
     "",
-    `${mergedPullRequests.length} merged PRs across ${projectEntries.length} upstream projects.`,
+    `${mergedPullRequests.length} merged PRs across ${projectEntries.length} upstream projects — click any row to open the repository.`,
     "",
     ...rowBlocks,
     axisBlock,
@@ -256,20 +262,20 @@ function renderContributions(projectEntries) {
 
 function computeChartLayout(projectEntries) {
   const width = 880;
-  const rowHeight = 28;
-  const barHeight = 16;
-  const barYOffset = 6;
-  const axisHeight = 36;
-  const leftPad = 64;
-  const rightPad = 40;
+  const rowHeight = 38;
+  const barHeight = 18;
+  const barYOffset = 10;
+  const axisHeight = 40;
+  const leftPad = 68;
+  const rightPad = 42;
 
   const maxLabelChars = Math.max(
     ...projectEntries.map((entry) => entry.repository.nameWithOwner.length),
     16,
   );
   const repoColWidth = Math.min(
-    240,
-    Math.max(196, Math.ceil(maxLabelChars * 7.5) + 22),
+    300,
+    Math.max(244, Math.ceil(maxLabelChars * 8.6) + 64),
   );
   const remaining = width - leftPad - rightPad - repoColWidth;
   const starAreaWidth = Math.floor(remaining / 2);
@@ -304,6 +310,7 @@ function computeChartLayout(projectEntries) {
     barHeight,
     barYOffset,
     axisHeight,
+    repoColWidth,
     starAreaWidth,
     prAreaWidth,
     starAxisX,
@@ -324,11 +331,11 @@ function renderRowSvg(entry, index, layout, mode) {
     rowHeight,
     barHeight,
     barYOffset,
+    repoColWidth,
     starAreaWidth,
     prAreaWidth,
     starAxisX,
     prAxisX,
-    repoCenterX,
     starAxisMax,
     starTicks,
     prAxisMax,
@@ -363,8 +370,16 @@ function renderRowSvg(entry, index, layout, mode) {
 
   const stripe =
     index % 2 === 0
-      ? `  <rect x="8" y="1" width="${width - 16}" height="${rowHeight - 2}" rx="4" fill="${t.rowStripe}" fill-opacity="${t.rowStripeOpacity}"/>\n`
+      ? `  <rect x="8" y="2" width="${width - 16}" height="${rowHeight - 4}" rx="5" fill="${t.rowStripe}" fill-opacity="${t.rowStripeOpacity}"/>\n`
       : "";
+
+  const pillPadX = 10;
+  const pillX = starAxisX + pillPadX;
+  const pillW = repoColWidth - pillPadX * 2;
+  const pillY = 5;
+  const pillH = rowHeight - pillY * 2;
+  const repoTextX = pillX + 12;
+  const iconX = pillX + pillW - 21;
 
   const labelText = owner
     ? `<tspan fill="${t.ownerText}" font-weight="400">${escapeXml(owner)}/</tspan><tspan fill="${t.repoText}" font-weight="600">${escapeXml(repo)}</tspan>`
@@ -384,7 +399,7 @@ function renderRowSvg(entry, index, layout, mode) {
     "H 0",
     "Z",
   ].join(" ");
-  const starCountX = (starAxisX - sw - 7).toFixed(1);
+  const starCountX = (starAxisX - sw - 8).toFixed(1);
 
   const pw = Math.max(4, (count / prAxisMax) * prAreaWidth);
   const pr = Math.min(4, pw / 2);
@@ -460,15 +475,20 @@ ${rightGridLines}
 ${stripe}  <g transform="translate(${starAxisX}, ${barYOffset})">
     <path class="bar" d="${starBarPath}" fill="url(#starBarGrad-${mode})" style="animation-delay: ${delayMs}ms;"/>
   </g>
-  <g transform="translate(${starCountX}, 18.5)">
-    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="${CHART_MONO}" font-size="11" font-weight="500" style="animation-delay: ${valueDelayMs}ms;"><tspan fill="${t.axisText}">${escapeXml(stars)}</tspan><tspan font-family="${CHART_SANS}" fill="${t.starIcon}" dx="1.5">&#9733;</tspan></text>
+  <g transform="translate(${starCountX}, 23)">
+    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="${CHART_MONO}" font-size="12" font-weight="500" style="animation-delay: ${valueDelayMs}ms;"><tspan fill="${t.axisText}">${escapeXml(stars)}</tspan><tspan font-family="${CHART_SANS}" fill="${t.starIcon}" dx="1.5">&#9733;</tspan></text>
   </g>
-  <text x="${repoCenterX.toFixed(1)}" y="18.5" text-anchor="middle" font-family="${CHART_SANS}" font-size="12.5">${labelText}</text>
+  <rect x="${pillX}" y="${pillY}" width="${pillW}" height="${pillH}" rx="6" fill="${t.pillFill}" stroke="${t.pillStroke}" stroke-width="1"/>
+  <text x="${repoTextX}" y="23.8" font-family="${CHART_SANS}" font-size="14">${labelText}</text>
+  <g transform="translate(${iconX}, 14)" stroke="${t.linkIcon}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 3 1.5 H 8.5 V 7"/>
+    <path d="M 8.5 1.5 L 1.5 8.5"/>
+  </g>
   <g transform="translate(${prAxisX}, ${barYOffset})">
     <path class="bar" d="${prBarPath}" fill="url(#prBarGrad-${mode})" style="animation-delay: ${delayMs}ms;"/>
   </g>
-  <g transform="translate(${prCountX}, 18.5)">
-    <text class="bar-value-right" x="0" y="0" font-family="${CHART_MONO}" font-size="12" font-weight="600" fill="${t.valueText}" style="animation-delay: ${valueDelayMs}ms;">${count}</text>
+  <g transform="translate(${prCountX}, 23.5)">
+    <text class="bar-value-right" x="0" y="0" font-family="${CHART_MONO}" font-size="13" font-weight="600" fill="${t.valueText}" style="animation-delay: ${valueDelayMs}ms;">${count}</text>
   </g>
 </svg>
 `;
@@ -483,6 +503,7 @@ function renderAxisSvg(layout, mode) {
     prAreaWidth,
     starAxisX,
     prAxisX,
+    repoCenterX,
     starAxisMax,
     starTicks,
     prAxisMax,
@@ -492,22 +513,23 @@ function renderAxisSvg(layout, mode) {
   const leftTickLabels = starTicks
     .map((tick) => {
       const xStr = (starAxisX - (tick / starAxisMax) * starAreaWidth).toFixed(2);
-      return `  <text x="${xStr}" y="16" text-anchor="middle" font-family="${CHART_MONO}" font-size="11" fill="${t.axisText}">${escapeXml(formatAxisTick(tick))}</text>`;
+      return `  <text x="${xStr}" y="16" text-anchor="middle" font-family="${CHART_MONO}" font-size="11.5" fill="${t.axisText}">${escapeXml(formatAxisTick(tick))}</text>`;
     })
     .join("\n");
 
   const rightTickLabels = prTicks
     .map((tick) => {
       const xStr = (prAxisX + (tick / prAxisMax) * prAreaWidth).toFixed(2);
-      return `  <text x="${xStr}" y="16" text-anchor="middle" font-family="${CHART_MONO}" font-size="11" fill="${t.axisText}">${escapeXml(formatAxisTick(tick))}</text>`;
+      return `  <text x="${xStr}" y="16" text-anchor="middle" font-family="${CHART_MONO}" font-size="11.5" fill="${t.axisText}">${escapeXml(formatAxisTick(tick))}</text>`;
     })
     .join("\n");
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${axisHeight}" viewBox="0 0 ${width} ${axisHeight}" fill="none" role="img" aria-label="Stars and Merged PRs axes">
 ${leftTickLabels}
-  <text x="${(starAxisX - starAreaWidth / 2).toFixed(1)}" y="31" text-anchor="middle" font-family="${CHART_SANS}" font-size="11" fill="${t.axisText}">Stars</text>
+  <text x="${(starAxisX - starAreaWidth / 2).toFixed(1)}" y="33" text-anchor="middle" font-family="${CHART_SANS}" font-size="11.5" fill="${t.axisText}">Stars</text>
+  <text x="${repoCenterX.toFixed(1)}" y="33" text-anchor="middle" font-family="${CHART_SANS}" font-size="11.5" fill="${t.axisText}">Repository</text>
 ${rightTickLabels}
-  <text x="${(prAxisX + prAreaWidth / 2).toFixed(1)}" y="31" text-anchor="middle" font-family="${CHART_SANS}" font-size="11" fill="${t.axisText}">Merged PRs</text>
+  <text x="${(prAxisX + prAreaWidth / 2).toFixed(1)}" y="33" text-anchor="middle" font-family="${CHART_SANS}" font-size="11.5" fill="${t.axisText}">Merged PRs</text>
 </svg>
 `;
 }

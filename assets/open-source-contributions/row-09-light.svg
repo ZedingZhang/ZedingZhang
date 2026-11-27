@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="28" viewBox="0 0 880 28" fill="none" role="img" aria-label="lightpanda-io/browser: 2 merged PRs, 42.6k★">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="lightpanda-io/browser: 2 merged PRs, 42.6k★">
   <defs>
-    <linearGradient id="starBarGrad-light" x1="0" y1="0" x2="-287" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="starBarGrad-light" x1="0" y1="0" x2="-249" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#4F7977"/>
       <stop offset="100%" stop-color="#7FA4A0"/>
     </linearGradient>
-    <linearGradient id="prBarGrad-light" x1="0" y1="0" x2="287" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="prBarGrad-light" x1="0" y1="0" x2="250" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#0969DA"/>
       <stop offset="100%" stop-color="#218BFF"/>
     </linearGradient>
@@ -52,26 +52,31 @@
       animation: valueFadeRight 1200ms ease-out both;
     }
   </style>
-  <line x1="255.33" y1="0" x2="255.33" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="159.67" y1="0" x2="159.67" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="64.00" y1="0" x2="64.00" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="624.75" y1="0" x2="624.75" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="696.50" y1="0" x2="696.50" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="768.25" y1="0" x2="768.25" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="840.00" y1="0" x2="840.00" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="351" y1="0" x2="351" y2="28" stroke="#D0D7DE" stroke-width="1"/>
-  <line x1="553" y1="0" x2="553" y2="28" stroke="#D0D7DE" stroke-width="1"/>
-  <g transform="translate(351, 6)">
-    <path class="bar" d="M 0 0 H -77.56 Q -81.56 0 -81.56 4.00 V 12.00 Q -81.56 16 -77.56 16 H 0 Z" fill="url(#starBarGrad-light)" style="animation-delay: 1089ms;"/>
+  <line x1="234.00" y1="0" x2="234.00" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="151.00" y1="0" x2="151.00" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="68.00" y1="0" x2="68.00" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="650.50" y1="0" x2="650.50" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="713.00" y1="0" x2="713.00" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="775.50" y1="0" x2="775.50" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="838.00" y1="0" x2="838.00" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="317" y1="0" x2="317" y2="38" stroke="#D0D7DE" stroke-width="1"/>
+  <line x1="588" y1="0" x2="588" y2="38" stroke="#D0D7DE" stroke-width="1"/>
+  <g transform="translate(317, 10)">
+    <path class="bar" d="M 0 0 H -66.76 Q -70.76 0 -70.76 4.00 V 14.00 Q -70.76 18 -66.76 18 H 0 Z" fill="url(#starBarGrad-light)" style="animation-delay: 1089ms;"/>
   </g>
-  <g transform="translate(262.4, 18.5)">
-    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="500" style="animation-delay: 2369ms;"><tspan fill="#57606A">42.6k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#648B88" dx="1.5">&#9733;</tspan></text>
+  <g transform="translate(238.2, 23)">
+    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 2369ms;"><tspan fill="#57606A">42.6k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#648B88" dx="1.5">&#9733;</tspan></text>
   </g>
-  <text x="452.0" y="18.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">lightpanda-io/</tspan><tspan fill="#1F2328" font-weight="600">browser</tspan></text>
-  <g transform="translate(553, 6)">
-    <path class="bar" d="M 0 0 H 2.87 Q 5.74 0 5.74 2.87 V 13.13 Q 5.74 16 2.87 16 H 0 Z" fill="url(#prBarGrad-light)" style="animation-delay: 1089ms;"/>
+  <rect x="327" y="5" width="251" height="28" rx="6" fill="#F6F8FA" stroke="#D8DEE4" stroke-width="1"/>
+  <text x="339" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14"><tspan fill="#57606A" font-weight="400">lightpanda-io/</tspan><tspan fill="#0969DA" font-weight="600">browser</tspan></text>
+  <g transform="translate(557, 14)" stroke="#6E7781" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 3 1.5 H 8.5 V 7"/>
+    <path d="M 8.5 1.5 L 1.5 8.5"/>
   </g>
-  <g transform="translate(566.7, 18.5)">
-    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 2369ms;">2</text>
+  <g transform="translate(588, 10)">
+    <path class="bar" d="M 0 0 H 2.50 Q 5.00 0 5.00 2.50 V 15.50 Q 5.00 18 2.50 18 H 0 Z" fill="url(#prBarGrad-light)" style="animation-delay: 1089ms;"/>
+  </g>
+  <g transform="translate(601.0, 23.5)">
+    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#1F2328" style="animation-delay: 2369ms;">2</text>
   </g>
 </svg>
