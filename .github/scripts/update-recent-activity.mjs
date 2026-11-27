@@ -284,13 +284,15 @@ function computeChartLayout(projectEntries) {
   const leftPad = 42;
   const rightPad = 68;
 
-  const maxLabelChars = Math.max(
-    ...projectEntries.map((entry) => entry.repository.nameWithOwner.length),
-    16,
+  const maxLabelWidth = Math.max(
+    ...projectEntries.map((entry) =>
+      estimateRepoLabelWidth(entry.repository.nameWithOwner),
+    ),
+    140,
   );
   const repoColWidth = Math.min(
-    300,
-    Math.max(244, Math.ceil(maxLabelChars * 8.6) + 64),
+    370,
+    Math.max(244, Math.ceil(maxLabelWidth) + 68),
   );
   const remaining = width - leftPad - rightPad - repoColWidth;
   const prAreaWidth = Math.floor(remaining / 2);
@@ -361,10 +363,7 @@ function renderRowSvg(entry, index, layout, mode) {
   const count = entry.pullRequests.length;
   const starCount = entry.repository.stargazerCount;
   const nameWithOwner = entry.repository.nameWithOwner;
-  const slashIndex = nameWithOwner.indexOf("/");
-  const owner = slashIndex === -1 ? "" : nameWithOwner.slice(0, slashIndex);
-  const repo =
-    slashIndex === -1 ? nameWithOwner : nameWithOwner.slice(slashIndex + 1);
+  const { owner, repo } = splitRepoName(nameWithOwner);
   const stars = formatStars(starCount);
 
   const leftGridLines = prTicks
@@ -395,10 +394,15 @@ function renderRowSvg(entry, index, layout, mode) {
   const pillH = rowHeight - pillY * 2;
   const repoTextX = pillX + 12;
   const iconX = pillX + pillW - 21;
+  const labelGapBeforeIcon = 8;
+  const maxTextWidth = iconX - labelGapBeforeIcon - repoTextX;
+  const labelClipX = pillX + 8;
+  const labelClipW = iconX - labelGapBeforeIcon - labelClipX;
+  const fitted = fitRepoLabel(owner, repo, maxTextWidth);
 
-  const labelText = owner
-    ? `<tspan fill="${t.ownerText}" font-weight="400">${escapeXml(owner)}/</tspan><tspan fill="${t.repoText}" font-weight="600">${escapeXml(repo)}</tspan>`
-    : `<tspan fill="${t.repoText}" font-weight="600">${escapeXml(repo)}</tspan>`;
+  const labelText = fitted.owner
+    ? `<tspan fill="${t.ownerText}" font-weight="400">${escapeXml(fitted.owner)}/</tspan><tspan fill="${t.repoText}" font-weight="600">${escapeXml(fitted.repo)}</tspan>`
+    : `<tspan fill="${t.repoText}" font-weight="600">${escapeXml(fitted.repo)}</tspan>`;
 
   const delayMs = index * staggerStep;
   const valueDelayMs = delayMs + 1280;
@@ -439,6 +443,9 @@ function renderRowSvg(entry, index, layout, mode) {
       <stop offset="0%" stop-color="${t.starBarStart}"/>
       <stop offset="100%" stop-color="${t.starBarEnd}"/>
     </linearGradient>
+    <clipPath id="repoLabelClip-${mode}">
+      <rect x="${labelClipX}" y="${pillY}" width="${labelClipW}" height="${pillH}"/>
+    </clipPath>
   </defs>
   <style>
     @keyframes barGrow {
@@ -494,7 +501,7 @@ ${stripe}  <g transform="translate(${prAxisX}, ${barYOffset})">
     <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="${CHART_MONO}" font-size="13" font-weight="600" fill="${t.valueText}" style="animation-delay: ${valueDelayMs}ms;">${count}</text>
   </g>
   <rect x="${pillX}" y="${pillY}" width="${pillW}" height="${pillH}" rx="6" fill="${t.pillFill}" stroke="${t.pillStroke}" stroke-width="1"/>
-  <text x="${repoTextX}" y="23.8" font-family="${CHART_SANS}" font-size="14">${labelText}</text>
+  <text x="${repoTextX}" y="23.8" font-family="${CHART_SANS}" font-size="14" clip-path="url(#repoLabelClip-${mode})">${labelText}</text>
   <g transform="translate(${iconX}, 14)" stroke="${t.linkIcon}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <path d="M 3 1.5 H 8.5 V 7"/>
     <path d="M 8.5 1.5 L 1.5 8.5"/>
@@ -609,4 +616,69 @@ function slugifyRepo(nameWithOwner) {
 
 function shortHash(content) {
   return createHash("sha256").update(content).digest("hex").slice(0, 8);
+}
+
+function estimateTextWidth(text, weight = 400) {
+  const scale = weight >= 600 ? 1.05 : 1;
+  let width = 0;
+  for (const ch of String(text)) {
+    if ("ilI1|!.,:;'`".includes(ch)) width += 4.2;
+    else if ("fjrt/-()[]".includes(ch)) width += 5.4;
+    else if ("mwMW@%".includes(ch)) width += 12.2;
+    else if (ch >= "A" && ch <= "Z") width += 9.8;
+    else width += 8.0;
+  }
+  return width * scale;
+}
+
+function splitRepoName(nameWithOwner) {
+  const slashIndex = nameWithOwner.indexOf("/");
+  return slashIndex === -1
+    ? { owner: "", repo: nameWithOwner }
+    : {
+        owner: nameWithOwner.slice(0, slashIndex),
+        repo: nameWithOwner.slice(slashIndex + 1),
+      };
+}
+
+function estimateRepoLabelWidth(nameWithOwner) {
+  const { owner, repo } = splitRepoName(nameWithOwner);
+  return (
+    (owner ? estimateTextWidth(`${owner}/`, 400) : 0) +
+    estimateTextWidth(repo, 600)
+  );
+}
+
+function truncateToWidth(text, maxWidth, weight = 400) {
+  if (estimateTextWidth(text, weight) <= maxWidth) return text;
+  const ellipsis = "…";
+  const ellipsisWidth = estimateTextWidth(ellipsis, weight);
+  if (maxWidth <= ellipsisWidth) return ellipsis;
+  let out = "";
+  for (const ch of text) {
+    if (estimateTextWidth(out + ch, weight) + ellipsisWidth > maxWidth) break;
+    out += ch;
+  }
+  return out ? `${out}${ellipsis}` : ellipsis;
+}
+
+function fitRepoLabel(owner, repo, maxWidth) {
+  const ownerPrefix = owner ? `${owner}/` : "";
+  const ownerWidth = ownerPrefix ? estimateTextWidth(ownerPrefix, 400) : 0;
+  const repoWidth = estimateTextWidth(repo, 600);
+  if (ownerWidth + repoWidth <= maxWidth) {
+    return { owner, repo };
+  }
+  const minRepoSpace = estimateTextWidth("…", 600) + 24;
+  if (owner && maxWidth - ownerWidth >= minRepoSpace) {
+    return {
+      owner,
+      repo: truncateToWidth(repo, maxWidth - ownerWidth, 600),
+    };
+  }
+  const combined = owner ? `${owner}/${repo}` : repo;
+  return {
+    owner: "",
+    repo: truncateToWidth(combined, maxWidth, 600),
+  };
 }

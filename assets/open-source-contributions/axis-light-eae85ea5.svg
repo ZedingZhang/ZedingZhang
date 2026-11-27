@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="40" viewBox="0 0 880 40" fill="none" role="img" aria-label="Merged PRs and Stars axes">
+  <text x="252.00" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11.5" fill="#57606A">0</text>
+  <text x="199.50" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11.5" fill="#57606A">25</text>
+  <text x="147.00" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11.5" fill="#57606A">50</text>
+  <text x="94.50" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11.5" fill="#57606A">75</text>
+  <text x="42.00" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11.5" fill="#57606A">100</text>
+  <text x="147.0" y="33" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#57606A">Merged PRs</text>
+  <text x="427.0" y="33" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#57606A">Repository</text>
+  <text x="602.00" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11.5" fill="#57606A">0</text>
+  <text x="672.00" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11.5" fill="#57606A">50k</text>
+  <text x="742.00" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11.5" fill="#57606A">100k</text>
+  <text x="812.00" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11.5" fill="#57606A">150k</text>
+  <text x="707.0" y="33" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#57606A">Stars</text>
+</svg>
