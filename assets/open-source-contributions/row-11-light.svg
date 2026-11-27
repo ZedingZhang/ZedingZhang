@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="28" viewBox="0 0 880 28" fill="none" role="img" aria-label="google/osv.dev: 2 merged PRs, 3.1k★">
   <defs>
     <linearGradient id="starBarGrad-light" x1="0" y1="0" x2="-287" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#BF8700"/>
-      <stop offset="100%" stop-color="#D4A72C"/>
+      <stop offset="0%" stop-color="#4F7977"/>
+      <stop offset="100%" stop-color="#7FA4A0"/>
     </linearGradient>
     <linearGradient id="prBarGrad-light" x1="0" y1="0" x2="287" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#0969DA"/>
@@ -65,7 +65,7 @@
     <path class="bar" d="M 0 0 H -2.96 Q -5.92 0 -5.92 2.96 V 13.04 Q -5.92 16 -2.96 16 H 0 Z" fill="url(#starBarGrad-light)" style="animation-delay: 1331ms;"/>
   </g>
   <g transform="translate(338.1, 18.5)">
-    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="500" style="animation-delay: 2611ms;"><tspan fill="#57606A">3.1k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#BF8700" dx="1.5">&#9733;</tspan></text>
+    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="500" style="animation-delay: 2611ms;"><tspan fill="#57606A">3.1k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#648B88" dx="1.5">&#9733;</tspan></text>
   </g>
   <text x="452.0" y="18.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">google/</tspan><tspan fill="#1F2328" font-weight="600">osv.dev</tspan></text>
   <g transform="translate(553, 6)">
