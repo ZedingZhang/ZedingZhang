@@ -4,24 +4,29 @@ Focusing on agent development, agent safety, edge inference, and backend systems
 
 ## Contribution Activity
 
+<!--CONTRIBUTION_ACTIVITY:start-->
+
 <p align="center">
-  <a href="https://zeding-github-activity-graph.vercel.app">
+  <a href="https://github.com/ZedingZhang">
     <picture>
       <source
         media="(prefers-color-scheme: dark)"
-        srcset="https://zeding-github-activity-graph.vercel.app/graph?theme=dark"
+        srcset="./assets/contribution-activity/activity-dark.svg"
       />
       <source
         media="(prefers-color-scheme: light)"
-        srcset="https://zeding-github-activity-graph.vercel.app/graph?theme=light"
+        srcset="./assets/contribution-activity/activity-light.svg"
       />
       <img
-        alt="Zeding Zhang's GitHub contribution activity graph"
-        src="https://zeding-github-activity-graph.vercel.app/graph?theme=light"
+        alt="Zeding Zhang's GitHub contribution activity stacked bar chart"
+        src="./assets/contribution-activity/activity-light.svg"
+        width="100%"
       />
     </picture>
   </a>
 </p>
+
+<!--CONTRIBUTION_ACTIVITY:end-->
 
 ## Open Source Contributions
 
