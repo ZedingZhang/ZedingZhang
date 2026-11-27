@@ -77,9 +77,9 @@
     <path d="M 8.5 1.5 L 1.5 8.5"/>
   </g>
   <g transform="translate(602, 10)">
-    <path class="bar" d="M 0 0 H 164.22 Q 168.22 0 168.22 4.00 V 14.00 Q 168.22 18 164.22 18 H 0 Z" fill="url(#starBarGrad-dark)" style="animation-delay: 348ms;"/>
+    <path class="bar" d="M 0 0 H 164.27 Q 168.27 0 168.27 4.00 V 14.00 Q 168.27 18 164.27 18 H 0 Z" fill="url(#starBarGrad-dark)" style="animation-delay: 348ms;"/>
   </g>
-  <g transform="translate(778.2, 23)">
+  <g transform="translate(778.3, 23)">
     <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 1628ms;"><tspan fill="#8B949E">120.2k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#7BA5A0" dx="1.5">&#9733;</tspan></text>
   </g>
 </svg>

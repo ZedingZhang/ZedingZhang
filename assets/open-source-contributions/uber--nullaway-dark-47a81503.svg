@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="microsoft/PyRIT: 1 merged PRs, 5.1k★">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="uber/NullAway: 3 merged PRs, 4.1k★">
   <defs>
     <linearGradient id="prBarGrad-dark" x1="0" y1="0" x2="-210" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#4B7096"/>
@@ -65,21 +65,21 @@
   <line x1="252" y1="0" x2="252" y2="38" stroke="#30363D" stroke-width="1"/>
   <line x1="602" y1="0" x2="602" y2="38" stroke="#30363D" stroke-width="1"/>
   <g transform="translate(252, 10)">
-    <path class="bar" d="M 0 0 H -2.00 Q -4.00 0 -4.00 2.00 V 16.00 Q -4.00 18 -2.00 18 H 0 Z" fill="url(#prBarGrad-dark)" style="animation-delay: 2436ms;"/>
+    <path class="bar" d="M 0 0 H -3.15 Q -6.30 0 -6.30 3.15 V 14.85 Q -6.30 18 -3.15 18 H 0 Z" fill="url(#prBarGrad-dark)" style="animation-delay: 1044ms;"/>
   </g>
-  <g transform="translate(240.0, 23.5)">
-    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#E6EDF3" style="animation-delay: 3716ms;">1</text>
+  <g transform="translate(237.7, 23.5)">
+    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#E6EDF3" style="animation-delay: 2324ms;">3</text>
   </g>
   <rect x="262" y="5" width="330" height="28" rx="6" fill="#161B22" stroke="#2E353D" stroke-width="1"/>
-  <text x="274" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" clip-path="url(#repoLabelClip-dark)"><tspan fill="#8B949E" font-weight="400">microsoft/</tspan><tspan fill="#80A4C8" font-weight="600">PyRIT</tspan></text>
+  <text x="274" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" clip-path="url(#repoLabelClip-dark)"><tspan fill="#8B949E" font-weight="400">uber/</tspan><tspan fill="#80A4C8" font-weight="600">NullAway</tspan></text>
   <g transform="translate(571, 14)" stroke="#8B949E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <path d="M 3 1.5 H 8.5 V 7"/>
     <path d="M 8.5 1.5 L 1.5 8.5"/>
   </g>
   <g transform="translate(602, 10)">
-    <path class="bar" d="M 0 0 H 3.60 Q 7.20 0 7.20 3.60 V 14.40 Q 7.20 18 3.60 18 H 0 Z" fill="url(#starBarGrad-dark)" style="animation-delay: 2436ms;"/>
+    <path class="bar" d="M 0 0 H 2.90 Q 5.79 0 5.79 2.90 V 15.10 Q 5.79 18 2.90 18 H 0 Z" fill="url(#starBarGrad-dark)" style="animation-delay: 1044ms;"/>
   </g>
-  <g transform="translate(617.2, 23)">
-    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 3716ms;"><tspan fill="#8B949E">5.1k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#7BA5A0" dx="1.5">&#9733;</tspan></text>
+  <g transform="translate(615.8, 23)">
+    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 2324ms;"><tspan fill="#8B949E">4.1k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#7BA5A0" dx="1.5">&#9733;</tspan></text>
   </g>
 </svg>
