@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="meta/lexical: 1 merged PRs, 24.1k★">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="GuillaumeBAUD-coder/open-math-agents: 2 merged PRs, 20★">
   <defs>
-    <linearGradient id="prBarGrad-dark" x1="0" y1="0" x2="-249" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="prBarGrad-dark" x1="0" y1="0" x2="-235" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#4B7096"/>
       <stop offset="100%" stop-color="#7CA0C4"/>
     </linearGradient>
-    <linearGradient id="starBarGrad-dark" x1="0" y1="0" x2="250" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="starBarGrad-dark" x1="0" y1="0" x2="235" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#466E6C"/>
       <stop offset="100%" stop-color="#7BA5A0"/>
     </linearGradient>
@@ -52,32 +52,32 @@
       animation: valueFadeRight 1200ms ease-out both;
     }
   </style>
-  <line x1="228.75" y1="0" x2="228.75" y2="38" stroke="#30363D" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.7"/>
-  <line x1="166.50" y1="0" x2="166.50" y2="38" stroke="#30363D" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.7"/>
-  <line x1="104.25" y1="0" x2="104.25" y2="38" stroke="#30363D" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.7"/>
+  <line x1="218.25" y1="0" x2="218.25" y2="38" stroke="#30363D" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.7"/>
+  <line x1="159.50" y1="0" x2="159.50" y2="38" stroke="#30363D" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.7"/>
+  <line x1="100.75" y1="0" x2="100.75" y2="38" stroke="#30363D" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.7"/>
   <line x1="42.00" y1="0" x2="42.00" y2="38" stroke="#30363D" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.7"/>
-  <line x1="645.33" y1="0" x2="645.33" y2="38" stroke="#30363D" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.7"/>
-  <line x1="728.67" y1="0" x2="728.67" y2="38" stroke="#30363D" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.7"/>
+  <line x1="655.33" y1="0" x2="655.33" y2="38" stroke="#30363D" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.7"/>
+  <line x1="733.67" y1="0" x2="733.67" y2="38" stroke="#30363D" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.7"/>
   <line x1="812.00" y1="0" x2="812.00" y2="38" stroke="#30363D" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.7"/>
-  <line x1="291" y1="0" x2="291" y2="38" stroke="#30363D" stroke-width="1"/>
-  <line x1="562" y1="0" x2="562" y2="38" stroke="#30363D" stroke-width="1"/>
+  <line x1="277" y1="0" x2="277" y2="38" stroke="#30363D" stroke-width="1"/>
+  <line x1="577" y1="0" x2="577" y2="38" stroke="#30363D" stroke-width="1"/>
   <rect x="8" y="2" width="864" height="34" rx="5" fill="#8B949E" fill-opacity="0.055"/>
-  <g transform="translate(291, 10)">
-    <path class="bar" d="M 0 0 H -2.00 Q -4.00 0 -4.00 2.00 V 16.00 Q -4.00 18 -2.00 18 H 0 Z" fill="url(#prBarGrad-dark)" style="animation-delay: 1694ms;"/>
+  <g transform="translate(277, 10)">
+    <path class="bar" d="M 0 0 H -2.35 Q -4.70 0 -4.70 2.35 V 15.65 Q -4.70 18 -2.35 18 H 0 Z" fill="url(#prBarGrad-dark)" style="animation-delay: 1624ms;"/>
   </g>
-  <g transform="translate(279.0, 23.5)">
-    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#E6EDF3" style="animation-delay: 2974ms;">1</text>
+  <g transform="translate(264.3, 23.5)">
+    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#E6EDF3" style="animation-delay: 2904ms;">2</text>
   </g>
-  <rect x="301" y="5" width="251" height="28" rx="6" fill="#161B22" stroke="#2E353D" stroke-width="1"/>
-  <text x="313" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14"><tspan fill="#8B949E" font-weight="400">meta/</tspan><tspan fill="#80A4C8" font-weight="600">lexical</tspan></text>
-  <g transform="translate(531, 14)" stroke="#8B949E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+  <rect x="287" y="5" width="280" height="28" rx="6" fill="#161B22" stroke="#2E353D" stroke-width="1"/>
+  <text x="299" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14"><tspan fill="#8B949E" font-weight="400">GuillaumeBAUD-coder/</tspan><tspan fill="#80A4C8" font-weight="600">open-math-agents</tspan></text>
+  <g transform="translate(546, 14)" stroke="#8B949E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <path d="M 3 1.5 H 8.5 V 7"/>
     <path d="M 8.5 1.5 L 1.5 8.5"/>
   </g>
-  <g transform="translate(562, 10)">
-    <path class="bar" d="M 0 0 H 36.09 Q 40.09 0 40.09 4.00 V 14.00 Q 40.09 18 36.09 18 H 0 Z" fill="url(#starBarGrad-dark)" style="animation-delay: 1694ms;"/>
+  <g transform="translate(577, 10)">
+    <path class="bar" d="M 0 0 H 2.00 Q 4.00 0 4.00 2.00 V 16.00 Q 4.00 18 2.00 18 H 0 Z" fill="url(#starBarGrad-dark)" style="animation-delay: 1624ms;"/>
   </g>
-  <g transform="translate(610.1, 23)">
-    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 2974ms;"><tspan fill="#8B949E">24.1k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#7BA5A0" dx="1.5">&#9733;</tspan></text>
+  <g transform="translate(589.0, 23)">
+    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 2904ms;"><tspan fill="#8B949E">20</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#7BA5A0" dx="1.5">&#9733;</tspan></text>
   </g>
 </svg>

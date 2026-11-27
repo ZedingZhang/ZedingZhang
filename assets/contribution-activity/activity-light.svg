@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="280" viewBox="0 0 880 280" fill="none" role="img" aria-label="550 contributions over the last 31 days across Commits, PRs, Issues, Reviews, and Other">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="280" viewBox="0 0 880 280" fill="none" role="img" aria-label="560 contributions over the last 31 days across Commits, PRs, Issues, Reviews, and Other">
   <defs>
-    <clipPath id="bar-clip-light-0"><path d="M 49.23 228 V 98.10 Q 49.23 94.60 52.73 94.60 H 61.73 Q 65.23 94.60 65.23 98.10 V 228 Z"/></clipPath>
+    <clipPath id="bar-clip-light-0"><path d="M 49.23 228 V 89.40 Q 49.23 85.90 52.73 85.90 H 61.73 Q 65.23 85.90 65.23 89.40 V 228 Z"/></clipPath>
     <clipPath id="bar-clip-light-1"><path d="M 75.68 228 V 217.00 Q 75.68 213.50 79.18 213.50 H 88.18 Q 91.68 213.50 91.68 217.00 V 228 Z"/></clipPath>
     <clipPath id="bar-clip-light-2"><path d="M 102.13 228 V 222.80 Q 102.13 219.30 105.63 219.30 H 114.63 Q 118.13 219.30 118.13 222.80 V 228 Z"/></clipPath>
     <clipPath id="bar-clip-light-3"><path d="M 128.58 228 V 226.50 Q 128.58 225.00 130.08 225.00 H 143.08 Q 144.58 225.00 144.58 226.50 V 228 Z"/></clipPath>
@@ -19,18 +19,18 @@
     <clipPath id="bar-clip-light-16"><path d="M 472.45 228 V 226.50 Q 472.45 225.00 473.95 225.00 H 486.95 Q 488.45 225.00 488.45 226.50 V 228 Z"/></clipPath>
     <clipPath id="bar-clip-light-17"><path d="M 498.90 228 V 222.80 Q 498.90 219.30 502.40 219.30 H 511.40 Q 514.90 219.30 514.90 222.80 V 228 Z"/></clipPath>
     <clipPath id="bar-clip-light-18"><path d="M 525.35 228 V 214.10 Q 525.35 210.60 528.85 210.60 H 537.85 Q 541.35 210.60 541.35 214.10 V 228 Z"/></clipPath>
-    <clipPath id="bar-clip-light-19"><path d="M 551.81 228 V 159.00 Q 551.81 155.50 555.31 155.50 H 564.31 Q 567.81 155.50 567.81 159.00 V 228 Z"/></clipPath>
-    <clipPath id="bar-clip-light-20"><path d="M 578.26 228 V 202.50 Q 578.26 199.00 581.76 199.00 H 590.76 Q 594.26 199.00 594.26 202.50 V 228 Z"/></clipPath>
-    <clipPath id="bar-clip-light-21"><path d="M 604.71 228 V 101.00 Q 604.71 97.50 608.21 97.50 H 617.21 Q 620.71 97.50 620.71 101.00 V 228 Z"/></clipPath>
-    <clipPath id="bar-clip-light-22"><path d="M 631.16 228 V 130.00 Q 631.16 126.50 634.66 126.50 H 643.66 Q 647.16 126.50 647.16 130.00 V 228 Z"/></clipPath>
-    <clipPath id="bar-clip-light-23"><path d="M 657.61 228 V 150.30 Q 657.61 146.80 661.11 146.80 H 670.11 Q 673.61 146.80 673.61 150.30 V 228 Z"/></clipPath>
+    <clipPath id="bar-clip-light-19"><path d="M 551.81 228 V 164.80 Q 551.81 161.30 555.31 161.30 H 564.31 Q 567.81 161.30 567.81 164.80 V 228 Z"/></clipPath>
+    <clipPath id="bar-clip-light-20"><path d="M 578.26 228 V 196.70 Q 578.26 193.20 581.76 193.20 H 590.76 Q 594.26 193.20 594.26 196.70 V 228 Z"/></clipPath>
+    <clipPath id="bar-clip-light-21"><path d="M 604.71 228 V 103.90 Q 604.71 100.40 608.21 100.40 H 617.21 Q 620.71 100.40 620.71 103.90 V 228 Z"/></clipPath>
+    <clipPath id="bar-clip-light-22"><path d="M 631.16 228 V 138.70 Q 631.16 135.20 634.66 135.20 H 643.66 Q 647.16 135.20 647.16 138.70 V 228 Z"/></clipPath>
+    <clipPath id="bar-clip-light-23"><path d="M 657.61 228 V 138.70 Q 657.61 135.20 661.11 135.20 H 670.11 Q 673.61 135.20 673.61 138.70 V 228 Z"/></clipPath>
     <clipPath id="bar-clip-light-24"><path d="M 684.06 228 V 202.50 Q 684.06 199.00 687.56 199.00 H 696.56 Q 700.06 199.00 700.06 202.50 V 228 Z"/></clipPath>
     <clipPath id="bar-clip-light-25"><path d="M 710.52 228 V 182.20 Q 710.52 178.70 714.02 178.70 H 723.02 Q 726.52 178.70 726.52 182.20 V 228 Z"/></clipPath>
     <clipPath id="bar-clip-light-26"><path d="M 736.97 228 V 83.60 Q 736.97 80.10 740.47 80.10 H 749.47 Q 752.97 80.10 752.97 83.60 V 228 Z"/></clipPath>
     <clipPath id="bar-clip-light-27"><path d="M 763.42 228 V 89.40 Q 763.42 85.90 766.92 85.90 H 775.92 Q 779.42 85.90 779.42 89.40 V 228 Z"/></clipPath>
-    <clipPath id="bar-clip-light-28"><path d="M 789.87 228 V 115.50 Q 789.87 112.00 793.37 112.00 H 802.37 Q 805.87 112.00 805.87 115.50 V 228 Z"/></clipPath>
+    <clipPath id="bar-clip-light-28"><path d="M 789.87 228 V 118.40 Q 789.87 114.90 793.37 114.90 H 802.37 Q 805.87 114.90 805.87 118.40 V 228 Z"/></clipPath>
     <clipPath id="bar-clip-light-29"><path d="M 816.32 228 V 69.10 Q 816.32 65.60 819.82 65.60 H 828.82 Q 832.32 65.60 832.32 69.10 V 228 Z"/></clipPath>
-    <clipPath id="bar-clip-light-30"><path d="M 842.77 228 V 205.40 Q 842.77 201.90 846.27 201.90 H 855.27 Q 858.77 201.90 858.77 205.40 V 228 Z"/></clipPath>
+    <clipPath id="bar-clip-light-30"><path d="M 842.77 228 V 182.20 Q 842.77 178.70 846.27 178.70 H 855.27 Q 858.77 178.70 858.77 182.20 V 228 Z"/></clipPath>
   </defs>
   <style>
     @keyframes barRise {
@@ -61,22 +61,22 @@
       animation: totalFadeUp 700ms ease-out both;
     }
   </style>
-  <text x="44" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#57606A">550 contributions · last 31 days</text>
-  <rect x="402.4" y="15.5" width="9" height="9" rx="2" fill="#446688"/>
-  <text x="417.4" y="23.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#24292F">Commits</text>
-  <text x="471.4" y="23.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">260</text>
-  <rect x="511.8" y="15.5" width="9" height="9" rx="2" fill="#6D9C94"/>
-  <text x="526.8" y="23.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#24292F">PRs</text>
-  <text x="552.8" y="23.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">196</text>
-  <rect x="593.2" y="15.5" width="9" height="9" rx="2" fill="#B78478"/>
-  <text x="608.2" y="23.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#24292F">Issues</text>
-  <text x="655.2" y="23.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">47</text>
-  <rect x="688.8" y="15.5" width="9" height="9" rx="2" fill="#8C7FA4"/>
-  <text x="703.8" y="23.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#24292F">Reviews</text>
-  <text x="757.8" y="23.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">15</text>
-  <rect x="791.4" y="15.5" width="9" height="9" rx="2" fill="#CFD6DE"/>
-  <text x="806.4" y="23.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#24292F">Other</text>
-  <text x="846.4" y="23.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">32</text>
+  <text x="44" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#57606A">560 contributions · last 31 days</text>
+  <rect x="395.6" y="15.5" width="9" height="9" rx="2" fill="#446688"/>
+  <text x="410.6" y="23.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#24292F">Commits</text>
+  <text x="464.6" y="23.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">171</text>
+  <rect x="505.0" y="15.5" width="9" height="9" rx="2" fill="#6D9C94"/>
+  <text x="520.0" y="23.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#24292F">PRs</text>
+  <text x="546.0" y="23.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">176</text>
+  <rect x="586.4" y="15.5" width="9" height="9" rx="2" fill="#B78478"/>
+  <text x="601.4" y="23.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#24292F">Issues</text>
+  <text x="648.4" y="23.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">47</text>
+  <rect x="682.0" y="15.5" width="9" height="9" rx="2" fill="#8C7FA4"/>
+  <text x="697.0" y="23.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#24292F">Reviews</text>
+  <text x="751.0" y="23.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">18</text>
+  <rect x="784.6" y="15.5" width="9" height="9" rx="2" fill="#CFD6DE"/>
+  <text x="799.6" y="23.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#24292F">Other</text>
+  <text x="839.6" y="23.5" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">148</text>
   <line x1="44" y1="228" x2="864" y2="228" stroke="#D0D7DE" stroke-width="1"/>
   <text x="36" y="231.50" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">0</text>
   <line x1="44" y1="199.00" x2="864" y2="199.00" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
@@ -95,11 +95,11 @@
     <g clip-path="url(#bar-clip-light-0)">
       <rect x="49.23" y="172.60" width="16" height="55.40" fill="#446688"/>
       <rect x="49.23" y="114.60" width="16" height="58.30" fill="#6D9C94"/>
-      <rect x="49.23" y="97.20" width="16" height="17.70" fill="#8C7FA4"/>
-      <rect x="49.23" y="94.60" width="16" height="2.90" fill="#CFD6DE"/>
+      <rect x="49.23" y="88.50" width="16" height="26.40" fill="#8C7FA4"/>
+      <rect x="49.23" y="85.90" width="16" height="2.90" fill="#CFD6DE"/>
     </g>
   </g>
-  <text class="bar-total" x="57.2" y="89.6" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 950ms;">46</text>
+  <text class="bar-total" x="57.2" y="80.9" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 950ms;">49</text>
   <g class="bar-col" style="animation-delay: 35ms;">
     <g clip-path="url(#bar-clip-light-1)">
       <rect x="75.68" y="221.90" width="16" height="6.10" fill="#446688"/>
@@ -187,17 +187,17 @@
   <text class="bar-total" x="374.6" y="191.1" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1370ms;">11</text>
   <g class="bar-col" style="animation-delay: 455ms;">
     <g clip-path="url(#bar-clip-light-13)">
-      <rect x="393.10" y="210.30" width="16" height="17.70" fill="#446688"/>
-      <rect x="393.10" y="192.90" width="16" height="17.70" fill="#6D9C94"/>
-      <rect x="393.10" y="187.40" width="16" height="5.80" fill="#CFD6DE"/>
+      <rect x="393.10" y="216.10" width="16" height="11.90" fill="#446688"/>
+      <rect x="393.10" y="198.70" width="16" height="17.70" fill="#6D9C94"/>
+      <rect x="393.10" y="187.40" width="16" height="11.60" fill="#CFD6DE"/>
     </g>
   </g>
   <text class="bar-total" x="401.1" y="182.4" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1405ms;">14</text>
   <g class="bar-col" style="animation-delay: 490ms;">
     <g clip-path="url(#bar-clip-light-14)">
-      <rect x="419.55" y="198.70" width="16" height="29.30" fill="#446688"/>
-      <rect x="419.55" y="175.50" width="16" height="23.50" fill="#6D9C94"/>
-      <rect x="419.55" y="172.90" width="16" height="2.90" fill="#CFD6DE"/>
+      <rect x="419.55" y="213.20" width="16" height="14.80" fill="#446688"/>
+      <rect x="419.55" y="195.80" width="16" height="17.70" fill="#6D9C94"/>
+      <rect x="419.55" y="172.90" width="16" height="23.20" fill="#CFD6DE"/>
     </g>
   </g>
   <text class="bar-total" x="427.5" y="167.9" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1440ms;">19</text>
@@ -233,44 +233,45 @@
     <g clip-path="url(#bar-clip-light-19)">
       <rect x="551.81" y="198.70" width="16" height="29.30" fill="#446688"/>
       <rect x="551.81" y="166.80" width="16" height="32.20" fill="#6D9C94"/>
-      <rect x="551.81" y="161.00" width="16" height="6.10" fill="#8C7FA4"/>
-      <rect x="551.81" y="155.50" width="16" height="5.80" fill="#CFD6DE"/>
+      <rect x="551.81" y="161.30" width="16" height="5.80" fill="#8C7FA4"/>
     </g>
   </g>
-  <text class="bar-total" x="559.8" y="150.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1615ms;">25</text>
+  <text class="bar-total" x="559.8" y="156.3" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1615ms;">23</text>
   <g class="bar-col" style="animation-delay: 700ms;">
     <g clip-path="url(#bar-clip-light-20)">
-      <rect x="578.26" y="210.30" width="16" height="17.70" fill="#446688"/>
-      <rect x="578.26" y="199.00" width="16" height="11.60" fill="#6D9C94"/>
+      <rect x="578.26" y="216.10" width="16" height="11.90" fill="#446688"/>
+      <rect x="578.26" y="204.50" width="16" height="11.90" fill="#6D9C94"/>
+      <rect x="578.26" y="193.20" width="16" height="11.60" fill="#CFD6DE"/>
     </g>
   </g>
-  <text class="bar-total" x="586.3" y="194.0" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1650ms;">10</text>
+  <text class="bar-total" x="586.3" y="188.2" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1650ms;">12</text>
   <g class="bar-col" style="animation-delay: 735ms;">
     <g clip-path="url(#bar-clip-light-21)">
-      <rect x="604.71" y="155.20" width="16" height="72.80" fill="#446688"/>
-      <rect x="604.71" y="117.50" width="16" height="38.00" fill="#6D9C94"/>
-      <rect x="604.71" y="100.10" width="16" height="17.70" fill="#B78478"/>
-      <rect x="604.71" y="97.50" width="16" height="2.90" fill="#CFD6DE"/>
+      <rect x="604.71" y="198.70" width="16" height="29.30" fill="#446688"/>
+      <rect x="604.71" y="166.80" width="16" height="32.20" fill="#6D9C94"/>
+      <rect x="604.71" y="149.40" width="16" height="17.70" fill="#B78478"/>
+      <rect x="604.71" y="100.40" width="16" height="49.30" fill="#CFD6DE"/>
     </g>
   </g>
-  <text class="bar-total" x="612.7" y="92.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1685ms;">45</text>
+  <text class="bar-total" x="612.7" y="95.4" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1685ms;">44</text>
   <g class="bar-col" style="animation-delay: 770ms;">
     <g clip-path="url(#bar-clip-light-22)">
-      <rect x="631.16" y="207.40" width="16" height="20.60" fill="#446688"/>
-      <rect x="631.16" y="175.50" width="16" height="32.20" fill="#6D9C94"/>
-      <rect x="631.16" y="137.80" width="16" height="38.00" fill="#B78478"/>
-      <rect x="631.16" y="126.50" width="16" height="11.60" fill="#8C7FA4"/>
+      <rect x="631.16" y="216.10" width="16" height="11.90" fill="#446688"/>
+      <rect x="631.16" y="184.20" width="16" height="32.20" fill="#6D9C94"/>
+      <rect x="631.16" y="146.50" width="16" height="38.00" fill="#B78478"/>
+      <rect x="631.16" y="135.20" width="16" height="11.60" fill="#CFD6DE"/>
     </g>
   </g>
-  <text class="bar-total" x="639.2" y="121.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1720ms;">35</text>
+  <text class="bar-total" x="639.2" y="130.2" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1720ms;">32</text>
   <g class="bar-col" style="animation-delay: 805ms;">
     <g clip-path="url(#bar-clip-light-23)">
-      <rect x="657.61" y="172.60" width="16" height="55.40" fill="#446688"/>
-      <rect x="657.61" y="152.30" width="16" height="20.60" fill="#6D9C94"/>
-      <rect x="657.61" y="146.80" width="16" height="5.80" fill="#CFD6DE"/>
+      <rect x="657.61" y="195.80" width="16" height="32.20" fill="#446688"/>
+      <rect x="657.61" y="175.50" width="16" height="20.60" fill="#6D9C94"/>
+      <rect x="657.61" y="163.90" width="16" height="11.90" fill="#8C7FA4"/>
+      <rect x="657.61" y="135.20" width="16" height="29.00" fill="#CFD6DE"/>
     </g>
   </g>
-  <text class="bar-total" x="665.6" y="141.8" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1755ms;">28</text>
+  <text class="bar-total" x="665.6" y="130.2" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1755ms;">32</text>
   <g class="bar-col" style="animation-delay: 840ms;">
     <g clip-path="url(#bar-clip-light-24)">
       <rect x="684.06" y="213.20" width="16" height="14.80" fill="#446688"/>
@@ -280,51 +281,56 @@
   <text class="bar-total" x="692.1" y="194.0" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1790ms;">10</text>
   <g class="bar-col" style="animation-delay: 875ms;">
     <g clip-path="url(#bar-clip-light-25)">
-      <rect x="710.52" y="195.80" width="16" height="32.20" fill="#446688"/>
-      <rect x="710.52" y="178.70" width="16" height="17.40" fill="#6D9C94"/>
+      <rect x="710.52" y="216.10" width="16" height="11.90" fill="#446688"/>
+      <rect x="710.52" y="210.30" width="16" height="6.10" fill="#6D9C94"/>
+      <rect x="710.52" y="178.70" width="16" height="31.90" fill="#CFD6DE"/>
     </g>
   </g>
   <text class="bar-total" x="718.5" y="173.7" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1825ms;">17</text>
   <g class="bar-col" style="animation-delay: 910ms;">
     <g clip-path="url(#bar-clip-light-26)">
-      <rect x="736.97" y="129.10" width="16" height="98.90" fill="#446688"/>
-      <rect x="736.97" y="80.10" width="16" height="49.30" fill="#6D9C94"/>
+      <rect x="736.97" y="190.00" width="16" height="38.00" fill="#446688"/>
+      <rect x="736.97" y="161.00" width="16" height="29.30" fill="#6D9C94"/>
+      <rect x="736.97" y="80.10" width="16" height="81.20" fill="#CFD6DE"/>
     </g>
   </g>
   <text class="bar-total" x="745.0" y="75.1" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1860ms;">51</text>
   <g class="bar-col" style="animation-delay: 945ms;">
     <g clip-path="url(#bar-clip-light-27)">
-      <rect x="763.42" y="146.50" width="16" height="81.50" fill="#446688"/>
-      <rect x="763.42" y="97.20" width="16" height="49.60" fill="#6D9C94"/>
-      <rect x="763.42" y="88.50" width="16" height="9.00" fill="#B78478"/>
-      <rect x="763.42" y="85.90" width="16" height="2.90" fill="#CFD6DE"/>
+      <rect x="763.42" y="155.20" width="16" height="72.80" fill="#446688"/>
+      <rect x="763.42" y="108.80" width="16" height="46.70" fill="#6D9C94"/>
+      <rect x="763.42" y="100.10" width="16" height="9.00" fill="#B78478"/>
+      <rect x="763.42" y="85.90" width="16" height="14.50" fill="#CFD6DE"/>
     </g>
   </g>
   <text class="bar-total" x="771.4" y="80.9" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1895ms;">49</text>
   <g class="bar-col" style="animation-delay: 980ms;">
     <g clip-path="url(#bar-clip-light-28)">
-      <rect x="789.87" y="169.70" width="16" height="58.30" fill="#446688"/>
-      <rect x="789.87" y="134.90" width="16" height="35.10" fill="#6D9C94"/>
-      <rect x="789.87" y="114.60" width="16" height="20.60" fill="#B78478"/>
-      <rect x="789.87" y="112.00" width="16" height="2.90" fill="#8C7FA4"/>
+      <rect x="789.87" y="207.40" width="16" height="20.60" fill="#446688"/>
+      <rect x="789.87" y="181.30" width="16" height="26.40" fill="#6D9C94"/>
+      <rect x="789.87" y="161.00" width="16" height="20.60" fill="#B78478"/>
+      <rect x="789.87" y="114.90" width="16" height="46.40" fill="#CFD6DE"/>
     </g>
   </g>
-  <text class="bar-total" x="797.9" y="107.0" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1930ms;">40</text>
+  <text class="bar-total" x="797.9" y="109.9" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1930ms;">39</text>
   <g class="bar-col" style="animation-delay: 1015ms;">
     <g clip-path="url(#bar-clip-light-29)">
-      <rect x="816.32" y="166.80" width="16" height="61.20" fill="#446688"/>
-      <rect x="816.32" y="100.10" width="16" height="67.00" fill="#6D9C94"/>
-      <rect x="816.32" y="68.20" width="16" height="32.20" fill="#B78478"/>
-      <rect x="816.32" y="65.60" width="16" height="2.90" fill="#CFD6DE"/>
+      <rect x="816.32" y="195.80" width="16" height="32.20" fill="#446688"/>
+      <rect x="816.32" y="137.80" width="16" height="58.30" fill="#6D9C94"/>
+      <rect x="816.32" y="105.90" width="16" height="32.20" fill="#B78478"/>
+      <rect x="816.32" y="103.00" width="16" height="3.20" fill="#8C7FA4"/>
+      <rect x="816.32" y="65.60" width="16" height="37.70" fill="#CFD6DE"/>
     </g>
   </g>
   <text class="bar-total" x="824.3" y="60.6" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 1965ms;">56</text>
   <g class="bar-col" style="animation-delay: 1050ms;">
     <g clip-path="url(#bar-clip-light-30)">
-      <rect x="842.77" y="201.90" width="16" height="26.10" fill="#446688"/>
+      <rect x="842.77" y="201.60" width="16" height="26.40" fill="#446688"/>
+      <rect x="842.77" y="195.80" width="16" height="6.10" fill="#6D9C94"/>
+      <rect x="842.77" y="178.70" width="16" height="17.40" fill="#CFD6DE"/>
     </g>
   </g>
-  <text class="bar-total" x="850.8" y="196.9" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 2000ms;">9</text>
+  <text class="bar-total" x="850.8" y="173.7" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="500" fill="#57606A" style="animation-delay: 2000ms;">17</text>
   <text x="57.2" y="246" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10.5" fill="#57606A">28</text>
   <text x="57.2" y="264" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#57606A">Oct</text>
   <text x="83.7" y="246" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="10.5" fill="#57606A">29</text>

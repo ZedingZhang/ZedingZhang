@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="alibaba/fastjson2: 1 merged PRs, 4.4k★">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="microsoft/PyRIT: 1 merged PRs, 5.1k★">
   <defs>
-    <linearGradient id="prBarGrad-light" x1="0" y1="0" x2="-249" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="prBarGrad-light" x1="0" y1="0" x2="-235" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#446688"/>
       <stop offset="100%" stop-color="#7193B5"/>
     </linearGradient>
-    <linearGradient id="starBarGrad-light" x1="0" y1="0" x2="250" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="starBarGrad-light" x1="0" y1="0" x2="235" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#4F7977"/>
       <stop offset="100%" stop-color="#7FA4A0"/>
     </linearGradient>
@@ -52,31 +52,31 @@
       animation: valueFadeRight 1200ms ease-out both;
     }
   </style>
-  <line x1="228.75" y1="0" x2="228.75" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="166.50" y1="0" x2="166.50" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="104.25" y1="0" x2="104.25" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="218.25" y1="0" x2="218.25" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="159.50" y1="0" x2="159.50" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="100.75" y1="0" x2="100.75" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
   <line x1="42.00" y1="0" x2="42.00" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="645.33" y1="0" x2="645.33" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="728.67" y1="0" x2="728.67" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="655.33" y1="0" x2="655.33" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="733.67" y1="0" x2="733.67" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
   <line x1="812.00" y1="0" x2="812.00" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="291" y1="0" x2="291" y2="38" stroke="#D0D7DE" stroke-width="1"/>
-  <line x1="562" y1="0" x2="562" y2="38" stroke="#D0D7DE" stroke-width="1"/>
-  <g transform="translate(291, 10)">
-    <path class="bar" d="M 0 0 H -2.00 Q -4.00 0 -4.00 2.00 V 16.00 Q -4.00 18 -2.00 18 H 0 Z" fill="url(#prBarGrad-light)" style="animation-delay: 2541ms;"/>
+  <line x1="277" y1="0" x2="277" y2="38" stroke="#D0D7DE" stroke-width="1"/>
+  <line x1="577" y1="0" x2="577" y2="38" stroke="#D0D7DE" stroke-width="1"/>
+  <g transform="translate(277, 10)">
+    <path class="bar" d="M 0 0 H -2.00 Q -4.00 0 -4.00 2.00 V 16.00 Q -4.00 18 -2.00 18 H 0 Z" fill="url(#prBarGrad-light)" style="animation-delay: 2436ms;"/>
   </g>
-  <g transform="translate(279.0, 23.5)">
-    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#24292F" style="animation-delay: 3821ms;">1</text>
+  <g transform="translate(265.0, 23.5)">
+    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#24292F" style="animation-delay: 3716ms;">1</text>
   </g>
-  <rect x="301" y="5" width="251" height="28" rx="6" fill="#F6F8FA" stroke="#DCE2E8" stroke-width="1"/>
-  <text x="313" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14"><tspan fill="#636C76" font-weight="400">alibaba/</tspan><tspan fill="#3C5F82" font-weight="600">fastjson2</tspan></text>
-  <g transform="translate(531, 14)" stroke="#6E7781" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+  <rect x="287" y="5" width="280" height="28" rx="6" fill="#F6F8FA" stroke="#DCE2E8" stroke-width="1"/>
+  <text x="299" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14"><tspan fill="#636C76" font-weight="400">microsoft/</tspan><tspan fill="#3C5F82" font-weight="600">PyRIT</tspan></text>
+  <g transform="translate(546, 14)" stroke="#6E7781" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <path d="M 3 1.5 H 8.5 V 7"/>
     <path d="M 8.5 1.5 L 1.5 8.5"/>
   </g>
-  <g transform="translate(562, 10)">
-    <path class="bar" d="M 0 0 H 3.69 Q 7.38 0 7.38 3.69 V 14.31 Q 7.38 18 3.69 18 H 0 Z" fill="url(#starBarGrad-light)" style="animation-delay: 2541ms;"/>
+  <g transform="translate(577, 10)">
+    <path class="bar" d="M 0 0 H 4.05 Q 8.05 0 8.05 4.00 V 14.00 Q 8.05 18 4.05 18 H 0 Z" fill="url(#starBarGrad-light)" style="animation-delay: 2436ms;"/>
   </g>
-  <g transform="translate(577.4, 23)">
-    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 3821ms;"><tspan fill="#57606A">4.4k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#648B88" dx="1.5">&#9733;</tspan></text>
+  <g transform="translate(593.0, 23)">
+    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 3716ms;"><tspan fill="#57606A">5.1k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#648B88" dx="1.5">&#9733;</tspan></text>
   </g>
 </svg>
