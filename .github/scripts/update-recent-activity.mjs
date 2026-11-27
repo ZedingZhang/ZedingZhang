@@ -19,6 +19,8 @@ const CHART_THEMES = {
   light: {
     barStart: "#0969DA",
     barEnd: "#218BFF",
+    starBarStart: "#BF8700",
+    starBarEnd: "#D4A72C",
     ownerText: "#656D76",
     repoText: "#1F2328",
     valueText: "#1F2328",
@@ -33,6 +35,8 @@ const CHART_THEMES = {
   dark: {
     barStart: "#1F6FEB",
     barEnd: "#58A6FF",
+    starBarStart: "#9E6A03",
+    starBarEnd: "#E3B341",
     ownerText: "#8B949E",
     repoText: "#E6EDF3",
     valueText: "#E6EDF3",
@@ -236,7 +240,7 @@ function renderContributions(projectEntries) {
     return `<div><a href="${url}" title="${title}"><picture><source media="(prefers-color-scheme: dark)" srcset="./${chartDir}/${rowSlug}-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./${chartDir}/${rowSlug}-light.svg" /><img alt="${alt}" src="./${chartDir}/${rowSlug}-light.svg" width="100%" align="top" /></picture></a></div>`;
   });
 
-  const axisBlock = `<div><picture><source media="(prefers-color-scheme: dark)" srcset="./${chartDir}/axis-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./${chartDir}/axis-light.svg" /><img alt="Merged PRs axis" src="./${chartDir}/axis-light.svg" width="100%" align="top" /></picture></div>`;
+  const axisBlock = `<div><picture><source media="(prefers-color-scheme: dark)" srcset="./${chartDir}/axis-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./${chartDir}/axis-light.svg" /><img alt="Stars and Merged PRs axes" src="./${chartDir}/axis-light.svg" width="100%" align="top" /></picture></div>`;
 
   return [
     startMarker,
@@ -252,40 +256,43 @@ function renderContributions(projectEntries) {
 
 function computeChartLayout(projectEntries) {
   const width = 880;
-  const padLeft = 14;
-  const padRight = 44;
   const rowHeight = 28;
   const barHeight = 16;
   const barYOffset = 6;
   const axisHeight = 36;
+  const leftPad = 64;
+  const rightPad = 40;
 
   const maxLabelChars = Math.max(
     ...projectEntries.map((entry) => entry.repository.nameWithOwner.length),
     16,
   );
-  const labelWidth = Math.min(
-    250,
-    Math.max(196, Math.ceil(maxLabelChars * 7.4) + 16),
+  const repoColWidth = Math.min(
+    240,
+    Math.max(196, Math.ceil(maxLabelChars * 7.5) + 22),
   );
-  const maxStarChars = Math.max(
-    ...projectEntries.map(
-      (entry) => formatStars(entry.repository.stargazerCount).length + 1,
-    ),
-    5,
-  );
-  const starGap = 10;
-  const starWidth = Math.max(54, Math.ceil(maxStarChars * 6.8) + 8);
-  const axisGap = 12;
-  const repoRightX = padLeft + labelWidth;
-  const starRightX = repoRightX + starGap + starWidth;
-  const axisX = starRightX + axisGap;
-  const barAreaWidth = width - axisX - padRight;
+  const remaining = width - leftPad - rightPad - repoColWidth;
+  const starAreaWidth = Math.floor(remaining / 2);
+  const prAreaWidth = remaining - starAreaWidth;
+  const starAxisX = leftPad + starAreaWidth;
+  const prAxisX = starAxisX + repoColWidth;
+  const repoCenterX = (starAxisX + prAxisX) / 2;
 
-  const maxCount = Math.max(
+  const maxStars = Math.max(
+    0,
+    ...projectEntries.map((entry) => entry.repository.stargazerCount),
+  );
+  const { axisMax: starAxisMax, ticks: starTicks } = computeNiceScale(
+    maxStars,
+    4,
+  );
+
+  const maxPrs = Math.max(
     0,
     ...projectEntries.map((entry) => entry.pullRequests.length),
   );
-  const { axisMax, ticks } = computeNiceScale(maxCount);
+  const { axisMax: prAxisMax, ticks: prTicks } = computeNiceScale(maxPrs, 4);
+
   const staggerStep = Math.min(
     140,
     Math.floor(2800 / Math.max(1, projectEntries.length)),
@@ -293,17 +300,19 @@ function computeChartLayout(projectEntries) {
 
   return {
     width,
-    padLeft,
     rowHeight,
     barHeight,
     barYOffset,
     axisHeight,
-    repoRightX,
-    starRightX,
-    axisX,
-    barAreaWidth,
-    axisMax,
-    ticks,
+    starAreaWidth,
+    prAreaWidth,
+    starAxisX,
+    prAxisX,
+    repoCenterX,
+    starAxisMax,
+    starTicks,
+    prAxisMax,
+    prTicks,
     staggerStep,
   };
 }
@@ -312,38 +321,49 @@ function renderRowSvg(entry, index, layout, mode) {
   const t = CHART_THEMES[mode];
   const {
     width,
-    padLeft,
     rowHeight,
     barHeight,
     barYOffset,
-    repoRightX,
-    starRightX,
-    axisX,
-    barAreaWidth,
-    axisMax,
-    ticks,
+    starAreaWidth,
+    prAreaWidth,
+    starAxisX,
+    prAxisX,
+    repoCenterX,
+    starAxisMax,
+    starTicks,
+    prAxisMax,
+    prTicks,
     staggerStep,
   } = layout;
 
   const count = entry.pullRequests.length;
+  const starCount = entry.repository.stargazerCount;
   const nameWithOwner = entry.repository.nameWithOwner;
   const slashIndex = nameWithOwner.indexOf("/");
   const owner = slashIndex === -1 ? "" : nameWithOwner.slice(0, slashIndex);
   const repo =
     slashIndex === -1 ? nameWithOwner : nameWithOwner.slice(slashIndex + 1);
-  const stars = formatStars(entry.repository.stargazerCount);
+  const stars = formatStars(starCount);
 
-  const gridLines = ticks
+  const leftGridLines = starTicks
     .filter((tick) => tick > 0)
     .map((tick) => {
-      const xStr = (axisX + (tick / axisMax) * barAreaWidth).toFixed(2);
+      const xStr = (starAxisX - (tick / starAxisMax) * starAreaWidth).toFixed(2);
+      return `  <line x1="${xStr}" y1="0" x2="${xStr}" y2="${rowHeight}" stroke="${t.gridLine}" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="${t.gridOpacity}"/>`;
+    })
+    .join("\n");
+
+  const rightGridLines = prTicks
+    .filter((tick) => tick > 0)
+    .map((tick) => {
+      const xStr = (prAxisX + (tick / prAxisMax) * prAreaWidth).toFixed(2);
       return `  <line x1="${xStr}" y1="0" x2="${xStr}" y2="${rowHeight}" stroke="${t.gridLine}" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="${t.gridOpacity}"/>`;
     })
     .join("\n");
 
   const stripe =
     index % 2 === 0
-      ? `  <rect x="${padLeft}" y="1" width="${width - padLeft - 10}" height="${rowHeight - 2}" rx="4" fill="${t.rowStripe}" fill-opacity="${t.rowStripeOpacity}"/>\n`
+      ? `  <rect x="8" y="1" width="${width - 16}" height="${rowHeight - 2}" rx="4" fill="${t.rowStripe}" fill-opacity="${t.rowStripeOpacity}"/>\n`
       : "";
 
   const labelText = owner
@@ -352,24 +372,40 @@ function renderRowSvg(entry, index, layout, mode) {
 
   const delayMs = index * staggerStep;
   const valueDelayMs = delayMs + 1280;
-  const rawBarWidth = (count / axisMax) * barAreaWidth;
-  const barWidth = Math.max(5, rawBarWidth);
-  const r = Math.min(4, barWidth / 2);
-  const barPath = [
+
+  const sw = Math.max(4, (starCount / starAxisMax) * starAreaWidth);
+  const sr = Math.min(4, sw / 2);
+  const starBarPath = [
     "M 0 0",
-    `H ${(barWidth - r).toFixed(2)}`,
-    `Q ${barWidth.toFixed(2)} 0 ${barWidth.toFixed(2)} ${r.toFixed(2)}`,
-    `V ${(barHeight - r).toFixed(2)}`,
-    `Q ${barWidth.toFixed(2)} ${barHeight} ${(barWidth - r).toFixed(2)} ${barHeight}`,
+    `H ${(-sw + sr).toFixed(2)}`,
+    `Q ${(-sw).toFixed(2)} 0 ${(-sw).toFixed(2)} ${sr.toFixed(2)}`,
+    `V ${(barHeight - sr).toFixed(2)}`,
+    `Q ${(-sw).toFixed(2)} ${barHeight} ${(-sw + sr).toFixed(2)} ${barHeight}`,
     "H 0",
     "Z",
   ].join(" ");
+  const starCountX = (starAxisX - sw - 7).toFixed(1);
 
-  const countX = (axisX + barWidth + 8).toFixed(1);
+  const pw = Math.max(4, (count / prAxisMax) * prAreaWidth);
+  const pr = Math.min(4, pw / 2);
+  const prBarPath = [
+    "M 0 0",
+    `H ${(pw - pr).toFixed(2)}`,
+    `Q ${pw.toFixed(2)} 0 ${pw.toFixed(2)} ${pr.toFixed(2)}`,
+    `V ${(barHeight - pr).toFixed(2)}`,
+    `Q ${pw.toFixed(2)} ${barHeight} ${(pw - pr).toFixed(2)} ${barHeight}`,
+    "H 0",
+    "Z",
+  ].join(" ");
+  const prCountX = (prAxisX + pw + 8).toFixed(1);
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${rowHeight}" viewBox="0 0 ${width} ${rowHeight}" fill="none" role="img" aria-label="${escapeXml(`${nameWithOwner}: ${count} merged PRs (${stars}★)`)}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${rowHeight}" viewBox="0 0 ${width} ${rowHeight}" fill="none" role="img" aria-label="${escapeXml(`${nameWithOwner}: ${count} merged PRs, ${stars}★`)}">
   <defs>
-    <linearGradient id="barGrad-${mode}" x1="0" y1="0" x2="${barAreaWidth}" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="starBarGrad-${mode}" x1="0" y1="0" x2="${-starAreaWidth}" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="${t.starBarStart}"/>
+      <stop offset="100%" stop-color="${t.starBarEnd}"/>
+    </linearGradient>
+    <linearGradient id="prBarGrad-${mode}" x1="0" y1="0" x2="${prAreaWidth}" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="${t.barStart}"/>
       <stop offset="100%" stop-color="${t.barEnd}"/>
     </linearGradient>
@@ -383,7 +419,17 @@ function renderRowSvg(entry, index, layout, mode) {
         transform: scaleX(1);
       }
     }
-    @keyframes valueFade {
+    @keyframes valueFadeLeft {
+      from {
+        opacity: 0;
+        transform: translateX(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes valueFadeRight {
       from {
         opacity: 0;
         transform: translateX(-6px);
@@ -398,20 +444,31 @@ function renderRowSvg(entry, index, layout, mode) {
       transform: scaleX(0);
       animation: barGrow 1400ms cubic-bezier(0.22, 1, 0.36, 1) both;
     }
-    .bar-value {
+    .bar-value-left {
       opacity: 0;
-      animation: valueFade 1200ms ease-out both;
+      animation: valueFadeLeft 1200ms ease-out both;
+    }
+    .bar-value-right {
+      opacity: 0;
+      animation: valueFadeRight 1200ms ease-out both;
     }
   </style>
-${gridLines}
-  <line x1="${axisX}" y1="0" x2="${axisX}" y2="${rowHeight}" stroke="${t.axisLine}" stroke-width="1"/>
-${stripe}  <text x="${repoRightX}" y="18.5" text-anchor="end" font-family="${CHART_SANS}" font-size="12.5">${labelText}</text>
-  <text x="${starRightX}" y="18.5" text-anchor="end" font-family="${CHART_MONO}" font-size="11" font-weight="500"><tspan fill="${t.axisText}">${escapeXml(stars)}</tspan><tspan font-family="${CHART_SANS}" fill="${t.starIcon}" dx="1.5">&#9733;</tspan></text>
-  <g transform="translate(${axisX}, ${barYOffset})">
-    <path class="bar" d="${barPath}" fill="url(#barGrad-${mode})" style="animation-delay: ${delayMs}ms;"/>
+${leftGridLines}
+${rightGridLines}
+  <line x1="${starAxisX}" y1="0" x2="${starAxisX}" y2="${rowHeight}" stroke="${t.axisLine}" stroke-width="1"/>
+  <line x1="${prAxisX}" y1="0" x2="${prAxisX}" y2="${rowHeight}" stroke="${t.axisLine}" stroke-width="1"/>
+${stripe}  <g transform="translate(${starAxisX}, ${barYOffset})">
+    <path class="bar" d="${starBarPath}" fill="url(#starBarGrad-${mode})" style="animation-delay: ${delayMs}ms;"/>
   </g>
-  <g transform="translate(${countX}, 18.5)">
-    <text class="bar-value" x="0" y="0" font-family="${CHART_MONO}" font-size="12" font-weight="600" fill="${t.valueText}" style="animation-delay: ${valueDelayMs}ms;">${count}</text>
+  <g transform="translate(${starCountX}, 18.5)">
+    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="${CHART_MONO}" font-size="11" font-weight="500" style="animation-delay: ${valueDelayMs}ms;"><tspan fill="${t.axisText}">${escapeXml(stars)}</tspan><tspan font-family="${CHART_SANS}" fill="${t.starIcon}" dx="1.5">&#9733;</tspan></text>
+  </g>
+  <text x="${repoCenterX.toFixed(1)}" y="18.5" text-anchor="middle" font-family="${CHART_SANS}" font-size="12.5">${labelText}</text>
+  <g transform="translate(${prAxisX}, ${barYOffset})">
+    <path class="bar" d="${prBarPath}" fill="url(#prBarGrad-${mode})" style="animation-delay: ${delayMs}ms;"/>
+  </g>
+  <g transform="translate(${prCountX}, 18.5)">
+    <text class="bar-value-right" x="0" y="0" font-family="${CHART_MONO}" font-size="12" font-weight="600" fill="${t.valueText}" style="animation-delay: ${valueDelayMs}ms;">${count}</text>
   </g>
 </svg>
 `;
@@ -419,34 +476,70 @@ ${stripe}  <text x="${repoRightX}" y="18.5" text-anchor="end" font-family="${CHA
 
 function renderAxisSvg(layout, mode) {
   const t = CHART_THEMES[mode];
-  const { width, axisHeight, axisX, barAreaWidth, axisMax, ticks } = layout;
+  const {
+    width,
+    axisHeight,
+    starAreaWidth,
+    prAreaWidth,
+    starAxisX,
+    prAxisX,
+    starAxisMax,
+    starTicks,
+    prAxisMax,
+    prTicks,
+  } = layout;
 
-  const tickLabels = ticks
+  const leftTickLabels = starTicks
     .map((tick) => {
-      const xStr = (axisX + (tick / axisMax) * barAreaWidth).toFixed(2);
-      return `  <text x="${xStr}" y="16" text-anchor="middle" font-family="${CHART_MONO}" font-size="11" fill="${t.axisText}">${tick}</text>`;
+      const xStr = (starAxisX - (tick / starAxisMax) * starAreaWidth).toFixed(2);
+      return `  <text x="${xStr}" y="16" text-anchor="middle" font-family="${CHART_MONO}" font-size="11" fill="${t.axisText}">${escapeXml(formatAxisTick(tick))}</text>`;
     })
     .join("\n");
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${axisHeight}" viewBox="0 0 ${width} ${axisHeight}" fill="none" role="img" aria-label="Merged PRs axis">
-${tickLabels}
-  <text x="${(axisX + barAreaWidth / 2).toFixed(1)}" y="31" text-anchor="middle" font-family="${CHART_SANS}" font-size="11" fill="${t.axisText}">Merged PRs</text>
+  const rightTickLabels = prTicks
+    .map((tick) => {
+      const xStr = (prAxisX + (tick / prAxisMax) * prAreaWidth).toFixed(2);
+      return `  <text x="${xStr}" y="16" text-anchor="middle" font-family="${CHART_MONO}" font-size="11" fill="${t.axisText}">${escapeXml(formatAxisTick(tick))}</text>`;
+    })
+    .join("\n");
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${axisHeight}" viewBox="0 0 ${width} ${axisHeight}" fill="none" role="img" aria-label="Stars and Merged PRs axes">
+${leftTickLabels}
+  <text x="${(starAxisX - starAreaWidth / 2).toFixed(1)}" y="31" text-anchor="middle" font-family="${CHART_SANS}" font-size="11" fill="${t.axisText}">Stars</text>
+${rightTickLabels}
+  <text x="${(prAxisX + prAreaWidth / 2).toFixed(1)}" y="31" text-anchor="middle" font-family="${CHART_SANS}" font-size="11" fill="${t.axisText}">Merged PRs</text>
 </svg>
 `;
 }
 
-function computeNiceScale(maxCount) {
-  if (maxCount <= 0) {
+function computeNiceScale(maxValue, maxTicks = 4) {
+  if (maxValue <= 0) {
     return { axisMax: 1, ticks: [0, 1] };
   }
-  const steps = [1, 2, 5, 10, 20, 25, 50, 100, 200, 500, 1000, 2000, 5000];
+  const rawStep = maxValue / maxTicks;
+  const magnitude = 10 ** Math.floor(Math.log10(rawStep));
+  const multipliers = [1, 2, 2.5, 5, 10];
   const step =
-    steps.find((candidate) => Math.ceil(maxCount / candidate) <= 5) ??
-    Math.ceil(maxCount / 5);
-  const tickCount = Math.max(1, Math.ceil(maxCount / step));
+    multipliers
+      .map((m) => m * magnitude)
+      .find((candidate) => Math.ceil(maxValue / candidate) <= maxTicks) ??
+    10 * magnitude;
+  const tickCount = Math.max(1, Math.ceil(maxValue / step));
   const axisMax = tickCount * step;
   const ticks = Array.from({ length: tickCount + 1 }, (_, index) => index * step);
   return { axisMax, ticks };
+}
+
+function formatAxisTick(value) {
+  if (value >= 1_000_000) {
+    const m = value / 1_000_000;
+    return `${Number.isInteger(m) ? m : m.toFixed(1)}M`;
+  }
+  if (value >= 1000) {
+    const k = value / 1000;
+    return `${Number.isInteger(k) ? k : k.toFixed(1)}k`;
+  }
+  return String(value);
 }
 
 function formatStars(stargazerCount) {

@@ -1,6 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="28" viewBox="0 0 880 28" fill="none" role="img" aria-label="Tencent/AI-Infra-Guard: 1 merged PRs (7.8k★)">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="28" viewBox="0 0 880 28" fill="none" role="img" aria-label="Tencent/AI-Infra-Guard: 1 merged PRs, 7.8k★">
   <defs>
-    <linearGradient id="barGrad-light" x1="0" y1="0" x2="548" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="starBarGrad-light" x1="0" y1="0" x2="-287" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#BF8700"/>
+      <stop offset="100%" stop-color="#D4A72C"/>
+    </linearGradient>
+    <linearGradient id="prBarGrad-light" x1="0" y1="0" x2="287" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#0969DA"/>
       <stop offset="100%" stop-color="#218BFF"/>
     </linearGradient>
@@ -14,7 +18,17 @@
         transform: scaleX(1);
       }
     }
-    @keyframes valueFade {
+    @keyframes valueFadeLeft {
+      from {
+        opacity: 0;
+        transform: translateX(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes valueFadeRight {
       from {
         opacity: 0;
         transform: translateX(-6px);
@@ -29,23 +43,35 @@
       transform: scaleX(0);
       animation: barGrow 1400ms cubic-bezier(0.22, 1, 0.36, 1) both;
     }
-    .bar-value {
+    .bar-value-left {
       opacity: 0;
-      animation: valueFade 1200ms ease-out both;
+      animation: valueFadeLeft 1200ms ease-out both;
+    }
+    .bar-value-right {
+      opacity: 0;
+      animation: valueFadeRight 1200ms ease-out both;
     }
   </style>
-  <line x1="397.60" y1="0" x2="397.60" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="507.20" y1="0" x2="507.20" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="616.80" y1="0" x2="616.80" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="726.40" y1="0" x2="726.40" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="836.00" y1="0" x2="836.00" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
-  <line x1="288" y1="0" x2="288" y2="28" stroke="#D0D7DE" stroke-width="1"/>
-  <text x="210" y="18.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">Tencent/</tspan><tspan fill="#1F2328" font-weight="600">AI-Infra-Guard</tspan></text>
-  <text x="276" y="18.5" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="500"><tspan fill="#57606A">7.8k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#BF8700" dx="1.5">&#9733;</tspan></text>
-  <g transform="translate(288, 6)">
-    <path class="bar" d="M 0 0 H 2.74 Q 5.48 0 5.48 2.74 V 13.26 Q 5.48 16 2.74 16 H 0 Z" fill="url(#barGrad-light)" style="animation-delay: 2299ms;"/>
+  <line x1="255.33" y1="0" x2="255.33" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="159.67" y1="0" x2="159.67" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="64.00" y1="0" x2="64.00" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="624.75" y1="0" x2="624.75" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="696.50" y1="0" x2="696.50" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="768.25" y1="0" x2="768.25" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="840.00" y1="0" x2="840.00" y2="28" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
+  <line x1="351" y1="0" x2="351" y2="28" stroke="#D0D7DE" stroke-width="1"/>
+  <line x1="553" y1="0" x2="553" y2="28" stroke="#D0D7DE" stroke-width="1"/>
+  <g transform="translate(351, 6)">
+    <path class="bar" d="M 0 0 H -10.87 Q -14.87 0 -14.87 4.00 V 12.00 Q -14.87 16 -10.87 16 H 0 Z" fill="url(#starBarGrad-light)" style="animation-delay: 2299ms;"/>
   </g>
-  <g transform="translate(301.5, 18.5)">
-    <text class="bar-value" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 3579ms;">1</text>
+  <g transform="translate(329.1, 18.5)">
+    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="500" style="animation-delay: 3579ms;"><tspan fill="#57606A">7.8k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#BF8700" dx="1.5">&#9733;</tspan></text>
+  </g>
+  <text x="452.0" y="18.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5"><tspan fill="#656D76" font-weight="400">Tencent/</tspan><tspan fill="#1F2328" font-weight="600">AI-Infra-Guard</tspan></text>
+  <g transform="translate(553, 6)">
+    <path class="bar" d="M 0 0 H 2.00 Q 4.00 0 4.00 2.00 V 14.00 Q 4.00 16 2.00 16 H 0 Z" fill="url(#prBarGrad-light)" style="animation-delay: 2299ms;"/>
+  </g>
+  <g transform="translate(565.0, 18.5)">
+    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#1F2328" style="animation-delay: 3579ms;">1</text>
   </g>
 </svg>

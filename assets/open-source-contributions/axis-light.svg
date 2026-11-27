@@ -1,9 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="36" viewBox="0 0 880 36" fill="none" role="img" aria-label="Merged PRs axis">
-  <text x="288.00" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">0</text>
-  <text x="397.60" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">20</text>
-  <text x="507.20" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">40</text>
-  <text x="616.80" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">60</text>
-  <text x="726.40" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">80</text>
-  <text x="836.00" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">100</text>
-  <text x="562.0" y="31" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#57606A">Merged PRs</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="36" viewBox="0 0 880 36" fill="none" role="img" aria-label="Stars and Merged PRs axes">
+  <text x="351.00" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">0</text>
+  <text x="255.33" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">50k</text>
+  <text x="159.67" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">100k</text>
+  <text x="64.00" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">150k</text>
+  <text x="207.5" y="31" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#57606A">Stars</text>
+  <text x="553.00" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">0</text>
+  <text x="624.75" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">25</text>
+  <text x="696.50" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">50</text>
+  <text x="768.25" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">75</text>
+  <text x="840.00" y="16" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#57606A">100</text>
+  <text x="696.5" y="31" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#57606A">Merged PRs</text>
 </svg>
