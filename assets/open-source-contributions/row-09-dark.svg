@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="HKUDS/nanobot: 2 merged PRs, 50.4k★">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="bytedance/deer-flow: 2 merged PRs, 85.9k★">
   <defs>
     <linearGradient id="prBarGrad-dark" x1="0" y1="0" x2="-235" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#4B7096"/>
@@ -68,15 +68,15 @@
     <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#E6EDF3" style="animation-delay: 2324ms;">2</text>
   </g>
   <rect x="287" y="5" width="280" height="28" rx="6" fill="#161B22" stroke="#2E353D" stroke-width="1"/>
-  <text x="299" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14"><tspan fill="#8B949E" font-weight="400">HKUDS/</tspan><tspan fill="#80A4C8" font-weight="600">nanobot</tspan></text>
+  <text x="299" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14"><tspan fill="#8B949E" font-weight="400">bytedance/</tspan><tspan fill="#80A4C8" font-weight="600">deer-flow</tspan></text>
   <g transform="translate(546, 14)" stroke="#8B949E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <path d="M 3 1.5 H 8.5 V 7"/>
     <path d="M 8.5 1.5 L 1.5 8.5"/>
   </g>
   <g transform="translate(577, 10)">
-    <path class="bar" d="M 0 0 H 74.93 Q 78.93 0 78.93 4.00 V 14.00 Q 78.93 18 74.93 18 H 0 Z" fill="url(#starBarGrad-dark)" style="animation-delay: 1044ms;"/>
+    <path class="bar" d="M 0 0 H 130.54 Q 134.54 0 134.54 4.00 V 14.00 Q 134.54 18 130.54 18 H 0 Z" fill="url(#starBarGrad-dark)" style="animation-delay: 1044ms;"/>
   </g>
-  <g transform="translate(663.9, 23)">
-    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 2324ms;"><tspan fill="#8B949E">50.4k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#7BA5A0" dx="1.5">&#9733;</tspan></text>
+  <g transform="translate(719.5, 23)">
+    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 2324ms;"><tspan fill="#8B949E">85.9k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#7BA5A0" dx="1.5">&#9733;</tspan></text>
   </g>
 </svg>

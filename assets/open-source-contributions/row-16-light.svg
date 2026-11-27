@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="google/filament: 1 merged PRs, 20.8k★">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="meta/lexical: 1 merged PRs, 24.1k★">
   <defs>
     <linearGradient id="prBarGrad-light" x1="0" y1="0" x2="-235" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#446688"/>
@@ -69,15 +69,15 @@
     <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#24292F" style="animation-delay: 3136ms;">1</text>
   </g>
   <rect x="287" y="5" width="280" height="28" rx="6" fill="#F6F8FA" stroke="#DCE2E8" stroke-width="1"/>
-  <text x="299" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14"><tspan fill="#636C76" font-weight="400">google/</tspan><tspan fill="#3C5F82" font-weight="600">filament</tspan></text>
+  <text x="299" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14"><tspan fill="#636C76" font-weight="400">meta/</tspan><tspan fill="#3C5F82" font-weight="600">lexical</tspan></text>
   <g transform="translate(546, 14)" stroke="#6E7781" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <path d="M 3 1.5 H 8.5 V 7"/>
     <path d="M 8.5 1.5 L 1.5 8.5"/>
   </g>
   <g transform="translate(577, 10)">
-    <path class="bar" d="M 0 0 H 28.59 Q 32.59 0 32.59 4.00 V 14.00 Q 32.59 18 28.59 18 H 0 Z" fill="url(#starBarGrad-light)" style="animation-delay: 1856ms;"/>
+    <path class="bar" d="M 0 0 H 33.69 Q 37.69 0 37.69 4.00 V 14.00 Q 37.69 18 33.69 18 H 0 Z" fill="url(#starBarGrad-light)" style="animation-delay: 1856ms;"/>
   </g>
-  <g transform="translate(617.6, 23)">
-    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 3136ms;"><tspan fill="#57606A">20.8k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#648B88" dx="1.5">&#9733;</tspan></text>
+  <g transform="translate(622.7, 23)">
+    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 3136ms;"><tspan fill="#57606A">24.1k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#648B88" dx="1.5">&#9733;</tspan></text>
   </g>
 </svg>
