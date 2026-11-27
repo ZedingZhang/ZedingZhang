@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 
 const username = process.env.GH_USERNAME;
@@ -133,26 +134,41 @@ if (start === -1 || end === -1 || end < start) {
 const chartDir = "assets/open-source-contributions";
 const layout = computeChartLayout(sortedProjects);
 
+const rowAssets = sortedProjects.map((entry, index) => {
+  const repoSlug = slugifyRepo(entry.repository.nameWithOwner);
+  const modes = Object.fromEntries(
+    ["light", "dark"].map((mode) => {
+      const svg = renderRowSvg(entry, index, layout, mode);
+      const filename = `${repoSlug}-${mode}-${shortHash(svg)}.svg`;
+      return [mode, { filename, svg }];
+    }),
+  );
+  return { entry, modes };
+});
+
+const axisAssets = Object.fromEntries(
+  ["light", "dark"].map((mode) => {
+    const svg = renderAxisSvg(layout, mode);
+    const filename = `axis-${mode}-${shortHash(svg)}.svg`;
+    return [mode, { filename, svg }];
+  }),
+);
+
 await rm(chartDir, { recursive: true, force: true });
 await mkdir(chartDir, { recursive: true });
 
 await Promise.all([
-  ...sortedProjects.flatMap((entry, index) => {
-    const rowSlug = `row-${String(index).padStart(2, "0")}`;
-    return ["light", "dark"].map((mode) =>
-      writeFile(
-        `${chartDir}/${rowSlug}-${mode}.svg`,
-        renderRowSvg(entry, index, layout, mode),
-        "utf8",
-      ),
-    );
-  }),
-  ...["light", "dark"].map((mode) =>
-    writeFile(`${chartDir}/axis-${mode}.svg`, renderAxisSvg(layout, mode), "utf8"),
+  ...rowAssets.flatMap(({ modes }) =>
+    Object.values(modes).map(({ filename, svg }) =>
+      writeFile(`${chartDir}/${filename}`, svg, "utf8"),
+    ),
+  ),
+  ...Object.values(axisAssets).map(({ filename, svg }) =>
+    writeFile(`${chartDir}/${filename}`, svg, "utf8"),
   ),
 ]);
 
-const generated = renderContributions(sortedProjects);
+const generated = renderContributions(rowAssets, axisAssets);
 const updated =
   readme.slice(0, start) + generated + readme.slice(end + endMarker.length);
 
@@ -232,9 +248,8 @@ function comparePullRequests(left, right, dateField) {
   );
 }
 
-function renderContributions(projectEntries) {
-  const rowBlocks = projectEntries.map((entry, index) => {
-    const rowSlug = `row-${String(index).padStart(2, "0")}`;
+function renderContributions(rowAssets, axisAssets) {
+  const rowBlocks = rowAssets.map(({ entry, modes }) => {
     const count = entry.pullRequests.length;
     const stars = formatStars(entry.repository.stargazerCount);
     const prLabel = count === 1 ? "merged PR" : "merged PRs";
@@ -243,15 +258,15 @@ function renderContributions(projectEntries) {
     const alt = escapeHtml(`${repoName}: ${count} ${prLabel} (${stars}★)`);
     const url = escapeHtml(entry.repository.url);
 
-    return `<div><a href="${url}" title="${title}"><picture><source media="(prefers-color-scheme: dark)" srcset="./${chartDir}/${rowSlug}-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./${chartDir}/${rowSlug}-light.svg" /><img alt="${alt}" src="./${chartDir}/${rowSlug}-light.svg" width="100%" align="top" /></picture></a></div>`;
+    return `<div><a href="${url}" title="${title}"><picture><source media="(prefers-color-scheme: dark)" srcset="./${chartDir}/${modes.dark.filename}" /><source media="(prefers-color-scheme: light)" srcset="./${chartDir}/${modes.light.filename}" /><img alt="${alt}" src="./${chartDir}/${modes.light.filename}" width="100%" align="top" /></picture></a></div>`;
   });
 
-  const axisBlock = `<div><picture><source media="(prefers-color-scheme: dark)" srcset="./${chartDir}/axis-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./${chartDir}/axis-light.svg" /><img alt="Merged PRs and Stars axes" src="./${chartDir}/axis-light.svg" width="100%" align="top" /></picture></div>`;
+  const axisBlock = `<div><picture><source media="(prefers-color-scheme: dark)" srcset="./${chartDir}/${axisAssets.dark.filename}" /><source media="(prefers-color-scheme: light)" srcset="./${chartDir}/${axisAssets.light.filename}" /><img alt="Merged PRs and Stars axes" src="./${chartDir}/${axisAssets.light.filename}" width="100%" align="top" /></picture></div>`;
 
   return [
     startMarker,
     "",
-    `${mergedPullRequests.length} merged PRs across ${projectEntries.length} upstream projects — click any row to open the repository.`,
+    `${mergedPullRequests.length} merged PRs across ${rowAssets.length} upstream projects — click any row to open the repository.`,
     "",
     ...rowBlocks,
     axisBlock,
@@ -580,4 +595,18 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;");
+}
+
+function slugifyRepo(nameWithOwner) {
+  const slug = String(nameWithOwner)
+    .toLowerCase()
+    .replace(/\//g, "--")
+    .replace(/[^a-z0-9-]+/g, "-")
+    .replace(/-{3,}/g, "--")
+    .replace(/^-+|-+$/g, "");
+  return slug || "repo";
+}
+
+function shortHash(content) {
+  return createHash("sha256").update(content).digest("hex").slice(0, 8);
 }
