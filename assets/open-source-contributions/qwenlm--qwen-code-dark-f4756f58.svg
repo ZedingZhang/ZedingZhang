@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="Tencent/AI-Infra-Guard: 1 merged PRs, 7.8k★">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="QwenLM/qwen-code: 5 merged PRs, 31.0k★">
   <defs>
     <linearGradient id="prBarGrad-dark" x1="0" y1="0" x2="-210" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#4B7096"/>
@@ -64,23 +64,22 @@
   <line x1="812.00" y1="0" x2="812.00" y2="38" stroke="#30363D" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.7"/>
   <line x1="252" y1="0" x2="252" y2="38" stroke="#30363D" stroke-width="1"/>
   <line x1="602" y1="0" x2="602" y2="38" stroke="#30363D" stroke-width="1"/>
-  <rect x="8" y="2" width="864" height="34" rx="5" fill="#8B949E" fill-opacity="0.055"/>
   <g transform="translate(252, 10)">
-    <path class="bar" d="M 0 0 H -2.00 Q -4.00 0 -4.00 2.00 V 16.00 Q -4.00 18 -2.00 18 H 0 Z" fill="url(#prBarGrad-dark)" style="animation-delay: 2320ms;"/>
+    <path class="bar" d="M 0 0 H -6.50 Q -10.50 0 -10.50 4.00 V 14.00 Q -10.50 18 -6.50 18 H 0 Z" fill="url(#prBarGrad-dark)" style="animation-delay: 580ms;"/>
   </g>
-  <g transform="translate(240.0, 23.5)">
-    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#E6EDF3" style="animation-delay: 3600ms;">1</text>
+  <g transform="translate(233.5, 23.5)">
+    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#E6EDF3" style="animation-delay: 1860ms;">5</text>
   </g>
   <rect x="262" y="5" width="330" height="28" rx="6" fill="#161B22" stroke="#2E353D" stroke-width="1"/>
-  <text x="274" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" clip-path="url(#repoLabelClip-dark)"><tspan fill="#8B949E" font-weight="400">Tencent/</tspan><tspan fill="#80A4C8" font-weight="600">AI-Infra-Guard</tspan></text>
+  <text x="274" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" clip-path="url(#repoLabelClip-dark)"><tspan fill="#8B949E" font-weight="400">QwenLM/</tspan><tspan fill="#80A4C8" font-weight="600">qwen-code</tspan></text>
   <g transform="translate(571, 14)" stroke="#8B949E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <path d="M 3 1.5 H 8.5 V 7"/>
     <path d="M 8.5 1.5 L 1.5 8.5"/>
   </g>
   <g transform="translate(602, 10)">
-    <path class="bar" d="M 0 0 H 6.90 Q 10.90 0 10.90 4.00 V 14.00 Q 10.90 18 6.90 18 H 0 Z" fill="url(#starBarGrad-dark)" style="animation-delay: 2320ms;"/>
+    <path class="bar" d="M 0 0 H 39.39 Q 43.39 0 43.39 4.00 V 14.00 Q 43.39 18 39.39 18 H 0 Z" fill="url(#starBarGrad-dark)" style="animation-delay: 580ms;"/>
   </g>
-  <g transform="translate(620.9, 23)">
-    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 3600ms;"><tspan fill="#8B949E">7.8k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#7BA5A0" dx="1.5">&#9733;</tspan></text>
+  <g transform="translate(653.4, 23)">
+    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 1860ms;"><tspan fill="#8B949E">31.0k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#7BA5A0" dx="1.5">&#9733;</tspan></text>
   </g>
 </svg>

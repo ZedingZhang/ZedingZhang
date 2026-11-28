@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="alibaba/MNN: 6 merged PRs, 16.6k★">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="38" viewBox="0 0 880 38" fill="none" role="img" aria-label="microsoft/PyRIT: 1 merged PRs, 5.2k★">
   <defs>
     <linearGradient id="prBarGrad-light" x1="0" y1="0" x2="-210" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#446688"/>
@@ -64,23 +64,22 @@
   <line x1="812.00" y1="0" x2="812.00" y2="38" stroke="#D0D7DE" stroke-width="1" stroke-dasharray="3.5 3.5" stroke-opacity="0.6"/>
   <line x1="252" y1="0" x2="252" y2="38" stroke="#D0D7DE" stroke-width="1"/>
   <line x1="602" y1="0" x2="602" y2="38" stroke="#D0D7DE" stroke-width="1"/>
-  <rect x="8" y="2" width="864" height="34" rx="5" fill="#8C959F" fill-opacity="0.045"/>
   <g transform="translate(252, 10)">
-    <path class="bar" d="M 0 0 H -8.60 Q -12.60 0 -12.60 4.00 V 14.00 Q -12.60 18 -8.60 18 H 0 Z" fill="url(#prBarGrad-light)" style="animation-delay: 464ms;"/>
+    <path class="bar" d="M 0 0 H -2.00 Q -4.00 0 -4.00 2.00 V 16.00 Q -4.00 18 -2.00 18 H 0 Z" fill="url(#prBarGrad-light)" style="animation-delay: 2436ms;"/>
   </g>
-  <g transform="translate(231.4, 23.5)">
-    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#24292F" style="animation-delay: 1744ms;">6</text>
+  <g transform="translate(240.0, 23.5)">
+    <text class="bar-value-left" x="0" y="0" text-anchor="end" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#24292F" style="animation-delay: 3716ms;">1</text>
   </g>
   <rect x="262" y="5" width="330" height="28" rx="6" fill="#F6F8FA" stroke="#DCE2E8" stroke-width="1"/>
-  <text x="274" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" clip-path="url(#repoLabelClip-light)"><tspan fill="#636C76" font-weight="400">alibaba/</tspan><tspan fill="#3C5F82" font-weight="600">MNN</tspan></text>
+  <text x="274" y="23.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" clip-path="url(#repoLabelClip-light)"><tspan fill="#636C76" font-weight="400">microsoft/</tspan><tspan fill="#3C5F82" font-weight="600">PyRIT</tspan></text>
   <g transform="translate(571, 14)" stroke="#6E7781" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <path d="M 3 1.5 H 8.5 V 7"/>
     <path d="M 8.5 1.5 L 1.5 8.5"/>
   </g>
   <g transform="translate(602, 10)">
-    <path class="bar" d="M 0 0 H 19.29 Q 23.29 0 23.29 4.00 V 14.00 Q 23.29 18 19.29 18 H 0 Z" fill="url(#starBarGrad-light)" style="animation-delay: 464ms;"/>
+    <path class="bar" d="M 0 0 H 3.61 Q 7.22 0 7.22 3.61 V 14.39 Q 7.22 18 3.61 18 H 0 Z" fill="url(#starBarGrad-light)" style="animation-delay: 2436ms;"/>
   </g>
-  <g transform="translate(633.3, 23)">
-    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 1744ms;"><tspan fill="#57606A">16.6k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#648B88" dx="1.5">&#9733;</tspan></text>
+  <g transform="translate(617.2, 23)">
+    <text class="bar-value-right" x="0" y="0" font-family="ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="500" style="animation-delay: 3716ms;"><tspan fill="#57606A">5.2k</tspan><tspan font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" fill="#648B88" dx="1.5">&#9733;</tspan></text>
   </g>
 </svg>
